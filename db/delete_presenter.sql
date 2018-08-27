@@ -1,0 +1,1 @@
+DELETE FROM presenters WHERE presenterid = $1;
