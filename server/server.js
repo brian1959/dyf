@@ -7,6 +7,7 @@ const axios = require("axios");
 
 const speaker_controller = require("./speaker_controller");
 const course_controller = require("./course_controller");
+const attendee_controller = require("./attendee_controller");
 
 const app = express();
 
@@ -103,6 +104,10 @@ app.get("/api/speakers", speaker_controller.getSpeakers);
 app.get("/api/featured", speaker_controller.getFeatured);
 app.post("/api/speaker", speaker_controller.addSpeaker);
 app.delete("/api/speaker/:id", speaker_controller.deleteSpeaker);
+app.get("/api/attendees", attendee_controller.getAttendees);
+app.get("/api/attendee", attendee_controller.getAttendee);
+app.post("/api/attendee", attendee_controller.addAttendee);
+app.delete("/api/attendee/:id", attendee_controller.deleteAttendee);
 app.get("/api/schedule", course_controller.getSchedule);
 app.post("api/course", course_controller.addCourse);
 app.put("/api/course/:id", course_controller.updateCourse);

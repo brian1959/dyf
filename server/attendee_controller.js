@@ -6,7 +6,7 @@ module.exports = {
         db.get_attendees()
             .then(attendees => res.status(200).send(attendees))
             .catch(err => {
-                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
+                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been informed!" });
                 console.log(err)
             });
     },
@@ -15,9 +15,9 @@ module.exports = {
         const db = req.app.get('db');
 
         db.get_attendee()
-            .then(speakers => res.status(200).send(speakers))
+            .then(attendee => res.status(200).send(attendee))
             .catch(err => {
-                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
+                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been informed!" });
                 console.log(err)
             });
     },
@@ -29,7 +29,7 @@ module.exports = {
         db.add_speaker([afirstname, alastname, aaddress,  acity, astate,  azip, email, phone, username, apassword, auth_id])
             .then(() => res.sendStatus(200))
             .catch(err => {
-                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
+                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been informed!" });
                 console.log(err)
             });
 
@@ -44,7 +44,7 @@ module.exports = {
         db.delete_attendee([id])
             .then(() => res.sendStatus(200))
             .catch(err => {
-                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
+                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been informed!" });
                 console.log(err)
             });
     }
