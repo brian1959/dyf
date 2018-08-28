@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../images/RT_logo.png";
 
 export default class Header extends Component {
@@ -19,6 +20,22 @@ export default class Header extends Component {
           </div>
           <div className="menu-word">Menu</div>
         </div>
+        <nav class="menu">
+          <ul class="menu-nav">
+            <li class="nav-item">
+              <Link to="/">Home</Link>
+            </li>
+            <li class="nav-item">
+              <Link to="/courses">Courses</Link>
+            </li>
+            <li class="nav-item">
+              <Link to="/presenters">Speakers</Link>
+            </li>
+            <li class="nav-item">
+              <Link to="/registration">Registration</Link>
+            </li>
+          </ul>
+        </nav>
       </div>
     );
   }

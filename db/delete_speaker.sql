@@ -1,0 +1,1 @@
+DELETE FROM speakers WHERE speakerid = $1;

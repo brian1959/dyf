@@ -5,7 +5,7 @@ const massive = require("massive");
 const session = require("express-session");
 const axios = require("axios");
 
-const presenter_controller = require("./presenter_controller");
+const speaker_controller = require("./speaker_controller");
 const course_controller = require("./course_controller");
 
 const app = express();
@@ -99,12 +99,13 @@ app.get("/auth/logout", (req, res) => {
 });
 //end of session logging
 
-app.get("/api/presenters", presenter_controller.getPresenters);
-app.post("/api/presenter", presenter_controller.addPresenter);
-app.delete("/api/presenter", presenter_controller.deletePresenter);
-app.get("/api/courses", course_controller.getCourses);
+app.get("/api/speakers", speaker_controller.getSpeakers);
+app.get("/api/featured", speaker_controller.getFeatured);
+app.post("/api/speaker", speaker_controller.addSpeaker);
+app.delete("/api/speaker/:id", speaker_controller.deleteSpeaker);
+app.get("/api/schedule", course_controller.getSchedule);
 app.post("api/course", course_controller.addCourse);
-app.put("/api/course", course_controller.updateCourse);
+app.put("/api/course/:id", course_controller.updateCourse);
 app.delete("/api/course", course_controller.deleteCourse);
 
 app.listen(SERVER_PORT, () => {

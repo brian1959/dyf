@@ -1,21 +1,32 @@
 module.exports = {
 
-    getPresenters: (req, res, next) => {
+    getFeatured: (req, res, next) => {
         const db = req.app.get('db');
 
-        db.get_presenters()
-            .then(presenters => res.status(200).send(presenters))
+        db.get_featured()
+            .then(featured => res.status(200).send(featured))
             .catch(err => {
                 res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
                 console.log(err)
             });
     },
 
-    addPresenter: (req, res, next) => {
+    getSpeakers: (req, res, next) => {
         const db = req.app.get('db');
-        const { pfirstname, plastname, pbio, pimage } = req.body;
+
+        db.get_speakers()
+            .then(speakers => res.status(200).send(speakers))
+            .catch(err => {
+                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
+                console.log(err)
+            });
+    },
+
+    addSpeaker: (req, res, next) => {
+        const db = req.app.get('db');
+        const { speaker_name, speaker_title, speaking_date, speaker_bio, speaker_image } = req.body;
         console.log(req.body)
-        db.add_presenter([pfirstname, plastname, pbio, pimage])
+        db.add_speaker([speaker_name, speaker_title, speaking_date, speaker_bio, speaker_image ])
             .then(() => res.sendStatus(200))
             .catch(err => {
                 res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
@@ -26,11 +37,11 @@ module.exports = {
 
 
 
-    deletePresenter: (req, res, next) => {
+    deleteSpeaker: (req, res, next) => {
         const db = req.app.get('db');
-        const { params } = req;
+        const { id } = req.params;
 
-        db.delete_presenter([params.id])
+        db.delete_speaker([id])
             .then(() => res.sendStatus(200))
             .catch(err => {
                 res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });

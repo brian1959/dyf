@@ -1,32 +1,32 @@
 module.exports = {
 
-    getSchedule: (req, res, next) => {
-        const dbInstance = req.app.get('db');
+    getAttendees: (req, res, next) => {
+        const db = req.app.get('db');
 
-        dbInstance.get_schedule()
-            .then(courses => res.status(200).send(courses))
+        db.get_attendees()
+            .then(attendees => res.status(200).send(attendees))
             .catch(err => {
                 res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
                 console.log(err)
             });
     },
 
-    addCourse: (req, res, next) => {
-        const dbInstance = req.app.get('db');
-        const { cname, csummary, cinstructor, crank } = req.body;
+    getAttendee: (req, res, next) => {
+        const db = req.app.get('db');
+
+        db.get_attendee()
+            .then(speakers => res.status(200).send(speakers))
+            .catch(err => {
+                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
+                console.log(err)
+            });
+    },
+
+    addAttendee: (req, res, next) => {
+        const db = req.app.get('db');
+        const {afirstname, alastname, aaddress,  acity, astate,  azip, email, phone, username, apassword, auth_id} = req.body;
         console.log(req.body)
-        dbInstance.add_course([cname, csummary, cinstructor, crank])
-            .then(() => res.sendStatus(200))
-            .catch(err => {
-                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
-                console.log(err)
-            });
-
-    },
-    updateCourse: (req, res, next) => {
-        const dbInstance = req.app.get('db');
-        const { cname, csummary, cinstructor, crank } = req.query;
-        dbInstance.update_course([params.id, query.cname, query.csummary, query.cinstructor, query.crank])
+        db.add_speaker([afirstname, alastname, aaddress,  acity, astate,  azip, email, phone, username, apassword, auth_id])
             .then(() => res.sendStatus(200))
             .catch(err => {
                 res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
@@ -36,11 +36,12 @@ module.exports = {
     },
 
 
-    deleteCourse: (req, res, next) => {
-        const dbInstance = req.app.get('db');
-        const { params } = req;
 
-        dbInstance.delete_course([params.id])
+    deleteAttendee: (req, res, next) => {
+        const db = req.app.get('db');
+        const { id } = req.params;
+
+        db.delete_attendee([id])
             .then(() => res.sendStatus(200))
             .catch(err => {
                 res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });

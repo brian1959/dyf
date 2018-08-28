@@ -1,18 +1,18 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-class Presenter extends Component {
+class Speakerbio extends Component {
     constructor(props){
         super(props)
 
         this.state = {
-            presenter: {}
+            speaker: {}
         }
     }
 
     componentDidMount(){
         axios.get(this.props.match.params.id)
-            .then(presenter => this.setState({presenter}))
+            .then(speaker => this.setState({speaker}))
     }
 
     render() {
@@ -20,12 +20,13 @@ class Presenter extends Component {
 
         return(
             <div className='presenter_body'>
-                <img className='presenter_image' src={`./images/${presenter.pimage}` } alt={product.title} />
-                <h1>{`${presenter.pfirstname} ${presenter.plastname}`}</h1>
+                <img className='presenter_image' src={`./images/${speaker.speaker_image}` } alt={speaker.speaker_name} />
+                <h1>${speaker.speaker_name}</h1>
+                <h2>${speaker.speaker_title}</h2>
                 <p>{presenter.pbio}</p>
             </div>
         )
     }
 }
 
-export default Product
+export default Speakerbio

@@ -1,8 +1,8 @@
 CREATE TABLE schedule
 (
     scheduleid SERIAL PRIMARY KEY,
-    time varchar(10),
-    day varchar(8),
+    sch_time varchar(10),
+    sch_day varchar(8),
     dayid INTEGER,
     time24 INTEGER,
     courseid INTEGER

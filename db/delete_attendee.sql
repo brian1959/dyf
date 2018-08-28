@@ -1,0 +1,1 @@
+DELETE FROM attendees WHERE attendeeid = $1;

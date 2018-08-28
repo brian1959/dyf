@@ -9,34 +9,36 @@ export default class Presenters extends Component {
     super(props)
 
     this.state = {
-      presentersToDisplay: [],
-      pfirstname: '',
-      plastname: '',
-      pbio: '',
-      pimage: ''
+      speakersToDisplay: [],
+      speakerName: '',
+      speakerTitle: '',
+      speakingDate: '',
+      speakerBio:'',
+      speakerImage: ''
     }
 
   }
   componentDidMount() {
-    axios.get('/api/presenters').then(response => {
-      this.setState({ presentersToDisplay: response.data })
+    axios.get('/api/speakers').then(response => {
+      this.setState({ speakersToDisplay: response.data })
 
     })
 
   }
 
   render() {
-    const { presentersToDisplay } = this.state;
+    const { speakersToDisplay } = this.state;
 
     return (
       <div>
         {
-          presentersToDisplay.map(presenter => (
-            <Presenterbio key={presenter.presenterid}
-              pfirstname={presenter.pfirstname}
-              plastname={presenter.plastname}
-              pbio={presenter.pbio}
-              pimage={presenter.pimage} />
+          speakersToDisplay.map(speaker => (
+            <Presenterbio key={speaker.speakerid}
+              speakerName={speaker.speaker_name}
+              speakerTitle={speaker.speaker_title}
+              speakerBio={speaker.speaker_bio}
+              speakerImage={speaker.speaker_image}
+              speakingDate={speaker.speaking_date} />
           ))
         }
       </div>

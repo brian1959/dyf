@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default function Presenterbio(props){
+export default function Speaker(props){
 
     return(
         <div className="presenter_info_container">
