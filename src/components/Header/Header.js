@@ -13,12 +13,14 @@ export default class Header extends Component {
         </div>
         <div className="menu-box">
           <span className="header-date">Feb. 27-Mar. 2, 2019</span>
-          <div className="menu-btn">
-            <div className="btn-line" />
-            <div className="btn-line" />
-            <div className="btn-line" />
+          <div className="menu-items-holder">
+            <div className="menu-btn">
+              <div className="btn-line" />
+              <div className="btn-line" />
+              <div className="btn-line" />
+            </div>
+            <div className="menu-word">Menu</div>
           </div>
-          <div className="menu-word">Menu</div>
         </div>
         <nav class="menu">
           <ul class="menu-nav">

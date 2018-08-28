@@ -11,30 +11,6 @@ module.exports = {
             });
     },
 
-    addCourse: (req, res, next) => {
-        const dbInstance = req.app.get('db');
-        const { cname, csummary, cinstructor, crank } = req.body;
-        console.log(req.body)
-        dbInstance.add_course([cname, csummary, cinstructor, crank])
-            .then(() => res.sendStatus(200))
-            .catch(err => {
-                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
-                console.log(err)
-            });
-
-    },
-    updateCourse: (req, res, next) => {
-        const dbInstance = req.app.get('db');
-        const { cname, csummary, cinstructor, crank } = req.query;
-        dbInstance.update_course([params.id, query.cname, query.csummary, query.cinstructor, query.crank])
-            .then(() => res.sendStatus(200))
-            .catch(err => {
-                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
-                console.log(err)
-            });
-
-    },
-
 
     deleteCourse: (req, res, next) => {
         const dbInstance = req.app.get('db');

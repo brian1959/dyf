@@ -107,10 +107,9 @@ app.delete("/api/speaker/:id", speaker_controller.deleteSpeaker);
 app.get("/api/attendees", attendee_controller.getAttendees);
 app.get("/api/attendee", attendee_controller.getAttendee);
 app.post("/api/attendee", attendee_controller.addAttendee);
+app.put("/api/attendee/:id", attendee_controller.updateAttendee);
 app.delete("/api/attendee/:id", attendee_controller.deleteAttendee);
 app.get("/api/schedule", course_controller.getSchedule);
-app.post("api/course", course_controller.addCourse);
-app.put("/api/course/:id", course_controller.updateCourse);
 app.delete("/api/course", course_controller.deleteCourse);
 
 app.listen(SERVER_PORT, () => {

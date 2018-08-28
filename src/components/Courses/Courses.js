@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import Coursesummary from './Coursesummary';
+import Schedule from './Schedule';
 
 class Courses extends Component {
     constructor(props){
@@ -8,17 +8,20 @@ class Courses extends Component {
 
         this.state= {
             coursesToDisplay:[],
-            cname:'',
-            csummary:'',
-            pfirstname:'',
-            plastname:'',
-            elevel:''
+            scheduleid:'',
+            coursename:'',
+            coursesummary:'',
+            presenter:'',
+            company:'',
+            day:'',
+            time:'',
+            explevel:''
         }
 
     }
     componentDidMount(){
         axios
-        .get('/api/courses')
+        .get('/api/schedule')
         .then(response => {
             console.log(response)
             this.setState({coursesToDisplay:response.data})
@@ -32,12 +35,14 @@ class Courses extends Component {
             <div>
                 {
                    coursesToDisplay.map(course => (
-                       <Coursesummary key={course.courseid}
-                       cname={course.cname}
-                       csummary={course.csummary}
-                       pfirstname={course.pfirstname}
-                       plastname={course.plastname}
-                       elevel={course.elevel} />
+                       <Schedule key={course.scheduleid}
+                       coursename={course.coursename}
+                       coursesummary={course.coursesummary}
+                       presenter={course.presenter}
+                       company={course.company}
+                       day={course.day}
+                       time={course.time}
+                       explevel={course.explevel} />
                    )) 
                 }
             </div>

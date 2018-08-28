@@ -1,9 +1,7 @@
-CREATE TABLE
-IF NOT EXISTS category
+CREATE TABLE category
 (
-   categoryid Serial Primary Key,
-   category VARCHAR
-(40)
+    categoryid Serial Primary Key,
+    category VARCHAR(40)
 );
 
 INSERT INTO category
