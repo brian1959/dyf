@@ -1,3 +1,26 @@
-.welcome {
-  color: rebeccapurple;
+//Home page component styling
+
+.landing {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
+  color: #fff;
+}
+
+.landing-hero {
+  margin: 4% 14%;
+  
+}
+.land-prepare{
+  color: #333;
+}
+
+.prep-title{
+  width: 100%;
+  margin:5% 10% 0 30%;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 300;
 }

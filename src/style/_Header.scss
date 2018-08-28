@@ -6,7 +6,6 @@
   background-image: url(../images/header-bg.gif);
   display: inline-block;
   font-family: "Open Sans", Zoram, "noto sans", Helvetica, Arial, sans-serif;
-  
 }
 
 .company-container {
@@ -24,17 +23,17 @@
   margin: auto 0;
 }
 
-
 .menu-box {
   position: absolute;
   z-index: 3;
-  right: 10%;
+  right: 13%;
   top: 20px;
   height: 85%;
   width: 18%;
   display: flex;
   flex-direction: row;
-  color: #fff
+  color: #fff;
+  font-weight: 300;
 }
 
 .header-date {
@@ -49,7 +48,6 @@
 }
 
 .menu-btn .btn-line {
-  
   width: 15px;
   height: 1.5px;
   margin: 0 0 3px 0;
