@@ -4,10 +4,12 @@ const bodyParser = require("body-parser");
 const massive = require("massive");
 const session = require("express-session");
 const axios = require("axios");
+const cors = require('cors');
 
 const speaker_controller = require("./speaker_controller");
 const course_controller = require("./course_controller");
 const attendee_controller = require("./attendee_controller");
+const faq_controller = require('./faq_controller');
 
 const app = express();
 
@@ -28,6 +30,7 @@ massive(CONNECTION_STRING).then(db => {
 });
 app.use(bodyParser.json());
 app.use(express.static(`${__dirname}/build`));
+app.use(cors());
 
 //session functionality
 app.use(
@@ -111,6 +114,7 @@ app.put("/api/attendee/:id", attendee_controller.updateAttendee);
 app.delete("/api/attendee/:id", attendee_controller.deleteAttendee);
 app.get("/api/schedule", course_controller.getSchedule);
 app.delete("/api/course", course_controller.deleteCourse);
+app.get('/api/faqs', faq_controller.getFaqs);
 
 app.listen(SERVER_PORT, () => {
   console.log(`Server evesdropping on port ${SERVER_PORT}.`);

@@ -1,0 +1,57 @@
+.presenter-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.speaker-section {
+  width: 90vw;
+  display: flex;
+  flex-direction: rows;
+  justify-content: center;
+  align-items: center;
+}
+
+.speaker-header {
+  font-family: "Open sans";
+  font-size: 38px;
+  text-align: center;
+  
+  margin: 80px 10% 20px 10%;
+  font-weight: 300;
+}
+.speaker-list{
+  width: 75vw;
+  margin: 15px 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:flex-start; 
+  align-items: flex-start;
+}
+
+.speaker-info-container {
+
+  margin: 40px 10px 60px 10px;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+}
+
+.speaker-image {
+  width: 250px;
+  margin-bottom: 15px;
+}
+
+.speaker-info{
+  font-family: "Open sans";
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.speaker-info h2{
+  font-style: italic;
+  font-size: 22px;
+  margin-bottom: 15px;
+}

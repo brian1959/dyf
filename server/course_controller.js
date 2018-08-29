@@ -6,7 +6,7 @@ module.exports = {
         dbInstance.get_schedule()
             .then(courses => res.status(200).send(courses))
             .catch(err => {
-                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
+                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been informed!" });
                 console.log(err)
             });
     },
@@ -19,7 +19,7 @@ module.exports = {
         dbInstance.delete_course([params.id])
             .then(() => res.sendStatus(200))
             .catch(err => {
-                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
+                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been informed!" });
                 console.log(err)
             });
     }

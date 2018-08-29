@@ -6,7 +6,7 @@ module.exports = {
         db.get_featured()
             .then(featured => res.status(200).send(featured))
             .catch(err => {
-                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
+                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been informed!" });
                 console.log(err)
             });
     },
@@ -17,7 +17,7 @@ module.exports = {
         db.get_speakers()
             .then(speakers => res.status(200).send(speakers))
             .catch(err => {
-                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
+                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been informed!" });
                 console.log(err)
             });
     },
@@ -29,7 +29,7 @@ module.exports = {
         db.add_speaker([speaker_name, speaker_title, speaking_date, speaker_bio, speaker_image ])
             .then(() => res.sendStatus(200))
             .catch(err => {
-                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
+                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been informed!" });
                 console.log(err)
             });
 
@@ -44,7 +44,7 @@ module.exports = {
         db.delete_speaker([id])
             .then(() => res.sendStatus(200))
             .catch(err => {
-                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been infomred!" });
+                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been informed!" });
                 console.log(err)
             });
     }

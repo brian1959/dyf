@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import "./Registration.css";
-import Button from "../Button/Button";
 import connect from "react-redux";
 
 class Registrationform extends Component {
@@ -74,7 +72,7 @@ class Registrationform extends Component {
             value={this.state.phone}
           />
         </div>
-        <Button action="">Register</Button>
+        <button action="">Register</button>
       </div>
     );
   }

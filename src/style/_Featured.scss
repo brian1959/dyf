@@ -1,0 +1,49 @@
+.featured-section {
+    display: flex;
+    flex-direction: rows;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .featured-header {
+    font-family: "Open sans";
+    font-size: 38px;
+    text-align: center;
+    width: 80%;
+    margin: 80px 10% 20px 10%;
+    font-weight: 300;
+  }
+  .featured-list{
+    margin: 10px 15%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  
+  .featured-info-container {
+    margin-bottom: 60px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  
+  .featured-image {
+    width: 200px;
+    margin: 10px;
+  }
+  
+  .featured-info{
+    font-family: "Open sans";
+    font-size: 18px;
+    font-weight: 300;
+  }
+  
+  .featured-info h2{
+    font-style: italic;
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  

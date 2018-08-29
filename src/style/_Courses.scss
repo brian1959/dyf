@@ -1,0 +1,75 @@
+.course-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.courses-header {
+  font-size: 60px;
+  text-align: center;
+  width: 80%;
+  margin: 5px 10% 20px 10%;
+  font-weight: 300;
+  font-family: "Open sans";
+}
+
+.day-box-container {
+  height: 150px;
+  width: 70%;
+  margin: 0 15%;
+  text-align: center;
+  display: grid;
+  grid-template-areas:
+    "dayT dayF dayS"
+    "dayth dayfr daysa";
+  grid-template-columns: (3 1fr);
+}
+
+.dayT {
+  grid-area: dayT;
+}
+.dayF {
+  grid-area: dayF;
+}
+.dayS {
+  grid-area: dayS;
+}
+.dayth {
+  grid-area: dayth;
+}
+.dayfr {
+  grid-area: dayfr;
+}
+.daysa {
+  grid-area: daysa;
+}
+
+.day-box {
+  border: 1px solid gray;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.day-letter-holder {
+  font-family: "Open sans";
+  font-weight: 300;
+  text-align: center;
+  height: 40%;
+  width: 33%;
+  font-size: 36px;
+  padding: auto;
+}
+
+.day-name-holder {
+  font-family: "Open sans";
+  height: 30%;
+  width: 33%;
+  font-size: 24px;
+}
+
+.current-day{
+    background-color: lightgray;
+
+}
