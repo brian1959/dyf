@@ -115,6 +115,7 @@ app.delete("/api/attendee/:id", attendee_controller.deleteAttendee);
 app.get("/api/schedule", course_controller.getSchedule);
 app.delete("/api/course", course_controller.deleteCourse);
 app.get('/api/faqs', faq_controller.getFaqs);
+app.get('/api/times', course_controller.getScheduleTime);
 
 app.listen(SERVER_PORT, () => {
   console.log(`Server evesdropping on port ${SERVER_PORT}.`);

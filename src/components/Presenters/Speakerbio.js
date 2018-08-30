@@ -1,15 +1,22 @@
-import React from 'react';
+import React from "react";
 
-export default function Speakerbio(props){
-    return (
-        <div className="bio-info-container">
-          <div className="bio-name">
-            <h2>{`${props.speakingDate}--${props.speakerName}`}</h2>
-          </div>
-          <div className="bio-info">
-            
-            <span>{props.speakerBio}</span>
-          </div>
+export default function Speakerbio({speakingDate,speakerName,speakerBio,presenterName,presenterTitle,presenterBio}) {
+  return (
+    <div className="bio-info-container">
+      <div className="bio-header">
+        <div className="bio-name">
+          <h2>
+            {speakingDate}? {`${speakingDate}-${speakerName}`}
+           : {presenterName}
+          </h2>
+          <h3>{presenterTitle}</h3>
         </div>
-      );
+      </div>
+      <div className="bio-info">
+        <span>
+          {speakerBio}? {speakerBio} : {presenterBio}
+        </span>
+      </div>
+    </div>
+  );
 }

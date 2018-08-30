@@ -73,3 +73,20 @@
     background-color: lightgray;
 
 }
+
+.schedule-container{
+  display: flex;
+  flex-direction: row;
+  
+}
+.schedule-filters-container{
+  width: 370px;
+  height: 750;
+  padding-right: 40px;
+}
+
+.schedule-filter{
+  width: 330px;
+  height: 150px;
+  border: solid 1px #000000;
+}

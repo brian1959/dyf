@@ -1,16 +1,19 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Schedule from "./Schedule";
+import Coursetime from "./Coursetime";
 
 class Courses extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      coursesToDisplayThursday: [],
-      coursesToDisplayFriday: [],
-      coursesToDisplaySaturday: [],
-      coursesToDisplay: [],
+      // coursesToDisplayThursday: [],
+      // coursesToDisplayFriday: [],
+      // coursesToDisplaySaturday: [],
+      // timeToDisplay: [],
+      courses: [],
+      displaytime:[],
+      displayday:'Thursday',
       scheduleid: "",
       coursename: "",
       coursesummary: "",
@@ -23,23 +26,20 @@ class Courses extends Component {
   }
   componentDidMount() {
     axios.get("/api/schedule").then(response => {
-      const Thursday = response.data.filter(
-        course => course.day === "Thursday"
-      );
-      const Friday = response.data.filter(course => course.day === "Friday");
-      const Saturday = response.data.filter(
-        course => course.day === "Saturday"
-      );
 
-      this.setState({ coursesToDisplay: response.data });
+      this.setState({courses: response.data });
+    });
+
+    axios.get("/api/times").then(response => {
+      this.setState({ displaytime: response.data });
     });
   }
 
-
-
   render() {
-    const { coursesToDisplay } = this.state;
+    let  coursesToDisplay = this.state.courses.filter(course => course.day === this.state.displayday);
     console.log(coursesToDisplay)
+    let timeToDisplay = this.state.displaytime.filter(times => times.day === this.state.displayday);
+
     return (
       <div>
         <section className="course-section">
@@ -61,18 +61,25 @@ class Courses extends Component {
             </div>
           </div>
         </section>
-        {coursesToDisplay.map(course => (
-          <Schedule
-            key={course.scheduleid}
-            coursename={course.coursename}
-            coursesummary={course.coursesummary}
-            presenter={course.presenter}
-            company={course.company}
-            day={course.day}
-            time={course.time}
-            explevel={course.explevel}
-          />
-        ))}
+        <div className="schedule-container">
+          <div className="schedule-filters-container">
+            <div className="schedule-filter">PASS</div>
+            <div className="schedule-filter">DIFFICULTY</div>
+            <div className="schedule-filter">CAETGORY</div>
+            <div className="schedule-filter">SEARCH</div>
+          </div>
+          <div className="course-schedule-container">
+            {timeToDisplay.map(schtime => (
+              <Coursetime
+                key={`${schtime.time}_${schtime.day}`}
+                time={schtime.time}
+                coursestime={coursesToDisplay.filter(course => {
+                  return course.time === schtime.time;
+                })}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     );
   }

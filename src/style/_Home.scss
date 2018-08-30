@@ -1,26 +1,80 @@
 //Home page component styling
 
 .landing {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: space-around;
+  align-items: center;
   color: #fff;
 }
 
 .landing-hero {
-  margin: 4% 14%;
-  
-}
-.land-prepare{
-  color: #333;
+  margin: 1% 0 50px 0;
+  width: 70vw;
+  height: 700px;
+  background:linear-gradient(
+    rgba(61, 33, 33, 0.2),
+    rgba(61, 33, 33, 0.9)),
+     url("../images/hero.jpg");
+  background-repeat: none;
+  background-size: cover;
+  text-align: center;
+  font-family: "Open sans";
+  font-weight: 300;
 }
 
-.prep-title{
+.overlay-promo {
+  font-size: 54px;
+  margin-top: 400px;
+  margin-bottom: 20px;
+}
+
+.overlay-promo-subtitle {
+  font-size: 22px;
+}
+.land-prepare {
+  width: 100vw;
+  color: #333;
+
+}
+
+.prep-title {
   width: 100%;
-  margin:5% 10% 0 30%;
+  margin: 20px 0 40px 0;
   text-align: center;
   font-size: 36px;
   font-weight: 300;
+
+}
+.prep-boxes-container{
+  width: 80%;
+  margin-left: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:flex-start;
+  font-family: "Open sans";
+}
+.prep-box{
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+
+.prep-images{
+  width: 300px;
+}
+
+.prep-text{
+  width: 300px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.prep-box h2{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-style: italic;
 }

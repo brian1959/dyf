@@ -4,7 +4,7 @@ export default function Speaker(props) {
   return (
     <div
       className="speaker-info-container"
-      onClick={() => props.getBioModal(props.speakerName)}
+      onClick={() => props.getBioModal(props)}
     >
       <div className="speaker-image">
         <img src={`../images/${props.speakerImage}`} alt={props.speakerName} />

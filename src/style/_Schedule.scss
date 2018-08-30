@@ -1,7 +1,7 @@
 .sch-container {
-  width: 40%;
-  float: right;
-  margin-right: 15%;
+  width: 60%;
+  
+  margin-left: 25%;
   font-family: "Open Sans";
   color: #53565a;
 }
@@ -27,4 +27,9 @@
 .session-meta-item-label {
   font-weight: 700;
   font-size: 18px;
+}
+
+.Collapsible__trigger{
+  font-size: 18px;
+  font-weight: 700;
 }

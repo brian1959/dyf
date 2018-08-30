@@ -3,6 +3,7 @@ import axios from "axios";
 import Speaker from "./Speaker";
 import Featured from "./Featured";
 import speakerBio from "./Speakerbio";
+import Speakerbio from "./Speakerbio";
 
 export default class Presenters extends Component {
   constructor(props) {
@@ -49,6 +50,7 @@ export default class Presenters extends Component {
           <div className="speaker-header">
             <span>RootsTech 2018 Speakers</span>
           </div>
+          <Speakerbio />
         </section>
         <section className="speaker-list">
           {speakersToDisplay.map(speaker => (
@@ -77,6 +79,7 @@ export default class Presenters extends Component {
               presenterBio={featured.presenter_bio}
               presenterImage={featured.presenter_image}
               caption={featured.caption}
+              getBioModal={this.getBioModal}
             />
           ))}
         </section>

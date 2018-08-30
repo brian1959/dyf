@@ -5,26 +5,63 @@ export default class Home extends Component {
     return (
       <div className="landing">
         <div className="landing-hero">
-          <img
-            className="landing-hero"
-            src="../images/Landing/hero.jpg"
-            alt="expo hall" width='189%'
-          />
-          <div className="hero-h1">
-          Be an Exhibitor at RootsTech 2019
+          <div className="overlay-promo">
+            RootsTech Expands to London in 2019
           </div>
-          <section className='land-prepare'>
-            <div className='prep-title'>Preparing for RootsTech 2019</div>
-            <div className="prep-boxes">
-            <div className="prep-images"></div>
-            <div className="prep-images"></div>
-            <div className="prep-images"></div>
-            <div className="prep-text"></div>
-            <div className="prep-text"></div>
-            <div className="prep-text"></div>
-            </div>
-          </section>
+          <div className="overlay-promo-subtitle">
+            24-26 October 2019 | ExCel London Convention Center | London,
+            England
+          </div>
         </div>
+        <section className="land-prepare">
+          <div className="prep-title">Preparing for RootsTech 2019</div>
+          <div className="prep-boxes-container">
+            <div className="prep-box">
+              <img
+                className="prep-images"
+                src="../images/exhibitor.jpg"
+                alt="exhibit"
+              />
+              <div className="prep-text">
+                <h2>Be an Exhibitor at RootsTech 2019</h2>
+                <p>
+                  Join us as an exhibitor or sponsor at the world’s largest
+                  genealogy conference! Get ready to make sales, interact with
+                  customers, and grow your brand. Apply today!
+                </p>
+              </div>
+            </div>
+            <div className="prep-box">
+              <img
+                className="prep-images"
+                src="../images/reasons.jpg"
+                alt="reasons"
+              />
+              <div className="prep-text">
+                <h2>9 Reasons to Attend RootsTech 2019</h2>
+                <p>
+                  From informative classes to inspirational keynotes and a
+                  gigantic expo hall, we’ve got something we’re sure you’ll
+                  love.
+                </p>
+              </div>
+            </div>
+            <div className="prep-box">
+              <img
+                className="prep-images"
+                src="../images/bookroom.jpg"
+                alt="Book a room"
+              />
+              <div className="prep-text">
+                <h2>Book Your Room</h2>
+                <p>
+                  Various hotels are offering reduced rates for RootsTech
+                  attendees. Make your reservation today!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     );
   }
