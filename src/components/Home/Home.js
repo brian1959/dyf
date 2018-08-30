@@ -62,6 +62,16 @@ export default class Home extends Component {
             </div>
           </div>
         </section>
+        <section className='save-the-date-container'>
+        <img className="save-date-img" src='../images/savethedate.jpg' />
+        <div className="save-date-text-container">
+        <div className="save-date">SAVE THE DATE </div><div> Registration for RootsTech 2019 opens September20!</div>
+        <h2>Registration for RootsTech 2019 opens September20!</h2>
+        <p>
+        Registration for RootsTech 2019, happening February 27–March 2, 2019, opens on Thursday, September 20, 2018! For a limited time, exclusive early bird pricing will be available on RootsTech passes. Mark your calendars, and be one of the first to register for the world’s largest family history event!
+        </p>
+        </div>
+        </section>
       </div>
     );
   }

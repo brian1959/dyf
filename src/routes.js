@@ -10,6 +10,7 @@ import Schedule from "./components/Courses/Schedule";
 import Registrationform from "./components/Registration/RegistrationForm";
 import Login from "./components/Login/Login";
 import Faqs from "./components/Faq/Faqs";
+import Labs from './components/Labs/Labs';
 
 export default (
   <Switch>
@@ -22,5 +23,6 @@ export default (
     <Route path="/faqs" component={Faqs} />
     <Route exact path="/login" component={Login} />
     <Route path="/registrationform" component={Registrationform} />
+    <Route path='/labs' component={Labs} />
   </Switch>
 );

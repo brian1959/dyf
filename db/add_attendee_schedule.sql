@@ -1,0 +1,1 @@
+INSERT INTO attendeeschedule (attendeeid,scheduleid) VALUES ($1,$2);

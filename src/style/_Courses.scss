@@ -45,11 +45,12 @@
 
 .day-box {
   border: 1px solid gray;
-  min-width: 260px;
+  min-width: 180px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .day-letter-holder {
@@ -64,19 +65,23 @@
 
 .day-name-holder {
   font-family: "Open sans";
+  text-align: center;
   height: 30%;
   width: 33%;
   font-size: 24px;
 }
 
 .current-day{
-    background-color: lightgray;
+    background-color: rgb(238, 238, 238);
 
 }
 
 .schedule-container{
   display: flex;
   flex-direction: row;
+  margin-left: 30px;
+  width: 100vw;
+  margin: 10px 15vw;
   
 }
 .schedule-filters-container{
@@ -86,7 +91,20 @@
 }
 
 .schedule-filter{
-  width: 330px;
-  height: 150px;
-  border: solid 1px #000000;
+  margin-bottom: 30px;
+  width: 310px;
+  height: 100px;
+  border: solid 1px rgb(238, 238, 238);
+  text-align: center;
+  padding: 20px;
 }
+
+.sf-header{
+  font-family: 'Open sans';
+  line-height: 1.5;
+  margin-top:14px;
+  font-weight: bold;
+  font-size: 22px;
+
+}
+

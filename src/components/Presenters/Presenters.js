@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import Speaker from "./Speaker";
 import Featured from "./Featured";
-import speakerBio from "./Speakerbio";
 import Speakerbio from "./Speakerbio";
 
 export default class Presenters extends Component {
@@ -48,9 +47,9 @@ export default class Presenters extends Component {
       <div className="presenter-body">
         <section className="speaker-section">
           <div className="speaker-header">
-            <span>RootsTech 2018 Speakers</span>
+            RootsTech 2018 Speakers
           </div>
-          <Speakerbio />
+          {/* <Speakerbio /> */}
         </section>
         <section className="speaker-list">
           {speakersToDisplay.map(speaker => (
@@ -67,7 +66,7 @@ export default class Presenters extends Component {
         </section>
         <section className="featured-section">
           <div className="featured-header">
-            <span>Featured Presenters</span>
+            Featured Presenters
           </div>
         </section>
         <section className="featured-list">

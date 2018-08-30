@@ -1,6 +1,7 @@
 //header styling
 
 .hcontainer {
+  position: fixed;
   height: 65px;
   width: 100vw;
   background-image: url(../images/header-bg.gif);
@@ -109,6 +110,7 @@
     .nav-item {
       transform: translate3d(600px, 0, 0);
       @include easeOut;
+   
 
       &.show {
         transform: translate3d(0, 0, 0);

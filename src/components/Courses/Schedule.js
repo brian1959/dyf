@@ -1,25 +1,36 @@
-import React from "react";
+import React, {Component} from "react";
 import Collapsible from "react-collapsible";
 
-export default function Schedule(props) {
+export default class Schedule extends Component {
+    constructor(props){
+      super(props)
+
+      this.state ={
+        shceduleid:'',
+      }
+    }
+
+  render(){
+
+
   return (
     <div className="sch-container">
-      <Collapsible trigger={props.coursename} transitionTime='2000'>
-
-        <div className="session-speaker">{` ${props.presenter}, ${
-          props.company
+      <Collapsible trigger={this.props.coursename} transitionTime={300}>
+<button >Select</button>
+        <div className="session-speaker">{` ${this.props.presenter}, ${
+          this.props.company
         }`}</div>
-        <div className="session-summary"> {props.coursesummary}</div>
+        <div className="session-summary"> {this.props.coursesummary}</div>
         <div className="session-meta-item">
           <span className="session-meta-item-label">Difficulty:</span>{" "}
-          {props.explevel}
+          {this.props.explevel}
         </div>
         <div className="session-meta-item">
           <span className="session-meta-item-label">Category:</span>{" "}
-          {props.category}
+          {this.props.category}
         </div>
       </Collapsible>
       <hr />
     </div>
-  );
+  )};
 }

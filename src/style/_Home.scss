@@ -59,6 +59,7 @@
   display: flex;
   flex-direction: column;
   width: 33%;
+  margin-bottom: 70px;
 }
 
 
@@ -77,4 +78,44 @@
   margin-bottom: 15px;
   font-size: 22px;
   font-style: italic;
+}
+
+.save-the-date-container{
+  width: 90vw;
+  margin-top: 50px;
+  display:flex;
+  flex-direction: row;
+ }
+
+.save-date-img{
+  height: 365px;
+}
+
+.save-the-date-text-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 30px;
+  padding: 20px;
+}
+
+.save-date{
+  font-family: 'Opens sans';
+  font-weight: bold;
+  color:#333;
+  font-size: 16px;
+  margin: 20px;
+}
+
+.save-date>h2{
+  font-size: 34px;
+  font-weight: 400;
+  color: black;
+}
+
+.save-date>p{
+  line-height: 1.6;
+  font-size: 16px;
+  color: black;
 }

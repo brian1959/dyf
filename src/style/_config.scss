@@ -1,5 +1,6 @@
 $primary-color: rgb(28, 24, 73);
 $secondary-color: #eece1a;
+$text-color:#53565a;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
@@ -9,7 +10,7 @@ $secondary-color: #eece1a;
 
 @function set-text-color($color) {
   @if (lightness($color) > 40) {
-    @return #000;
+    @return #53565a;
   } @else {
     @return #fff;
   }

@@ -6,9 +6,9 @@ export default function Speaker(props) {
       className="speaker-info-container"
       onClick={() => props.getBioModal(props)}
     >
-      <div className="speaker-image">
-        <img src={`../images/${props.speakerImage}`} alt={props.speakerName} />
-      </div>
+     
+        <img className="speaker-image" src={`../images/${props.speakerImage}`} alt={props.speakerName} />
+      
       <div className="speaker-info">
         <h2>{`${props.speakingDate}--${props.speakerName}`}</h2>
 

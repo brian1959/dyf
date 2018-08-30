@@ -5,7 +5,7 @@ class Labs extends Component{
     render(){
 
         return(
-            <div>
+            <div className='lab-main'>
                 <h1 className="lab-header">
                 Computer Labs</h1>
                 <img className='lab-image' src='../images/labs.jpg' alt='Computer Labs'/>
