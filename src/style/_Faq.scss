@@ -1,0 +1,20 @@
+.faq-container{
+  font-family: 'Open sans';
+  width: 90%;
+  margin: 30px 2%;
+  padding: 10px 3%;
+  font-size: 18px;
+  font-weight: 300;  
+}
+.faq-categories{
+    margin: 40px 0;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.faq-cat-filter{
+    color: #333;
+    margin: 10px;
+}

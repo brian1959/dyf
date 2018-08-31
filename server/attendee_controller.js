@@ -1,75 +1,86 @@
 module.exports = {
+  getAttendees: (req, res, next) => {
+    const db = req.app.get("db");
 
-    getAttendees: (req, res, next) => {
-        const db = req.app.get('db');
+    db.get_attendees()
+      .then(attendees => res.status(200).send(attendees))
+      .catch(err => {
+        res.status(500).send({
+          errorMessage:
+            "Oops! Something went wrong. Our engineers have been informed!"
+        });
+        console.log(err);
+      });
+  },
 
-        db.get_attendees()
-            .then(attendees => res.status(200).send(attendees))
-            .catch(err => {
-                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been informed!" });
-                console.log(err)
-            });
-    },
+  getAttendee: async (req, res) => {
+    const db = req.app.get("db");
+    const { userid } = req.session.user;
+    let attendee = await db.get_attendee([userid]);
+    res.status(200).send(attendee)
 
-    getAttendee: (req, res, next) => {
-        const db = req.app.get('db');
+  },
 
-        db.get_attendee()
-            .then(attendee => res.status(200).send(attendee))
-            .catch(err => {
-                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been informed!" });
-                console.log(err)
-            });
-    },
+  updateAttendee: async (req, res) => {
+    const db = req.app.get("db");
 
-    addAttendee: (req, res, next) => {
-        const db = req.app.get('db');
-        const {afirstname, alastname, aaddress,  acity, astate,  azip, email, phone, username, apassword, auth_id} = req.body;
-        console.log(req.body)
-        db.add_attendee([afirstname, alastname, aaddress,  acity, astate,  azip, email, phone, username, apassword, auth_id])
-            .then(() => res.sendStatus(200))
-            .catch(err => {
-                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been informed!" });
-                console.log(err)
-            });
+    const { userid } = req.session.user;
+    let attendee = await db.get_attendee([userid]);
+   
+    const {
+      firstname = attendee[0].firstname,
+      lastname = attendee[0].lastname,
+      address = attendee[0].address,
+      city = attendee[0].city,
+      state = attendee[0].state,
+      zip = attendee[0].zip,
+      phone = attendee[0].phone,
+      email = attendee[0].email
+    } = req.body;
 
-    },
+    let updatedAttendee = await db.update_attendee([
+     
+      userid,
+      firstname,
+      lastname,
+      address,
+      city,
+      state,
+      zip,
+      phone,
+      email
+    ]);
 
-    updateAttendee:(req, res) => {
-        const updateID = req.params.id;
-        const {afirstname, alastname, aaddress, acity, astate, azip, email, phone, username, apassword  } = req.body;
-        const attendeeIndex = attendees.findIndex(attendee=> attendee.id == updateID);
-        console.log(date)
-        let attendee = attendees[attendeeIndex];
+    res.status(200).send(updatedAttendee);
+  },
 
-        attendees[attendeeIndex ] = {
-            id: attendee.id,
-            afirstname: afirstname || attendee.afirstname,
-            alastname: alastname || attendee.alastname,
-            aaddress: aaddress || attendee.aaddress,
-            acity: acity || attendee.acity,
-            astate: astate || attendee.astate,
-            azip: azip || attendee.azip,
-            email: email || attendee.email,
-            phone: phone || attendee.phone,
-            username: username || attendee.username,
-            apassword: apassword || attendee.apassword
-        };
-        console.log(workouts)
-        res.status(200).send(workouts);
-     },
+  deleteAttendee: (req, res, next) => {
+    const db = req.app.get("db");
+    const { id } = req.params;
 
+    db.delete_attendee([id])
+      .then(() => res.sendStatus(200))
+      .catch(err => {
+        res.status(500).send({
+          errorMessage:
+            "Oops! Something went wrong. Our engineers have been informed!"
+        });
+        console.log(err);
+      });
+  },
 
+  addAttendeeSchedule: (req, res) => {
+    const db = req.app.get("db");
+    const { scheduleid } = req.body;
 
-    deleteAttendee: (req, res, next) => {
-        const db = req.app.get('db');
-        const { id } = req.params;
-
-        db.delete_attendee([id])
-            .then(() => res.sendStatus(200))
-            .catch(err => {
-                res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been informed!" });
-                console.log(err)
-            });
-    }
-}
+    db.add_attendee_schedule([req.session.user.userid, scheduleid])
+      .then(() => res.sendStatus(200))
+      .catch(err => {
+        res.status(500).send({
+          errorMessage:
+            "Oops! Something went wrong. Our engineers have been informed!"
+        });
+        console.log(err);
+      });
+  }
+};

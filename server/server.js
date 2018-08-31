@@ -68,10 +68,11 @@ app.get("/auth/callback", async (req, res) => {
   let foundUser = await db.find_user([sub]);
   if (foundUser[0]) {
     req.session.user = foundUser[0];
-    res.redirect("/#/schedule");
+    res.redirect("/#/profile");
   } else {
     let createdUser = await db.create_user(name, email, picture, sub);
-    req.session.user = createdUser[0] = res.redirect("/#/registrationform");
+    req.session.user = createdUser[0] ;
+    res.redirect("/#/registrationform");
   }
 });
 
@@ -97,6 +98,7 @@ app.get("/api/user-data", envCheck, (req, res) => {
   }
 });
 
+
 app.get("/auth/logout", (req, res) => {
   req.session.destroy();
   res.redirect("http://localhost:3000/");
@@ -109,13 +111,13 @@ app.post("/api/speaker", speaker_controller.addSpeaker);
 app.delete("/api/speaker/:id", speaker_controller.deleteSpeaker);
 app.get("/api/attendees", attendee_controller.getAttendees);
 app.get("/api/attendee", attendee_controller.getAttendee);
-app.post("/api/attendee", attendee_controller.addAttendee);
-app.put("/api/attendee/:id", attendee_controller.updateAttendee);
-app.delete("/api/attendee/:id", attendee_controller.deleteAttendee);
+app.put("/api/attendee", attendee_controller.updateAttendee);
+app.delete("/api/admin/:usertodelete", attendee_controller.deleteAttendee);
 app.get("/api/schedule", course_controller.getSchedule);
 app.delete("/api/course", course_controller.deleteCourse);
 app.get('/api/faqs', faq_controller.getFaqs);
 app.get('/api/times', course_controller.getScheduleTime);
+app.post("/api/addschedule", attendee_controller.addAttendeeSchedule);
 
 app.listen(SERVER_PORT, () => {
   console.log(`Server evesdropping on port ${SERVER_PORT}.`);

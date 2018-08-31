@@ -9,9 +9,9 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <nav className="nav">
+        <div className='header-spacer' />
           {routes}
-        </nav>
+        
         <div className="welcome">Hello to all coders!</div>
       </div>
     );

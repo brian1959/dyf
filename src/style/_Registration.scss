@@ -1,0 +1,46 @@
+.registration-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reg-title {
+  margin: 30px 0;
+  text-align: center;
+  font-family: "Open sans";
+  font-size: 24px;
+}
+
+.form-container {
+  width: 70%;
+  margin: 10px 15%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.reg-form-box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: 'Open sans';
+  font-weight: 300;
+}
+
+.reg-form-title {
+  height: 40px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.reg-form {
+  height: 40px;
+  width: 200px;
+  margin: 10px 30px;
+  font-size: 18px;
+  padding: 4px;
+}

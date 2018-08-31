@@ -63,7 +63,7 @@ export default class Home extends Component {
           </div>
         </section>
         <section className='save-the-date-container'>
-        <img className="save-date-img" src='../images/savethedate.jpg' />
+        <img className="save-date-img" src='../images/savethedate.jpg' alt='save the date'/>
         <div className="save-date-text-container">
         <div className="save-date">SAVE THE DATE </div><div> Registration for RootsTech 2019 opens September20!</div>
         <h2>Registration for RootsTech 2019 opens September20!</h2>

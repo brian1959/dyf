@@ -1,1 +1,2 @@
-UPDATE attendees SET afirstname = $2, alastname = $3, aaddress = $4, acity = $5, astate = $6, azip = $7, email = $8, phone = $9, username = $10, apassword = $11 WHERE attendeeid = $1;
+UPDATE users SET firstname = $2, lastname = $3, "address" = $4, city = $5, "state" = $6, zip = $7, email = $9, phone = $8 WHERE userid = $1
+returning *;

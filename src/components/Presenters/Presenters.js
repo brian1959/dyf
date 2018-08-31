@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Speaker from "./Speaker";
 import Featured from "./Featured";
-import Speakerbio from "./Speakerbio";
+// import Speakerbio from "./Speakerbio";
 
 export default class Presenters extends Component {
   constructor(props) {

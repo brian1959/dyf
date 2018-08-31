@@ -1,3 +1,3 @@
 SELECT *
 FROM users
-WHERE userid=1;
+WHERE userid=$1;

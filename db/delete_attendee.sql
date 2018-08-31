@@ -1,1 +1,1 @@
-DELETE FROM attendees WHERE attendeeid = $1;
+DELETE FROM users WHERE userid = $1;

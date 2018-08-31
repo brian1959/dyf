@@ -2,7 +2,7 @@ module.exports = {
 
     getSchedule: (req, res, next) => {
         const dbInstance = req.app.get('db');
-
+      
         dbInstance.get_schedule()
             .then(courses => res.status(200).send(courses))
             .catch(err => {

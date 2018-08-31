@@ -11,6 +11,7 @@ import Registrationform from "./components/Registration/RegistrationForm";
 import Login from "./components/Login/Login";
 import Faqs from "./components/Faq/Faqs";
 import Labs from './components/Labs/Labs';
+import Profile from './components/Participants/Attendee';
 
 export default (
   <Switch>
@@ -23,6 +24,8 @@ export default (
     <Route path="/faqs" component={Faqs} />
     <Route exact path="/login" component={Login} />
     <Route path="/registrationform" component={Registrationform} />
-    <Route path='/labs' component={Labs} />
+    <Route path='/labs' component={Labs}
+     />
+     <Route path='/profile' component={Profile} />
   </Switch>
 );
