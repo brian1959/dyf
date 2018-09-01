@@ -109,15 +109,19 @@ app.get("/api/speakers", speaker_controller.getSpeakers);
 app.get("/api/featured", speaker_controller.getFeatured);
 app.post("/api/speaker", speaker_controller.addSpeaker);
 app.delete("/api/speaker/:id", speaker_controller.deleteSpeaker);
+
 app.get("/api/attendees", attendee_controller.getAttendees);
 app.get("/api/attendee", attendee_controller.getAttendee);
 app.put("/api/attendee", attendee_controller.updateAttendee);
+app.post("/api/addschedule", attendee_controller.addAttendeeSchedule);
 app.delete("/api/admin/:usertodelete", attendee_controller.deleteAttendee);
+
 app.get("/api/schedule", course_controller.getSchedule);
 app.delete("/api/course", course_controller.deleteCourse);
-app.get('/api/faqs', faq_controller.getFaqs);
 app.get('/api/times', course_controller.getScheduleTime);
-app.post("/api/addschedule", attendee_controller.addAttendeeSchedule);
+
+app.get('/api/faqs', faq_controller.getFaqs);
+app.get('/api/categories', faq_controller.getCategories)
 
 app.listen(SERVER_PORT, () => {
   console.log(`Server evesdropping on port ${SERVER_PORT}.`);

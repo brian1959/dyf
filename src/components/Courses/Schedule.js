@@ -6,7 +6,7 @@ export default class Schedule extends Component {
       super(props)
 
       this.state ={
-        shceduleid:'',
+        scheduleid:'',
       }
     }
 

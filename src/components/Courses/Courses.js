@@ -37,10 +37,9 @@ class Courses extends Component {
 
   render() {
     let  coursesToDisplay = this.state.courses.filter(course => course.day === this.state.displayday);
-    console.log(coursesToDisplay)
+ 
     let timeToDisplay = this.state.displaytime.filter(times => times.day === this.state.displayday);
-console.log(
-    this.state.displayday )
+
 
     return (
       <div>

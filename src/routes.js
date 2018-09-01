@@ -12,6 +12,8 @@ import Login from "./components/Login/Login";
 import Faqs from "./components/Faq/Faqs";
 import Labs from './components/Labs/Labs';
 import Profile from './components/Participants/Attendee';
+import Expohall from './components/Expohall/Expohall';
+import Overview from './components/Overview/Overview';
 
 export default (
   <Switch>
@@ -27,5 +29,7 @@ export default (
     <Route path='/labs' component={Labs}
      />
      <Route path='/profile' component={Profile} />
+     <Route path='/expohall' component={Expohall}/>
+     <Route path='/overview' component={Overview}/>
   </Switch>
 );

@@ -1,0 +1,1 @@
+SElect faq_category from faq GROUP BY faq_category;

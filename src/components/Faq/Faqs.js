@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Faq from "./Faq";
+import Faqcategory from "./Faqcategory";
+import Faq from './Faq'
 
 class Faqs extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      faqsToDisplay: [],
+      faqs: [],
+      categories: [],
       category: "",
       question: "",
       answer: ""
@@ -15,12 +17,19 @@ class Faqs extends Component {
   }
   componentDidMount() {
     axios.get("/api/faqs").then(response => {
-      this.setState({ faqsToDisplay: response.data });
+      this.setState({ faqs: response.data });
+    });
+    
+    axios.get("/api/categories").then(response => {
+      this.setState({ categories: response.data });
     });
   }
-
+  
   render() {
-    const { faqsToDisplay } = this.state;
+    
+    
+    let categoryToDisplay = this.state.categories
+    console.log(this.state);
 
     return (
       <div className="faq-container">
@@ -34,9 +43,9 @@ class Faqs extends Component {
           <div className="faq-cat-filter">REGISTRATION</div>
           <div className="faq-category" />
         </div>
-        {faqsToDisplay.map(faq => (
+        {categoryToDisplay.map(faq => (
           <Faq
-            key={faq.faqid}
+            key={faq.faq_category}
             category={faq.faq_category}
             question={faq.faq_question}
             answer={faq.faq_response}
