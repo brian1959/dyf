@@ -1,32 +1,178 @@
-.overview-hero{
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-  
-  }
-  
-  .overview-image{
-      
-      margin-bottom: 56px;
-      
-  }
-  
-  .overview-text-container{
-      margin-left: 25px;
-      line-height: 1.6;
-      font-weight: 300;
-  }
+.overview-main {
+  width: 80%;
+  font-family: "Open sans";
+  margin: 0 10%;
 
-  .overview-date{
-   font-size: 14px;   
-  }
-  h1{
-      font-size: 34px;
-      margin-bottom: 15px;
-  }
-  
-  p{
-      font-size: 18px;
-      font-weight: 300;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #53565a;
+}
+.overview-header {
+}
+.overview-hero {
+  width: 90%;
+  margin: 20px 5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.overview-image {
+  margin-bottom: 56px;
+}
+
+.overview-text-container {
+  margin-left: 25px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.overview-date {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.overview-text-container > h1 {
+  font-size: 34px;
+  font-weight: 400;
+  margin: 15px 0;
+  line-height: 1.4;
+}
+
+.overview-text-container > p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.overview-sessions {
+  width: 90%;
+  margin: o 5%;
+}
+
+.overview-session-header-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overview-session-image {
+  border-radius: 50%;
+  max-width: 200px;
+}
+
+.overview-session-main {
+  margin: 40px 0;
+  font-size: 54px;
+  font-weight: 300;
+}
+
+.overview-session-main-text {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 35px;
+}
+
+.overview-session-categories-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.overview-session-category-wrapper {
+  max-width: 33%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+.overview-session-category-image {
+  max-width: 25%;
+}
+.os-image {
+  max-height: 75px;
+}
+
+.overview-session-category-text-wrapper {
+  max-width: 70%;
+  padding: 0 15px;
+  font-size: 18px;
+}
+.overview-session-category-title {
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.overview-session-category-text {
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  padding-right: 20px;
+}
+
+.overview-expohall {
+  width: 85%;
+  background-color: #eff9fb;
+  padding: 30px 30px;
+}
+
+.ov-expo-title {
+  font-size: 54px;
+  font-weight: 300;
+  text-align: center;
+  margin: 30px 0;
+}
+.ov-expo-hero-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+.ov-expo-image {
+  max-width: 60%;
+}
+
+.ov-expo-hero {
+  max-height: 380px;
+}
+
+.ov-expo-features-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.ov-expo-feature-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ov-expo-feature-image{
+    max-height: 150px;
+    margin: 20px;
+}
+
+.ov-expo-feature-box>h1{
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin: 50px 0 10px 0;
+
+}
+.ov-expo-feature-box>p{
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    text-align: center;
+
+}
+
+
