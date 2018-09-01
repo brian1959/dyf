@@ -149,6 +149,11 @@ export default function Overview(props) {
               It's the perfect place to meet hundreds of vendors and find out
               what's up and coming in the family history industry.
             </div>
+            <a href="/#/expohall">
+              <div className="ov-expo-btn">
+                <span className="ov-expo-link">Expo Hall</span>
+              </div>
+            </a>
           </div>
         </div>
         <div className="ov-expo-title">What to Do at the Expo Hall</div>
@@ -159,7 +164,6 @@ export default function Overview(props) {
               src="../images/overview/discovery.jpg"
               alt="Discovery"
             />
-
             <h1>Discovery Zone</h1>
             <p>
               At discovery zone,you'll see your ancestors come to life with
@@ -196,6 +200,34 @@ export default function Overview(props) {
               interactive displays, fun facts, and engaging activies. Come
               seehow fun it can be to learn about your heritage.
             </p>
+          </div>
+        </div>
+      </section>
+      <section className="ov-reasons">
+        <div className="reason-title">
+          4 Reasons You're Going to Love RootsTech 2019
+        </div>
+        <div className="ov-reasons-wrapper">
+          <div className="ov-reasons-filter-container">
+            <div className="ov-reason-filter-box">
+              <div className="reason-num">1</div>
+              <div className="reason-prop">AMAZING EVENTS</div>
+            </div>
+            <div className="ov-reason-filter-box">
+              <div className="reason-num">2</div>
+              <div className="reason-prop">INFORMATIVE SESSIONS</div>
+            </div>
+            <div className="ov-reason-filter-box">
+              <div className="reason-num">3</div>
+              <div className="reason-prop">EXPO HALL</div>
+            </div>
+            <div className="ov-reason-filter-box">
+              <div className="reason-num">4</div>
+              <div className="reason-prop">INSPIRING KEYNOTES</div>
+            </div>
+          </div>
+          <div className="ov-reason-image-holder">
+          <img className='ov-reason-image' src='../images/overview/amazeevent.jpg' alt='amazing events'/>
           </div>
         </div>
       </section>

@@ -115,7 +115,7 @@
 }
 
 .overview-expohall {
-  width: 85%;
+  width: 86%;
   background-color: #eff9fb;
   padding: 30px 30px;
 }
@@ -124,7 +124,7 @@
   font-size: 54px;
   font-weight: 300;
   text-align: center;
-  margin: 30px 0;
+  margin: 30px 0 42px 0;
 }
 .ov-expo-hero-wrapper {
   width: 100%;
@@ -132,6 +132,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  margin: 30px 0 60px 0;
 }
 .ov-expo-image {
   max-width: 60%;
@@ -139,6 +140,39 @@
 
 .ov-expo-hero {
   max-height: 380px;
+}
+.ov-expo-text-wrapper {
+  margin: 10px;
+}
+
+.ov-expo-text-title {
+  font-size: 36px;
+  margin: 10px;
+}
+
+.ov-expo-text {
+  margin: 20px 10px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.ov-expo-btn {
+  background: #34a2bc;
+  width: 87px;
+  height: 28px;
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+
+  margin: 28px 8px 10px 0;
+}
+.ov-expo-link {
+  // margin: 20% auto;
 }
 
 .ov-expo-features-wrapper {
@@ -153,26 +187,71 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-items: flex-start;
+  width: 31%;
+  margin: 0 1%;
 }
 
-.ov-expo-feature-image{
-    max-height: 150px;
-    margin: 20px;
+.ov-expo-feature-image {
+  max-height: 150px;
+  margin: 20px;
 }
 
-.ov-expo-feature-box>h1{
-    font-weight: 400;
-    font-size: 1.8rem;
-    margin: 50px 0 10px 0;
-
+.ov-expo-feature-box > h1 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin: 50px 0 10px 0;
 }
-.ov-expo-feature-box>p{
-    font-weight: 300;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin: 10px 0;
-    text-align: center;
-
+.ov-expo-feature-box > p {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 10px 0;
+  text-align: center;
 }
 
+.ov-reasons {
+  width: 90%;
+  margin-top: 30px;
+}
 
+.reason-title {
+  margin: 30px 0 40px 0;
+  font-size: 54px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.ov-reason-wrapper {
+}
+
+.ov-reasons-filter-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.ov-reason-filter-box {
+  width: 25%;
+  text-align: center;
+  border: solid #53565a 1px;
+  height: 120px;
+}
+
+.reason-num {
+  height: 30%;
+  font-size: 34px;
+  font-weight: 300;
+  padding-top: 30px;
+}
+
+.reason-prop {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.ov-reason-image{
+   width: 100%;
+   
+}
