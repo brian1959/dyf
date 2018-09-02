@@ -31,7 +31,7 @@
 }
 
 .expo-image{
-    
+    max-width: 100%;
     margin-bottom: 56px;
     
 }
@@ -57,14 +57,14 @@ p{
     margin-top: 20px;
 }
 
-.expo-new-bg{
+.reason-expo-new-bg{
     background-image: url(../images/ruby.jpg);
     width: 100%;
     height: 380px;
     text-align: center;
 }
 
-.expo-new-bg>h1{
+.reason-expo-new-bg>h1{
     color: #fff;
     font-size: 54px;
     font-weight: 400;
@@ -128,7 +128,7 @@ p{
     
 }
 
-.reason-date{
+.five-reason-date{
     text-align: left;
     font-weight: bold;
     font-size: 14px;
@@ -138,9 +138,9 @@ p{
 
 }
 
-.reason-title{
+.five-reason-title{
     font-size: 22px;
-    font-weight:bolder;
+    font-weight:bold;
     line-height: 1.5;
     padding: 8px 0;
 

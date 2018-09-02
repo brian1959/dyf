@@ -23,7 +23,7 @@ class Expohall extends Component {
           </div>
         </section>
         <section expo-new-schedule>
-          <div className="expo-new-bg">
+          <div className="reason-expo-new-bg">
             <h1>Expo Hall Hours</h1>
             <div className="expo-text">
               Thursday 9:30 a.m. to 7:00 p.m. | Friday 9:30 a.m. to 7:00 p.m. |
@@ -44,10 +44,10 @@ class Expohall extends Component {
             <img src='../images/expo/coaches.jpg' atl='coaches' width='260px' />
             </div>
             <div className="reason-text-holder" >
-              <div className="reason-date">
+              <div className="five-reason-date">
                  FEBRUARY 28–MARCH 2, EXPO HALL
               </div>
-              <div className="reason-title">
+              <div className="five-reason-title">
                 Trace.com Coaches’ Corner
               </div>
               <div className="reason-body">
@@ -60,11 +60,11 @@ class Expohall extends Component {
           </div>
           <div className="reason-wrapper" >
             <div className="reason-image-holder" >
-            <img src='../images/expo/heirloom.jpg' atl='Heirloom' width='260px' />
+            <img className='expo-image' src='../images/expo/heirloom.jpg' alt='Heirloom' />
             </div>
             <div className="reason-text-holder" >
-              <div className="reason-date">MARCH 1–3, EXPO HALL</div>
-              <div className="reason-title">Heirloom Show and Tell</div>
+              <div className="five-reason-date">MARCH 1–3, EXPO HALL</div>
+              <div className="five-reason-title">Heirloom Show and Tell</div>
               <div className="reason-body">
                   Have an antique, heirloom, or photo that you’d like an expert
                   to look at? Now’s your chance! Bring in any small item, or a
@@ -75,13 +75,13 @@ class Expohall extends Component {
           </div>
           <div className="reason-wrapper" >
             <div className="reason-image-holder" >
-            <img src='../images/expo/innovation.jpg' atl='Innovation' width='260px' />
+            <img className='expo-image' src='../images/expo/innovation.jpg' atl='Innovation' />
             </div>
             <div className="reason-text-holder" >
-              <div className="reason-date">
+              <div className="five-reason-date">
                   FEBRUARY 28–MARCH 3, EXPO HALL
               </div>
-              <div className="reason-title">
+              <div className="five-reason-title">
                   Innovation Alley
               </div>
               <div className="reason-body">
@@ -95,13 +95,13 @@ class Expohall extends Component {
           </div>
           <div className="reason-wrapper" >
             <div className="reason-image-holder" >
-            <img src='../images/expo/discovery.jpg' atl='Discovery' width='260px' />
+            <img className='expo-image'  src='../images/expo/discovery.jpg' alt='Discovery'/>
             </div>
             <div className="reason-text-holder" >
-              <div className="reason-date">
+              <div className="five-reason-date">
                   FEBRUARY 28–MARCH 3, EXPO HALL
               </div>
-              <div className="reason-title">
+              <div className="five-reason-title">
                   Discovery Zone
               </div>
               <div className="reason-body">
@@ -115,14 +115,14 @@ class Expohall extends Component {
                 
           <div className="reason-wrapper" >
             <div className="reason-image-holder" >
-            <img src='../images/expo/23andme.jpg' atl='23 and Me' width='260px' />
+            <img className='expo-image' src='../images/expo/23andme.jpg' atl='23 and Me' />
             </div>
             <div className="reason-text-holder" >
             <hr/>
-              <div className="reason-date">
+              <div className="five-reason-date">
                   FEBRUARY 28–MARCH 3, EXPO HALL
               </div>
-              <div className="reason-title">
+              <div className="five-reason-title">
                 23andMe Demo Theater
               </div>
               <div className="reason-body">

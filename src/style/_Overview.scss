@@ -118,6 +118,7 @@
   width: 86%;
   background-color: #eff9fb;
   padding: 30px 30px;
+
 }
 
 .ov-expo-title {
@@ -197,6 +198,11 @@
   margin: 20px;
 }
 
+.ov-expo-feature-box > a{
+
+  text-decoration: none;
+  color: #53565a;
+}
 .ov-expo-feature-box > h1 {
   font-weight: 400;
   font-size: 1.8rem;

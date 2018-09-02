@@ -14,6 +14,8 @@ import Labs from './components/Labs/Labs';
 import Profile from './components/Participants/Attendee';
 import Expohall from './components/Expohall/Expohall';
 import Overview from './components/Overview/Overview';
+import Events from './components/Events/Events';
+import About from './components/About/About';
 
 export default (
   <Switch>
@@ -31,5 +33,7 @@ export default (
      <Route path='/profile' component={Profile} />
      <Route path='/expohall' component={Expohall}/>
      <Route path='/overview' component={Overview}/>
+     <Route path='/events' component={Events}/>
+     <Route path='/about' component={About}/>
   </Switch>
 );
