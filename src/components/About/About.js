@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Footer from '../Footer/Footer';
 
 export default class About extends Component {
 
@@ -81,8 +82,50 @@ export default class About extends Component {
           </div>
         </section>
         <section className="about-experience">
-    
+        <div className="about-exper-title">
+        The RootsTech Experience</div>
+        <div className="about-exper-wrapper">
+        <div className="about-exper-box">
+        <img className='about-exper-image' src='../images/about/pastconf.jpg'/>
+        <h2>Watch Past Conferences</h2>
+        <p>
+        Watch recorded sessions from past conferences, and see why RootsTech </p>
+        </div>
+        <div className="about-exper-box">
+        <img className='about-exper-image' src='../images/about/blog.jpg'/>
+        <h2>Read the RootsTech Blog</h2>
+        <p>
+        RootsTech is more than just a conference—it’s a hub for all things family history. Get the latest genealogy updates, tips, and tools year round. Subscribe to our newsletter at the bottom of the page.</p>
+        </div>
+        </div>
         </section>
+        <section className='about-exper-quote-wrapper'>
+        <div className='seperator-div'></div>
+        <div className="about-exper-quote">
+        “There are many great genealogical events all around the world, but RootsTech stands head and shoulders above them all. Nowhere else on earth can you meet so many like-minded individuals, new friends and even previously unknown relatives. The opportunities to learn, share, collaborate, and discover are endless.”</div>
+        <div className="quote-person">
+        —MYKO CLELLAND, FINDMYPAST
+</div>
+        <div className='seperator-div'></div>
+        </section>
+        <section className='video-clips'>
+<div className="video-clips-title">Past Attendees Talk about Their RootsTech Experience</div>
+<div className="video-clips-wrapper">
+<a href='https://www.youtube.com/watch?v=nBno-JSC6W0&list=PLGng78LVGBHGOCL6LxB_KGj0Pb_UhjBNu&index=10'>
+<div className="video-clip-box">
+<img className='video-clip-image' src='../images/about/Curt-Witcher.jpg' alt='Curt Witcher'/>
+<h2>Curt Witcher</h2></div></a>
+<a href='https://www.youtube.com/watch?v=poFVQieNhFw&list=PLGng78LVGBHGOCL6LxB_KGj0Pb_UhjBNu&index=13'>
+<div className="video-clip-box">
+<img className='video-clip-image' src='../images/about/Sunny-Morton.jpg' alt='Sunny Morton'/>
+<h2>Sunny Morton</h2></div></a>
+<a href="https://www.youtube.com/watch?v=EQZ03jCo2f0&list=PLGng78LVGBHHr7LuHa5Rx8icHlgacZTZE&index=9">
+<div className="video-clip-box">
+<img className='video-clip-image' src='../images/about/NickaSmith.jpg' alt='Nicka Smith'/>
+<h2>Nicka Smith</h2></div></a>
+</div>
+        </section>
+        <Footer/>
       </div>
     );
   }
