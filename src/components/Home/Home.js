@@ -12,6 +12,12 @@ export default class Home extends Component {
             24-26 October 2019 | ExCel London Convention Center | London,
             England
           </div>
+          <div className="overlay-promo-text">
+            We’re thrilled to announce that RootsTech is expanding to
+            international borders! Mark your calendars, and plan to join us for
+            3 exciting days of discovery and family connections in one of the
+            world’s most historic cities.
+          </div>
         </div>
         <section className="land-prepare">
           <div className="prep-title">Preparing for RootsTech 2019</div>
@@ -62,15 +68,27 @@ export default class Home extends Component {
             </div>
           </div>
         </section>
-        <section className='save-the-date-container'>
-        <img className="save-date-img" src='../images/savethedate.jpg' alt='save the date'/>
-        <div className="save-date-text-container">
-        <div className="save-date">SAVE THE DATE </div><div> Registration for RootsTech 2019 opens September20!</div>
-        <h2>Registration for RootsTech 2019 opens September20!</h2>
-        <p>
-        Registration for RootsTech 2019, happening February 27–March 2, 2019, opens on Thursday, September 20, 2018! For a limited time, exclusive early bird pricing will be available on RootsTech passes. Mark your calendars, and be one of the first to register for the world’s largest family history event!
-        </p>
-        </div>
+        <section className="save-the-date-container">
+          <div className="save-the-date-image-box">
+            <img
+              className="save-date-img"
+              src="../images/savethedate.jpg"
+              alt="save the date"
+            />
+          </div>
+          <div className="save-date-text-container">
+            <div className="save-date">SAVE THE DATE </div>
+            <div className="save-date-title">
+              Registration for RootsTech 2019 opens September20!
+            </div>
+            <div className="save-date-text">
+              Registration for RootsTech 2019, happening February 27–March 2,
+              2019, opens on Thursday, September 20, 2018! For a limited time,
+              exclusive early bird pricing will be available on RootsTech
+              passes. Mark your calendars, and be one of the first to register
+              for the world’s largest family history event!
+            </div>
+          </div>
         </section>
       </div>
     );

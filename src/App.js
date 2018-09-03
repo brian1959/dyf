@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Header from "./components/Header/Header";
+import Footer from './components/Footer/Footer';
 import routes from "./routes";
 
 
@@ -12,7 +13,8 @@ class App extends Component {
         <div className='header-spacer' />
           {routes}
         
-        <div className="welcome">Hello to all coders!</div>
+        <div className="footer-spacer">!</div>
+        <Footer />
       </div>
     );
   }

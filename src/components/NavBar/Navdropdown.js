@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Header, Icon,  Menu, Segment, Sidebar } from 'semantic-ui-react'
 
-export default class SidebarExampleDimmed extends Component {
+export default class Navdropdown extends Component {
   state = { visible: false }
 
   handleButtonClick = () => this.setState({ visible: !this.state.visible })

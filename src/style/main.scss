@@ -17,9 +17,18 @@
 @import "Overview";
 @import "Events";
 @import "About";
-@import "footer";
 
 .header-spacer {
   height: 100px;
   width: 100%;
 }
+
+.footer-spacer{
+  overflow: auto;
+  padding-bottom: 1px;
+}
+
+
+@import "footer";
+
+@import 'Media';

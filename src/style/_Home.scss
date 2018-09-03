@@ -12,10 +12,8 @@
   margin: 1% 0 50px 0;
   width: 70vw;
   height: 700px;
-  background:linear-gradient(
-    rgba(61, 33, 33, 0.2),
-    rgba(61, 33, 33, 0.9)),
-     url("../images/hero.jpg");
+  background: linear-gradient(rgba(26, 25, 25, 0), rgb(14, 13, 13)),
+    url("../images/london.jpg");
   background-repeat: none;
   background-size: cover;
   text-align: center;
@@ -25,17 +23,23 @@
 
 .overlay-promo {
   font-size: 54px;
-  margin-top: 400px;
-  margin-bottom: 20px;
+  margin: 32% 14% 30px 14%;
+  line-height: 1.2;
 }
 
 .overlay-promo-subtitle {
   font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.overlay-promo-text {
+  line-height: 1.5;
+  margin: 15px 14%;
+  font-size: 18px;
 }
 .land-prepare {
   width: 100vw;
   color: #333;
-
 }
 
 .prep-title {
@@ -44,78 +48,86 @@
   text-align: center;
   font-size: 36px;
   font-weight: 300;
-
 }
-.prep-boxes-container{
+.prep-boxes-container {
   width: 80%;
   margin-left: 15%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items:flex-start;
+  align-items: flex-start;
   font-family: "Open sans";
 }
-.prep-box{
+.prep-box {
   display: flex;
   flex-direction: column;
   width: 33%;
   margin-bottom: 70px;
 }
 
-
-.prep-images{
+.prep-images {
   width: 300px;
 }
 
-.prep-text{
+.prep-text {
   width: 300px;
   font-size: 16px;
   font-weight: 300;
 }
 
-.prep-box h2{
+.prep-box h2 {
   margin-top: 15px;
   margin-bottom: 15px;
   font-size: 22px;
   font-style: italic;
 }
 
-.save-the-date-container{
-  width: 90vw;
-  margin-top: 50px;
-  display:flex;
+.save-the-date-container {
+  width: 70%;
+  margin: 50px 15%;
+  display: flex;
   flex-direction: row;
- }
-
-.save-date-img{
-  height: 365px;
 }
 
-.save-the-date-text-container{
+.save-date-image-box {
+  width: 56%;
+}
+.save-date-img {
+  max-height: 360px;
+}
+
+.save-the-date-text-container {
+  font-family: "Open sans";
+  width: 41%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-left: 30px;
-  padding: 20px;
+  margin-left: 1%;
+  padding: 10px;
 }
 
-.save-date{
-  font-family: 'Opens sans';
+.save-date {
+  font-family: "Open sans";
   font-weight: bold;
-  color:#333;
+  color: #333;
   font-size: 16px;
   margin: 20px;
 }
 
-.save-date>h2{
-  font-size: 34px;
+.save-date-title {
+  font-family: "Open sans";
+  font-size: 36px;
   font-weight: 400;
   color: black;
+  margin: 20px;
 }
 
-.save-date>p{
+.save-date-text {
+  font-family: "Open sans";
+  font-weight: 300;
   line-height: 1.6;
-  font-size: 16px;
-  color: black;
+  font-size: 18px;
+  color: #333;
+  margin: 20px;
 }

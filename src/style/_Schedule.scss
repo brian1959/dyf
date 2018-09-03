@@ -1,5 +1,5 @@
 .sch-container {
-  width: 60%;
+  width: 80%;
   
   margin-left:15%;
   font-family: "Open Sans";
@@ -32,6 +32,7 @@
 }
 
 .Collapsible__trigger{
+  max-width: 95%;
   font-size: 18px;
   font-weight: 700;
 }

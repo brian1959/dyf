@@ -15,8 +15,9 @@ export default class Schedule extends Component {
 
   return (
     <div className="sch-container">
-      <Collapsible trigger={this.props.coursename} transitionTime={300}>
-      <button >Select</button>
+
+
+      <Collapsible trigger={` dot  ${this.props.coursename}`} transitionTime={300}>
         <div className="session-speaker">{` ${this.props.presenter}, ${
           this.props.company
         }`}</div>
