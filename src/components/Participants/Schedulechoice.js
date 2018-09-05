@@ -30,6 +30,7 @@ class Schedulechoice extends Component {
     });
   }
 
+
   handleDayChange(currentday) {
     this.setState({ displayday: currentday });
   }
@@ -92,6 +93,7 @@ class Schedulechoice extends Component {
               <Schedulechoicetime
                 key={`${schtime.time}_${schtime.day}`}
                 time={schtime.time}
+                handleAddClass={this.props.handleAddClass}
                 coursestime={coursesToDisplay.filter(course => {
                   return course.time === schtime.time;
                 })}

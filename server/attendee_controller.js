@@ -17,24 +17,21 @@ module.exports = {
     const db = req.app.get("db");
     const { userid } = req.session.user;
     let attendee = await db.get_attendee([userid]);
-    res.status(200).send(attendee)
-
+    res.status(200).send(attendee);
   },
   getAttendeeSchedule: async (req, res) => {
     // console.log('we are here')
     const db = req.app.get("db");
     const { userid } = req.session.user;
     let attendeeSchedule = await db.get_attendee_schedule([userid]);
-    res.status(200).send(attendeeSchedule)
-
+    res.status(200).send(attendeeSchedule);
   },
 
   updateAttendee: async (req, res) => {
     const db = req.app.get("db");
-
     const { userid } = req.session.user;
     let attendee = await db.get_attendee([userid]);
-   
+
     const {
       firstname = attendee[0].firstname,
       lastname = attendee[0].lastname,
@@ -43,11 +40,11 @@ module.exports = {
       state = attendee[0].state,
       zip = attendee[0].zip,
       phone = attendee[0].phone,
-      email = attendee[0].email
+      email = attendee[0].email,
+      passtype = attendee[0].passtype
     } = req.body;
 
     let updatedAttendee = await db.update_attendee([
-     
       userid,
       firstname,
       lastname,
@@ -56,7 +53,8 @@ module.exports = {
       state,
       zip,
       phone,
-      email
+      email,
+      passtype
     ]);
 
     res.status(200).send(updatedAttendee);
@@ -96,7 +94,12 @@ module.exports = {
     const { scheduleid } = req.body;
 
     db.add_attendee_schedule([req.session.user.userid, scheduleid])
-      .then(() => res.sendStatus(200))
+      .then(() => {
+        const { userid } = req.session.user;
+        db.get_attendee_schedule([userid]).then((attendeeSchedule) => {
+          res.status(200).send(attendeeSchedule);
+        });
+      })
       .catch(err => {
         res.status(500).send({
           errorMessage:

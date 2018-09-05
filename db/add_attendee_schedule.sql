@@ -1,0 +1,1 @@
+insert into attendeeschedule (attendeeid, schedulesid) VALUES ($1,$2);

@@ -51,12 +51,21 @@
 
 .reg-title {
   margin-bottom: 20px;
-  font-size: 24px;
+  font-family: 'Open sans';
+  font-size: 36px;
 }
 
 .reg-instruction{
   margin-bottom: 10px;
 
+}
+
+.form{
+  width: 70%;
+  margin: 10px 15%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .form-container {
@@ -69,12 +78,12 @@
   align-items: center;
 }
 
-
 .reg-form-box {
+  width: 50%;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-end;
   font-family: "Open sans";
   font-weight: 300;
 }
@@ -91,4 +100,32 @@
   margin: 10px 30px;
   font-size: 18px;
   padding: 4px;
+}
+
+.radio-form-box{
+  width: 50%;
+  margin: 20px 25%;
+font-family: 'Open sans';
+font-weight: 300;
+}
+
+.radio-form-title{
+  font-size: 24px;
+  margin: 15px;
+}
+
+.radio-box{
+  width: 80%;
+  margin: 10px 10%;
+  display: flex;
+  flex-direction: row;
+}
+.radio{
+  font-size: 18px;
+  margin: 5px 20px;
+
+}
+
+.reg-form-btn{
+  width: 10%;
 }

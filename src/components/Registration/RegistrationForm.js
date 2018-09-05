@@ -15,29 +15,31 @@ class Registrationform extends Component {
       zip: "",
       phone: "",
       email: "",
+      passtype:'Single',
       redirect: false
     };
   }
-
-  setRedirect = () => {
-    this.setState({redirect: true})
+  
+  
+  handleOptionChange=(e) =>{
+    this.setState({passtype: e.target.value
+    });
   }
-
-  renderRedirect = () => {
-    if(this.state.redirect){
-      return<Redirect to='/profile' />
-    }
-  }
+  
   handleSubmit(){
     axios
     .put('/api/attendee',this.state)
+    .then(response =>{
+      this.props.history.push('/profile')
+    })
   }
-
+  
   render() {
-    console.log(this.state);
+    console.log(this.props)
+    
     return (
       <div className="form">
-        <div className="reg-title">2018 Discover Your Family Registration</div>
+        <div className="reg-title">2019 RootsTech Registration</div>
         <div className="form-container">
           <div className="reg-form-box">
             <div className="reg-form-title">First Name</div>
@@ -111,8 +113,25 @@ class Registrationform extends Component {
               value={this.state.email}
             />
           </div>
+          <div className="radio-form-box">
+            <div className="radio-form-title">Pass Type</div>
+            <div className='radio-box'>
+            <div className="radio">
+          <label>
+            <input type="radio" value="Full" checked={this.state.passtype==='Full'}  onChange={this.handleOptionChange} />
+           Full Event $219
+          </label>
         </div>
-        <button onClick={() => this.handleSubmit()} >Register</button>
+        <div className="radio">
+          <label>
+            <input type="radio" value="Single" checked={this.state.passtype==='Single'}  onChange={this.handleOptionChange} />
+            1 Day Pass $169
+          </label>
+        </div>
+        </div>
+          </div>
+        <button className='reg-form-btn' onClick={() => this.handleSubmit()} >Register</button>
+        </div>
       </div>
     );
   }

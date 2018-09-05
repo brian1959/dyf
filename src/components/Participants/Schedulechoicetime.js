@@ -2,7 +2,7 @@ import React from "react";
 import Scheduleadd from './Scheduleadd';
 
 export default function Schedulechoicetime(props) {
-  
+
   return (
     <div className="coursetime-container">
       <div className="my-time-container">
@@ -18,6 +18,7 @@ export default function Schedulechoicetime(props) {
         return (
         <Scheduleadd
           key={course.scheduleid}
+          scheduleid={course.scheduleid}
           coursename={course.coursename}
           coursesummary={course.coursesummary}
           presenter={course.presenter}
@@ -25,6 +26,7 @@ export default function Schedulechoicetime(props) {
           day={course.day}
           time={course.time}
           explevel={course.explevel}
+          handleAddClass={props.handleAddClass}
         />
       
         )}
