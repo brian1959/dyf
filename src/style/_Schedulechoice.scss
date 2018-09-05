@@ -1,0 +1,76 @@
+.my-schedule-main-wrapper{
+  width: 100%;
+ 
+}
+
+.my-schedule-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.courses-header {
+  font-size: 60px;
+  text-align: center;
+  width: 80%;
+  margin: 5px 10% 20px 10%;
+  font-weight: 300;
+  font-family: "Open sans";
+}
+
+.my-schedule-day-box-container {
+  height:80px;
+  width: 50%;
+  margin: 0 25%;
+   display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.my-schedule-day-box {
+  height: 70%;
+  border: 1px solid gray;
+  min-width: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:center;
+  cursor: pointer;
+}
+
+.my-schedule-day-letter-holder {
+  margin-top: 10px;
+  font-family: "Open sans";
+  font-weight: 300;
+  text-align: center;
+  height: 50%;
+  width: 100%;
+  font-size:16px;
+
+}
+
+.my-schedule-day-name-holder {
+  font-family: "Open sans";
+  text-align: center;
+  height: 50%;
+  width: 100%;
+  font-size: 12px;
+}
+
+.current-day{
+    background-color: rgb(238, 238, 238);
+
+}
+
+.schedule-container-scroll{
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+  width: 80%;
+  margin: 10px 5% 0 15%;
+  height: 500px;
+  overflow: scroll;
+  
+}

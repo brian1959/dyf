@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Myschedule from "./Myschedule";
+import Schedulechoice from './Schedulechoice';
 
 class Profile extends Component {
   constructor(props) {
@@ -61,26 +62,37 @@ class Profile extends Component {
     } = attendee;
 
     return (
-      <div className="attendee-details-wrapper">
+      <div className="attendee-wrapper">
+      <div className='attendee-details-wrapper'>
         <section className="profile-holder">
           <div className="profile-item-holder">
-            {`${firstname} ${lastname}`}
+            {`${firstname} ${lastname}`}{" "}
           </div>
           <div className="profile-item-holder">
             <div className="profile-item-type">Address:</div>
-            <div> {address}</div>
-            <div className="profile-item-holder">City:</div>
-            <div className="profile-item"> {city}</div>
-            <div className="profile-item-holder">State:</div>
-            <div> {state}</div>
-            <div className="profile-item-holder">Zip: </div>
-            <div>{zip}</div>
-            <div className="profile-item-holder">Phone: {phone}</div>
-            <div className="profile-item-holder">
-              email:
-              {email}
-            </div>
+            <div className="profile-item"> {address}</div>
           </div>
+          <div className="profile-item-holder">
+            <div className="profile-item-type">City:</div>
+            <div className="profile-item"> {city}</div>
+          </div>
+          <div className="profile-item-holder">
+            <div className="profile-item-type">State:</div>
+            <div className="profile-item"> {state}</div>
+          </div>
+          <div className="profile-item-holder">
+            <div className="profile-item-type">Zip: </div>
+            <div className="profile-item">{zip}</div>
+          </div>
+          <div className="profile-item-holder">
+            <div className="profile-item-type">Phone:</div>
+            <div className="profile-item">{phone}</div>
+          </div>
+          <div className="profile-item-holder">
+            <div className="profile-item-type">email:</div>
+            <div className="profile-item"> {email}</div>
+          </div>
+
         </section>
         <section className="my-schedule-selector">
           <div className="my-schedule-title">Current Schedule</div>
@@ -104,6 +116,10 @@ class Profile extends Component {
               />
             ))}
           </div>
+        </section>
+        </div>
+        <section className='schedule-selection'>
+        <Schedulechoice/>
         </section>
       </div>
     );
