@@ -57,7 +57,7 @@ export default class Overview extends Component {
               <div className="overview-session-category-image">
                 <img
                   className="overview-session-image os-image"
-                  src="../images/overview/classes_DNA_ruby.jpg"
+                  src="../images/overview/classes_DNA_ruby.jpg" alt='DNA'
                 />
               </div>
               <div className="overview-session-category-text-wrapper">
@@ -72,7 +72,7 @@ export default class Overview extends Component {
               <div className="overview-session-category-image">
                 <img
                   className="overview-session-image os-image"
-                  src="../images/overview/classes_tools_ruby.jpg"
+                  src="../images/overview/classes_tools_ruby.jpg" alt='Tools'
                 />
               </div>
               <div className="overview-session-category-text-wrapper">
@@ -88,7 +88,7 @@ export default class Overview extends Component {
               <div className="overview-session-category-image">
                 <img
                   className="overview-session-image os-image"
-                  src="../images/overview/classes_pictures_ruby.jpg"
+                  src="../images/overview/classes_pictures_ruby.jpg" alt='Photos'
                 />
               </div>
               <div className="overview-session-category-text-wrapper">
@@ -103,7 +103,7 @@ export default class Overview extends Component {
               <div className="overview-session-category-image">
                 <img
                   className="overview-session-image os-image"
-                  src="../images/overview/classes_stories_ruby.jpg"
+                  src="../images/overview/classes_stories_ruby.jpg" alt="Stories"
                 />
               </div>
               <div className="overview-session-category-text-wrapper">
@@ -119,7 +119,7 @@ export default class Overview extends Component {
               <div className="overview-session-category-image">
                 <img
                   className="overview-session-image os-image"
-                  src="../images/overview/classes_organize_ruby.jpg"
+                  src="../images/overview/classes_organize_ruby.jpg" alt='Organize'
                 />
               </div>
               <div className="overview-session-category-text-wrapper">
@@ -136,7 +136,7 @@ export default class Overview extends Component {
               <div className="overview-session-category-image">
                 <img
                   className="overview-session-image os-image"
-                  src="../images/overview/classes_discovery_ruby.jpg"
+                  src="../images/overview/classes_discovery_ruby.jpg" alt='Discovery'
                 />
               </div>
               <div className="overview-session-category-text-wrapper">

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Faqcategory from "./Faqcategory";
 import Faq from './Faq'
 
 class Faqs extends Component {

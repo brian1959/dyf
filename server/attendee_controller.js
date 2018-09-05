@@ -20,6 +20,14 @@ module.exports = {
     res.status(200).send(attendee)
 
   },
+  getAttendeeSchedule: async (req, res) => {
+    // console.log('we are here')
+    const db = req.app.get("db");
+    const { userid } = req.session.user;
+    let attendeeSchedule = await db.get_attendee_schedule([userid]);
+    res.status(200).send(attendeeSchedule)
+
+  },
 
   updateAttendee: async (req, res) => {
     const db = req.app.get("db");
@@ -59,6 +67,20 @@ module.exports = {
     const { id } = req.params;
 
     db.delete_attendee([id])
+      .then(() => res.sendStatus(200))
+      .catch(err => {
+        res.status(500).send({
+          errorMessage:
+            "Oops! Something went wrong. Our engineers have been informed!"
+        });
+        console.log(err);
+      });
+  },
+  deleteAttendeeSchedule: (req, res, next) => {
+    const db = req.app.get("db");
+    const { id } = req.params;
+
+    db.delete_attendee_schedule([id])
       .then(() => res.sendStatus(200))
       .catch(err => {
         res.status(500).send({

@@ -77,7 +77,7 @@ class Events extends Component {
             <div className="event-image-holder">
               <img className='event-image'
                 src="../images/events/previewnight.jpg"
-                atl="Preview Night"
+               alt="Preview Night"
               />
             </div>
             <div className="event-text-holder">
@@ -108,7 +108,7 @@ class Events extends Component {
             <div className="event-image-holder">
               <img className='event-image'
                 src="../images/events/closing.jpg"
-                atl="Closing Night"
+               alt="Closing Night"
               />
             </div>
             <div className="event-text-holder">

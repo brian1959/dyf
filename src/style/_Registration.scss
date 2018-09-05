@@ -1,16 +1,62 @@
 .registration-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100%;
+  width: 60%;
+  margin: 10px 20%;
+  font-family: 'Myriad';
+}
+
+.reg-sidebar-wrapper{
+  padding: 20px;
+  width: 15%;
+  border-right: solid 1px lightgrey;
+}
+
+.reg-info-box{
+  margin-bottom: 20px;
+  
+}
+
+.reg-info-box>a{
+  text-decoration: none;
+  color: #3295ac;
+  margin-left:10px;
+}
+
+.reg-info-box>a:hover{
+  text-decoration-line: underline;
+}
+
+.reg-info-box>h2{
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.reg-info-box>span{
+  font-size: 14px;
+  margin-left: 10px;
+
+}
+
+.reg-landing-wrapper{
+  width: 70%;
+  margin: 10px 14% 10px 1%;
+
 }
 
 .reg-title {
-  margin: 30px 0;
-  text-align: center;
-  font-family: "Open sans";
+  margin-bottom: 20px;
   font-size: 24px;
+}
+
+.reg-instruction{
+  margin-bottom: 10px;
+
 }
 
 .form-container {
@@ -23,12 +69,13 @@
   align-items: center;
 }
 
+
 .reg-form-box {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: center;
-  font-family: 'Open sans';
+  font-family: "Open sans";
   font-weight: 300;
 }
 

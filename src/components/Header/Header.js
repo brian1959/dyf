@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../NavBar/Navbar";
 import logo from "../../images/RT_logo.png";
 
 export default class Header extends Component {
@@ -14,7 +15,6 @@ export default class Header extends Component {
         <div className="menu-box">
           <span className="header-date">Feb. 27-Mar. 2, 2019</span>
           <div className="menu-items-holder">
-   
             <div className="menu-btn">
               <div className="btn-line" />
               <div className="btn-line" />
@@ -42,7 +42,6 @@ export default class Header extends Component {
             </li>
             <li className="nav-item">
               <Link to="/labs">Labs</Link>
-              
             </li>
             <li className="nav-item">
               <Link to="/profile">Profile</Link>
@@ -52,15 +51,16 @@ export default class Header extends Component {
             </li>
             <li className="nav-item">
               <Link to="/overview">Overview</Link>
-                </li>
+            </li>
             <li className="nav-item">
               <Link to="/events">Events</Link>
-                </li>
+            </li>
             <li className="nav-item">
               <Link to="/about">About</Link>
-                </li>
+            </li>
           </ul>
         </nav>
+        {Navbar}
       </div>
     );
   }

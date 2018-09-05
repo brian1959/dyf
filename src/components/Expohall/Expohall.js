@@ -41,7 +41,7 @@ class Expohall extends Component {
           </div>
           <div className="reason-wrapper">
             <div className="reason-image-holder" >
-            <img src='../images/expo/coaches.jpg' atl='coaches' width='260px' />
+            <img src='../images/expo/coaches.jpg' alt='coaches' width='260px' />
             </div>
             <div className="reason-text-holder" >
               <div className="five-reason-date">
@@ -75,7 +75,7 @@ class Expohall extends Component {
           </div>
           <div className="reason-wrapper" >
             <div className="reason-image-holder" >
-            <img className='expo-image' src='../images/expo/innovation.jpg' atl='Innovation' />
+            <img className='expo-image' src='../images/expo/innovation.jpg' alt='Innovation' />
             </div>
             <div className="reason-text-holder" >
               <div className="five-reason-date">
@@ -115,7 +115,7 @@ class Expohall extends Component {
                 
           <div className="reason-wrapper" >
             <div className="reason-image-holder" >
-            <img className='expo-image' src='../images/expo/23andme.jpg' atl='23 and Me' />
+            <img className='expo-image' src='../images/expo/23andme.jpg' alt='23 and Me' />
             </div>
             <div className="reason-text-holder" >
             <hr/>

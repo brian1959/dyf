@@ -34,14 +34,14 @@ export default class About extends Component {
           <div className="about-expect-main-text">One of the most important things we’ve learned is that celebrating families knows no limitations. From the newest newbie to the most advanced family historian, there’s a place at RootsTech for everyone who’s interested in discovering their roots.</div>
           <div className="about-expo-features-wrapper">
             <div className="about-expo-feature-box">
-              <a href="/#/expohall">
+              <a href="/#/courses">
                 <img
                   className="about-expo-feature-image about-expect-image"
                   src="../images/about/breakouts.jpg"
                   alt="Discovery"
                 />
               </a>
-              <a href="/#/expohall">
+              <a href="/#/courses">
                 <h1>300+ Breakout Sessions</h1>
                 <p>
                 At RootsTech, learning is priority number one. Choose from over 300 classes taught by industry experts, professional genealogists, and experienced storytellers. Learn about the tools, resources, and methods available to uncover and share your family’s story.
@@ -49,7 +49,7 @@ export default class About extends Component {
               </a>
             </div>
             <div className="about-expo-feature-box">
-              <a href="/#/courses">
+              <a href="/#/expohall">
                 <img
                   className="about-expo-feature-image about-expect-image"
                   src="../images/about/expohall.jpg"
@@ -64,15 +64,15 @@ export default class About extends Component {
               </a>
             </div>
             <div className="about-expo-feature-box">
-              <a href="/#/expohall">
+              <a href="/#/presenters">
                 <img
                   className="about-expo-feature-image about-expect-image"
                   src="../images/about/Keynote.jpg"
-                  alt="Coaches Corner"
+                  alt="Presenters"
                 />
               </a>
 
-              <a href="/#/speakers">
+              <a href="/#/presenters">
                 <h1>Inspirational Keynote Sessions</h1>
                 <p>
                 Be inspired and uplifted by an all-star lineup of keynote speakers. Past RootsTech keynote speakers include: LeVar Burton, The Property Brothers, Scott Hamilton, and Buddy “Cake Boss” Valastro.
@@ -86,13 +86,13 @@ export default class About extends Component {
         The RootsTech Experience</div>
         <div className="about-exper-wrapper">
         <div className="about-exper-box">
-        <img className='about-exper-image' src='../images/about/pastconf.jpg'/>
+        <img className='about-exper-image' src='../images/about/pastconf.jpg' alt='Past Conferences'/>
         <h2>Watch Past Conferences</h2>
         <p>
         Watch recorded sessions from past conferences, and see why RootsTech </p>
         </div>
         <div className="about-exper-box">
-        <img className='about-exper-image' src='../images/about/blog.jpg'/>
+        <img className='about-exper-image' src='../images/about/blog.jpg' alt='Blog'/>
         <h2>Read the RootsTech Blog</h2>
         <p>
         RootsTech is more than just a conference—it’s a hub for all things family history. Get the latest genealogy updates, tips, and tools year round. Subscribe to our newsletter at the bottom of the page.</p>

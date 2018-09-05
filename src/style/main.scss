@@ -3,6 +3,7 @@
 
 @import "config";
 @import "Header";
+@import "Navbar";
 @import "Home";
 @import "Schedule";
 @import "Courses";
@@ -12,23 +13,27 @@
 @import "Coursetime";
 @import "Labs";
 @import "Registration";
+@import "Profile";
 @import "Faq";
 @import "Expohall";
 @import "Overview";
 @import "Events";
 @import "About";
+@import "Myschedule";
 
 .header-spacer {
   height: 100px;
   width: 100%;
 }
+.body-spacing{
+  min-height: calc(100vh - 100px - 300px )
+}
 
-.footer-spacer{
+.footer-spacer {
   overflow: auto;
   padding-bottom: 1px;
 }
 
-
 @import "footer";
 
-@import 'Media';
+@import "Media";

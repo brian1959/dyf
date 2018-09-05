@@ -11,9 +11,11 @@ class App extends Component {
       <div>
         <Header />
         <div className='header-spacer' />
-          {routes}
+        <div className="body-spacing">
         
-        <div className="footer-spacer">!</div>
+          {routes}
+        </div>
+        
         <Footer />
       </div>
     );

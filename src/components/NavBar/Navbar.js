@@ -1,27 +1,24 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Button from "../Button/Button";
+
 
 
 export default class Navbar extends Component {
   render() {
     return (
       <div className="navbar_top">
-        <Link to="/registration">
-          <Button className="btn">Registration</Button>
-        </Link>
-        <Link to="/courses">
-          <Button className="btn">Courses</Button>
-        </Link>
-        <Link to="/presenters">
-          <Button className="btn">Presenters</Button>
-        </Link>
-        <Link to="/products">
-          <Button className="btn">Products</Button>
-        </Link>
-        <Link to="/">
-          <Button className="btn">Home</Button>
-        </Link>
+        <div className="nav-main-links">
+        <ul>
+          <li>Blog</li>
+          <Link to='/#/overview'>
+          <li>Why Attend RootsTech</li></Link>
+          <li>Family Discovery Day</li>
+          <Link to='/#/expohall'><li>Expo Hall</li></Link>
+          <li>London</li>
+        </ul>
+        </div>
+       
+
       </div>
     );
   }

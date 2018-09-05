@@ -110,10 +110,12 @@ app.get("/api/featured", speaker_controller.getFeatured);
 app.post("/api/speaker", speaker_controller.addSpeaker);
 app.delete("/api/speaker/:id", speaker_controller.deleteSpeaker);
 
+app.get("/api/attendeeschedule",attendee_controller.getAttendeeSchedule)
 app.get("/api/attendees", attendee_controller.getAttendees);
 app.get("/api/attendee", attendee_controller.getAttendee);
 app.put("/api/attendee", attendee_controller.updateAttendee);
 app.post("/api/addschedule", attendee_controller.addAttendeeSchedule);
+app.delete('/api/attendeeschedule/:id', attendee_controller.deleteAttendeeSchedule)
 app.delete("/api/admin/:usertodelete", attendee_controller.deleteAttendee);
 
 app.get("/api/schedule", course_controller.getSchedule);

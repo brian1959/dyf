@@ -90,6 +90,68 @@ export default class Home extends Component {
             </div>
           </div>
         </section>
+        <section className="home-reasons">
+          <div className="home-reasons-title">
+            3 Reasons to Attend RootsTech 2019
+          </div>
+          <div className="home-expo-features-wrapper">
+            <div className="home-expo-feature-box">
+              <a href="/#/courses">
+                <img
+                  className="home-expo-feature-image home-expect-image"
+                  src="../images/about/breakouts.jpg"
+                  alt="Breakouts"
+                />
+              </a>
+              <a href="/#/courses">
+                <h2>300+ Breakout Sessions</h2>
+                <p>
+                  At RootsTech, learning is priority number one. Choose from
+                  over 300 classes taught by industry experts, professional
+                  genealogists, and experienced storytellers. Learn about the
+                  tools, resources, and methods available to uncover and share
+                  your family’s story.
+                </p>
+              </a>
+            </div>
+            <div className="home-expo-feature-box">
+              <a href="/#/expohall">
+                <img
+                  className="home-expo-feature-image home-expect-image"
+                  src="../images/about/expohall.jpg"
+                  alt="Expo Hall"
+                />
+              </a>
+              <a href="/#/expohall">
+                <h2>Expo Hall</h2>
+                <p>
+                  The Expo Hall features more than 200 companies offering
+                  products and services designed to help you discover and
+                  connect with family. Enjoy demonstrations, free swag, and the
+                  opportunity to test out the latest family history tech!
+                </p>
+              </a>
+            </div>
+            <div className="home-expo-feature-box">
+              <a href="/#/presenters">
+                <img
+                  className="home-expo-feature-image home-expect-image"
+                  src="../images/about/Keynote.jpg"
+                  alt="Presenters"
+                />
+              </a>
+              <a href="/#/presenters">
+                <h2>Inspirational Keynote Sessions</h2>
+                <p>
+                  Be inspired and uplifted by an all-star lineup of keynote
+                  speakers. Past keynotes include: LeVar Burton, The Property
+                  Brothers, and Scott Hamilton. Stay tuned for announcements
+                  regarding the 2019 keynote speaker lineup!
+                </p>
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
     );
   }

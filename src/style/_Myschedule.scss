@@ -1,0 +1,22 @@
+.my-schedule-container{
+    margin-top: 10px;
+    min-height: 25px;
+    border-bottom: solid 1px lightgrey;
+    display: flex;
+    flex-direction: row;
+    font-family:'Open sans';
+    font-weight: 300;
+    justify-content: space-between;
+
+}
+
+.my-schedule-field{
+    text-align: left;
+    font-size: 14px;
+    margin-left: 10px;
+
+}
+
+.my-schedule-container>button{
+max-height: 20px;
+}
