@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
 
 @import "config";
-@import "Header";
+
+@import "Menu";
 @import "Navbar";
 @import "Home";
 @import "Schedule";
@@ -20,16 +21,16 @@
 @import "Events";
 @import "About";
 @import "Myschedule";
-@import 'Scheduleadd';
-@import 'Schedulechoicetime';
-@import 'Schedulechoice';
+@import "Scheduleadd";
+@import "Schedulechoicetime";
+@import "Schedulechoice";
 
 .header-spacer {
   height: 100px;
   width: 100%;
 }
-.body-spacing{
-  min-height: calc(100vh - 100px - 300px )
+.body-spacing {
+  min-height: calc(100vh - 100px - 300px);
 }
 
 .footer-spacer {

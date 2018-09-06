@@ -19,7 +19,7 @@ nodemailer.createTestAccount((err, account) => {
 
     let mailOptions = {
         from: '"Brian McCann" <brian@cworegon.com>', //sender address
-        to: 'Brian@solutionation.net'//list of receivers
+        to: 'Brian@solutionation.net',//list of receivers
         subject: 'Order Confirmation', //Subject Line
         text: "We look forward to seeing you at RootsTech 2019", //plain text body
         html: '<b>We look forward to seeing you at RootsTech 2019</b>' //html body
