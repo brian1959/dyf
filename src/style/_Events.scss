@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #53565a;
+  color: $primary-color;
 }
 .event-header {
   width: 100%;
@@ -90,7 +90,7 @@ a {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    border-top: solid #53565a 1px;
+    border-top: solid $primary-color 1px;
   }
 
   .event-date {

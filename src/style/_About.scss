@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #53565a;
+  color: $primary-color;
 }
 
 .about-header {
@@ -100,7 +100,7 @@
 
 .about-expo-feature-box > a {
   text-decoration: none;
-  color: #53565a;
+  color: $primary-color;
   font-weight: 300;
 }
 
@@ -116,7 +116,7 @@
 
 .about-expo-feature-box >a h1 {
   font-size: 26px;
-  color: #53565a;
+  color:$primary-color;
   font-weight: 400;
 }
 
@@ -186,7 +186,7 @@ line-height: 1.1;
 
 .seperator-div{
   width: 15%;
-border: lightgrey solid 1px;
+border: $primary-color solid 1px;
 margin: 20px 0;
 }
 

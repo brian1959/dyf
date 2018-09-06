@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #53565a;
+  color: $primary-color;
 }
 .overview-header {
 }
@@ -201,7 +201,7 @@
 .ov-expo-feature-box > a{
 
   text-decoration: none;
-  color: #53565a;
+  color: $primary-color;
 }
 .ov-expo-feature-box > h1 {
   font-weight: 400;
@@ -241,7 +241,7 @@
 .ov-reason-filter-box {
   width: 25%;
   text-align: center;
-  border: solid #53565a 1px;
+  border: solid $primary-color 1px;
   height: 120px;
 }
 

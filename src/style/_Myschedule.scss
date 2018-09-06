@@ -1,7 +1,7 @@
 .my-schedule-container{
     margin-top: 10px;
     min-height: 25px;
-    border-bottom: solid 1px lightgrey;
+    border-bottom: solid 1px $primary-color;
     display: flex;
     flex-direction: row;
     font-family:'Open sans';

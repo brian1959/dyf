@@ -9,8 +9,8 @@
   margin-left: 1%;
   font-family: "Opens sans";
   margin-bottom: 20px;
-  border-top: solid 1px #53565a;
-  border-bottom: solid 1px #53565a;
+  border-top: solid 1px $primary-color;
+  border-bottom: solid 1px $primary-color;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -22,7 +22,7 @@
   display: inline;
   font-family: "Opens sans";
   font-weight: 300;
-  color: #53565a;
+  color: $primary-color;
   font-size: 22px;
   padding-left: 6px;
   padding-right: 20px;

@@ -2,12 +2,9 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
 
 @import "config";
-
 @import "Menu";
-@import "Navbar";
 @import "Home";
 @import "Schedule";
-@import "Courses";
 @import "Speakers";
 @import "Featured";
 @import "Speakerbio";
@@ -24,6 +21,7 @@
 @import "Scheduleadd";
 @import "Schedulechoicetime";
 @import "Schedulechoice";
+@import "Courses";
 
 .header-spacer {
   height: 100px;
@@ -38,6 +36,6 @@
   padding-bottom: 1px;
 }
 
-@import "footer";
+@import "Footer";
 
 @import "Media";

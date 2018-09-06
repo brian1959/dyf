@@ -10,6 +10,7 @@ export default class Presenters extends Component {
 
     this.state = {
       speakersToDisplay: [],
+      speakerid:'',
       speakerName: "",
       speakerTitle: "",
       speakingDate: "",
@@ -55,6 +56,7 @@ export default class Presenters extends Component {
           {speakersToDisplay.map(speaker => (
             <Speaker
               key={speaker.speakerid}
+              speakerid={speaker.speakerid}
               speakerName={speaker.speaker_name}
               speakerTitle={speaker.speaker_title}
               speakerBio={speaker.speaker_bio}
@@ -73,6 +75,7 @@ export default class Presenters extends Component {
           {presentersToDisplay.map(featured => (
             <Featured
               key={featured.featured_id}
+              presenterid={featured.presenterid}
               presenterName={featured.presenter}
               presenterTitle={featured.presenter_title}
               presenterBio={featured.presenter_bio}

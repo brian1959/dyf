@@ -12,7 +12,7 @@
     padding-right: 10px;
     display: flex;
     flex-direction: column;
-    border-right: solid 1px lightgrey;
+    border-right: solid 1px $primary-color;
   }
   
   .profile-item-holder{
@@ -55,7 +55,7 @@
     justify-content: space-apart;
     align-items: flex-start;
     flex-wrap: none;
-    border-bottom: solid 2px lightgrey;
+    border-bottom: solid 2px $primary-color;
   }
 
   .my-schedule-header{
