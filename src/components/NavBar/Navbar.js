@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import onClickOutside from "react-onclickoutside";
 
 import logo from "../../images/RT_logo.png";
 
-export default class Navbar extends Component {
+ class Navbar extends Component {
   constructor(props) {
     super(props);
 
@@ -15,6 +16,10 @@ export default class Navbar extends Component {
     this.setState({
       menuShow: !this.state.menuShow
     });
+  }
+
+  handleClickOutside() {
+    this.setState({ menuShow: false });
   }
 
   render() {
@@ -47,13 +52,26 @@ export default class Navbar extends Component {
           className={(this.state.menuShow ? "dropDownShow" : "") + " dropdown"}
         >
           <div className="navbar-header-links">
-            <ul>
-              <li>Blog</li>
-              <Link to='/overview'><li onClick={()=> this.setState({menuShow:false })}>Why Attend RootsTech</li></Link>
-              <li>Family Discovery Day</li>
-             <Link to='/expohall'> <li onClick={()=> this.setState({menuShow:false }) }>Expo Hall</li></Link>
-              <li>London</li>
-            </ul>
+            <div className="navbar-header-link-word">Blog</div>
+            <Link to="/overview">
+              <div
+                className="navbar-header-link-word"
+                onClick={() => this.setState({ menuShow: false })}
+              >
+                Why Attend RootsTech
+              </div>
+            </Link>
+            <div className="navbar-header-link-word">Family Discovery Day</div>
+            <Link to="/expohall">
+              {" "}
+              <div
+                className="navbar-header-link-word"
+                onClick={() => this.setState({ menuShow: false })}
+              >
+                Expo Hall
+              </div>
+            </Link>
+            <div className="navbar-header-link-word">London</div>
           </div>
           <div className="navbar-body-wrapper">
             <div className="navbar-column-header-wrapper">
@@ -66,25 +84,55 @@ export default class Navbar extends Component {
             <div className="navbar-column-link-wrapper">
               <div className="navbar-column-link-box">
                 <Link to="/overview">
-                  <div className="navbar-column-link" onClick={()=> this.setState({menuShow:false }) }>Conference Overview</div>
+                  <div
+                    className="navbar-column-link"
+                    onClick={() => this.setState({ menuShow: false })}
+                  >
+                    Conference Overview
+                  </div>
                 </Link>
                 <div className="navbar-column-link">Family Discovery Day</div>
                 <Link to="/expohall">
-                  <div className="navbar-column-link" onClick={()=> this.setState({menuShow:false }) }>Expo Hall</div>
+                  <div
+                    className="navbar-column-link"
+                    onClick={() => this.setState({ menuShow: false })}
+                  >
+                    Expo Hall
+                  </div>
                 </Link>
               </div>
               <div className="navbar-column-link-box">
                 <Link to="/courses">
-                  <div className="navbar-column-link" onClick={()=> this.setState({menuShow:false }) }>Schedule</div>
+                  <div
+                    className="navbar-column-link"
+                    onClick={() => this.setState({ menuShow: false })}
+                  >
+                    Schedule
+                  </div>
                 </Link>
                 <Link to="/presenters">
-                  <div className="navbar-column-link" onClick={()=> this.setState({menuShow:false }) }>Speakers</div>
+                  <div
+                    className="navbar-column-link"
+                    onClick={() => this.setState({ menuShow: false })}
+                  >
+                    Speakers
+                  </div>
                 </Link>
                 <Link to="/events">
-                  <div className="navbar-column-link" onClick={()=> this.setState({menuShow:false }) }>Events</div>
+                  <div
+                    className="navbar-column-link"
+                    onClick={() => this.setState({ menuShow: false })}
+                  >
+                    Events
+                  </div>
                 </Link>
                 <Link to="/labs">
-                  <div className="navbar-column-link" onClick={()=> this.setState({menuShow:false }) }>Labs</div>
+                  <div
+                    className="navbar-column-link"
+                    onClick={() => this.setState({ menuShow: false })}
+                  >
+                    Labs
+                  </div>
                 </Link>
                 <div className="navbar-column-link">Live Stream Schedule</div>
               </div>
@@ -96,10 +144,20 @@ export default class Navbar extends Component {
               </div>
               <div className="navbar-column-link-box">
                 <Link to="/about">
-                  <div className="navbar-column-link" onClick={()=> this.setState({menuShow:false }) }>About</div>
+                  <div
+                    className="navbar-column-link"
+                    onClick={() => this.setState({ menuShow: false })}
+                  >
+                    About
+                  </div>
                 </Link>
                 <Link to="/faq">
-                  <div className="navbar-column-link" onClick={()=> this.setState({menuShow:false }) }>FAQ</div>
+                  <div
+                    className="navbar-column-link"
+                    onClick={() => this.setState({ menuShow: false })}
+                  >
+                    FAQ
+                  </div>
                 </Link>
                 <div className="navbar-column-link">Library</div>
                 <div className="navbar-column-link">RootsTech 2018 Videos</div>
@@ -119,3 +177,5 @@ export default class Navbar extends Component {
     );
   }
 }
+
+export default onClickOutside(Navbar);

@@ -36,6 +36,11 @@
   padding-bottom: 1px;
 }
 
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+  color: #8d003f;
+}
+
 @import "Footer";
 
 @import "Media";

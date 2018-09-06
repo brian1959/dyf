@@ -118,6 +118,7 @@ app.post("/api/addschedule", attendee_controller.addAttendeeSchedule);
 app.delete('/api/attendeeschedule/:id', attendee_controller.deleteAttendeeSchedule)
 app.delete("/api/admin/:usertodelete", attendee_controller.deleteAttendee);
 
+
 app.get("/api/schedule", course_controller.getSchedule);
 app.delete("/api/course", course_controller.deleteCourse);
 app.get('/api/times', course_controller.getScheduleTime);

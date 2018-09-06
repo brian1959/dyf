@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "0e833a9c-3265-459f-bddb-10ed36e8e55b",
+		"name": "RootsTech Clone",
+		"description": "Testing endpoints for the RootTech Clone db",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:4000/api/attendeeschedule/:id must have valid asid",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9893048e-8607-44bf-996e-71e61185ef67",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:4000/api/attendeeschedule/27",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"attendeeschedule",
+						"27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/featured check response time and response",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "337ac449-c18f-4593-aa24-e3f640672a52",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:4000/api/featured",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"featured"
+					]
+				},
+				"description": "get all featured speakers and their details for the evente"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/speakers test response time as well",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "09dde614-f925-46a9-94c7-b271119a291a",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"Brian\",\n\"password\":\"McCann\",\n\"favoriteColor\":\"blue\"\n}\n\n"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/speakers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"speakers"
+					]
+				},
+				"description": "get the speakers and their details for the event"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/admin - delete user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a8bcc78f-2d52-404b-b6e2-20a9cfd5641b",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:4000/api/admin/23",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"admin",
+						"23"
+					]
+				},
+				"description": "deletes an attendee"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:4000/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"categories"
+					]
+				},
+				"description": "get the categories for the FAQ's"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/api/faqs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c27e4627-cd83-4851-861f-5d2ff8e0f6a7",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"General\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:4000/api/faqs",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"faqs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

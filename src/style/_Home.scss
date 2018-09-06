@@ -37,6 +37,7 @@
   margin: 15px 14%;
   font-size: 18px;
 }
+
 .land-prepare {
   width: 100vw;
   color: #333;
@@ -49,6 +50,7 @@
   font-size: 36px;
   font-weight: 300;
 }
+
 .prep-boxes-container {
   width: 80%;
   margin-left: 15%;
@@ -107,20 +109,24 @@
   padding: 10px;
 }
 
+.save-date-primary {
+  color: #333;
+
+  margin: 20px;
+}
+
 .save-date {
   font-family: "Open sans";
   font-weight: bold;
-  color: #333;
   font-size: 16px;
-  margin: 20px;
+  @extend .save-date-primary;
 }
 
 .save-date-title {
   font-family: "Open sans";
   font-size: 36px;
   font-weight: 400;
-  color: black;
-  margin: 20px;
+  @extend .save-date-primary;
 }
 
 .save-date-text {
@@ -128,37 +134,35 @@
   font-weight: 300;
   line-height: 1.6;
   font-size: 18px;
-  color: #333;
-  margin: 20px;
+  @extend .save-date-primary;
 }
 
-.home-reason{
+.home-reason {
   width: 80%;
   margin: 0 10%;
   margin: 0 5%;
-  font-family: 'Open sans';
+  font-family: "Open sans";
 }
-.home-reasons-title{
+.home-reasons-title {
   color: #333;
-  font-family: 'Open sans';
+  font-family: "Open sans";
   font-weight: 300;
-    margin: 40px 0;
-    font-size: 54px;
-    font-weight: 300;
-    text-align: center;
-  
+  margin: 40px 0;
+  font-size: 54px;
+  font-weight: 300;
+  text-align: center;
 }
 .home-expo-features-wrapper {
   max-width: 80%;
   margin: 0 10%;
-   display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
 }
 
 .home-expo-feature-box {
-  font-family: 'Open sans';
+  font-family: "Open sans";
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -177,7 +181,7 @@
 }
 
 .home-expo-feature-image {
-  max-height:170px;
+  max-height: 170px;
   margin: 20px;
   border-radius: 50%;
 }
@@ -187,9 +191,9 @@
   margin: 20px;
 }
 
-.home-expo-feature-box >a, h2 {
+.home-expo-feature-box > a,
+h2 {
   font-size: 26px;
   color: $primary-color;
   font-weight: 400;
-  
 }
