@@ -5,6 +5,7 @@
   font-family: "Open Sans", Zoram, "noto sans", Helvetica, Arial, sans-serif;
   display: flex;
   flex-direction: row;
+  z-index: 1;
 }
 
 .fixed-top {
@@ -12,12 +13,11 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030;
 }
 //Company Stuff
 .company-container {
   margin-top: 40px;
-  margin-left: 15%;
+  margin-left: 25%;
   height: 85%;
   width: 15%;
   display: flex;
@@ -28,7 +28,7 @@
   width: 50%;
   height: 100%;
 
-  padding: 20px 0 0 80px;
+  padding: 20px 0 0 15%;
 }
 
 //Menu button
@@ -103,11 +103,11 @@ nav {
 .dropdown {
   position: fixed;
   width: 100%;
-  top: 65px;
+  top: 60px;
   left: 0;
   font-family: "Open sans";
   border: solid 1px rgb(197, 193, 193);
-  z-index: 100;
+  // z-index: -1;
   background-color: #fff;
   color: #8d003f;
   height: 0;
@@ -125,14 +125,15 @@ nav {
   display: flex;
   flex-direction: row;
   font-size: 20px;
-  margin: 0px 15%;
+  margin: 20px 15% 30px 15%;
   padding-top: 30px;
   line-height: 32px;
   font-weight: 300;
   border-bottom: 1px solid rgb(197, 193, 193);
 }
 
-.navbar-header-link-word{ margin: 0 15px 10px 10px; 
+.navbar-header-link-word {
+  margin: 0 15px 20px 10px;
 }
 
 .navbar-body-wrapper {
@@ -141,7 +142,7 @@ nav {
 
 .navbar-column-header-wrapper {
   width: 70%;
-  margin: 20px 15%;
+  margin: 40px 15%;
   display: flex;
   flex-direction: row;
   font-weight: bold;
@@ -182,6 +183,10 @@ nav {
   text-align: left;
   font-size: 16px;
   margin: 5px 0;
+  cursor: pointer;
+}
+.navbar-column-link:hover{
+  color: $primary-color;
 }
 
 // ul {

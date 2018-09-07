@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import onClickOutside from "react-onclickoutside";
-
+// import {FontAwesome} from 'react-fontawesome'
 import logo from "../../images/RT_logo.png";
 
- class Navbar extends Component {
+class Navbar extends Component {
   constructor(props) {
     super(props);
 
@@ -63,7 +63,6 @@ import logo from "../../images/RT_logo.png";
             </Link>
             <div className="navbar-header-link-word">Family Discovery Day</div>
             <Link to="/expohall">
-              {" "}
               <div
                 className="navbar-header-link-word"
                 onClick={() => this.setState({ menuShow: false })}
@@ -80,6 +79,9 @@ import logo from "../../images/RT_logo.png";
               <div className="navbar-column-title">Get Involved</div>
               <div className="navbar-column-title">About RootsTech</div>
               <div className="navbar-column-title">Topics</div>
+              <div className="icons">
+              <i className='fab fa-twitter'></i>
+              </div>
             </div>
             <div className="navbar-column-link-wrapper">
               <div className="navbar-column-link-box">

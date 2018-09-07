@@ -25,6 +25,7 @@ export default function Coursetime(props) {
           day={course.day}
           time={course.time}
           explevel={course.explevel}
+          category={course.category}
         />
       
         )}

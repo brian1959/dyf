@@ -19,13 +19,12 @@ export default class Overview extends Component {
       <div className="overview-main">
         <section className="overview-header">
           <div className="overview-hero">
-            <div className="overview-image">
-              <img
-                src="../images/overview/hero.jpg"
-                alt="Overview"
-                height="430px"
-              />
-            </div>
+            <img
+              className="overview-image"
+              src="../images/overview/hero.jpg"
+              alt="Overview"
+            />
+
             <div className="overview-text-container">
               <div className="overview-date">FEBRUARY 28–MARCH 3</div>
               <h1>Look at All of the Great Reasons to Attend</h1>
@@ -57,7 +56,8 @@ export default class Overview extends Component {
               <div className="overview-session-category-image">
                 <img
                   className="overview-session-image os-image"
-                  src="../images/overview/classes_DNA_ruby.jpg" alt='DNA'
+                  src="../images/overview/classes_DNA_ruby.jpg"
+                  alt="DNA"
                 />
               </div>
               <div className="overview-session-category-text-wrapper">
@@ -72,7 +72,8 @@ export default class Overview extends Component {
               <div className="overview-session-category-image">
                 <img
                   className="overview-session-image os-image"
-                  src="../images/overview/classes_tools_ruby.jpg" alt='Tools'
+                  src="../images/overview/classes_tools_ruby.jpg"
+                  alt="Tools"
                 />
               </div>
               <div className="overview-session-category-text-wrapper">
@@ -88,7 +89,8 @@ export default class Overview extends Component {
               <div className="overview-session-category-image">
                 <img
                   className="overview-session-image os-image"
-                  src="../images/overview/classes_pictures_ruby.jpg" alt='Photos'
+                  src="../images/overview/classes_pictures_ruby.jpg"
+                  alt="Photos"
                 />
               </div>
               <div className="overview-session-category-text-wrapper">
@@ -103,7 +105,8 @@ export default class Overview extends Component {
               <div className="overview-session-category-image">
                 <img
                   className="overview-session-image os-image"
-                  src="../images/overview/classes_stories_ruby.jpg" alt="Stories"
+                  src="../images/overview/classes_stories_ruby.jpg"
+                  alt="Stories"
                 />
               </div>
               <div className="overview-session-category-text-wrapper">
@@ -119,7 +122,8 @@ export default class Overview extends Component {
               <div className="overview-session-category-image">
                 <img
                   className="overview-session-image os-image"
-                  src="../images/overview/classes_organize_ruby.jpg" alt='Organize'
+                  src="../images/overview/classes_organize_ruby.jpg"
+                  alt="Organize"
                 />
               </div>
               <div className="overview-session-category-text-wrapper">
@@ -136,7 +140,8 @@ export default class Overview extends Component {
               <div className="overview-session-category-image">
                 <img
                   className="overview-session-image os-image"
-                  src="../images/overview/classes_discovery_ruby.jpg" alt='Discovery'
+                  src="../images/overview/classes_discovery_ruby.jpg"
+                  alt="Discovery"
                 />
               </div>
               <div className="overview-session-category-text-wrapper">
@@ -182,7 +187,7 @@ export default class Overview extends Component {
                   alt="Discovery"
                 />
               </a>
-              <a href="/#/expohall">
+              <a className="a-link" href="/#/expohall">
                 <h1>Discovery Zone</h1>
                 <p>
                   At discovery zone,you'll see your ancestors come to life with
@@ -192,14 +197,14 @@ export default class Overview extends Component {
               </a>
             </div>
             <div className="ov-expo-feature-box">
-              <a href="/#/expohall">
+              <a  href="/#/expohall">
                 <img
                   className="ov-expo-feature-image overview-session-image"
                   src="../images/overview/innovation.jpg"
                   alt="Innovation"
                 />
               </a>
-              <a href="/#/expohall">
+              <a className="a-link" href="/#/expohall">
                 <h1>Innovation Alley</h1>
                 <p>
                   Check out a showcase of new tech tools and products at
@@ -217,12 +222,10 @@ export default class Overview extends Component {
                 />
               </a>
 
-              <a href="/#/expohall">
+              <a className="a-link" href="/#/expohall">
                 <h1>Coaches Corner</h1>
                 <p>
-                  At discovery zone,you'll see your ancestors come to life with
-                  interactive displays, fun facts, and engaging activies. Come
-                  seehow fun it can be to learn about your heritage.
+                Are you hitting roadblocks in your family history? Drop by the coaches’ corner for some one-on-one mentoring from an expert genealogist.
                 </p>
               </a>
             </div>
@@ -287,8 +290,8 @@ export default class Overview extends Component {
               <img
                 className="ov-reason-image"
                 id="imageToChange"
-                src="../images/overview/amazeevent.jpg"
-                alt="amazing events"
+                src={`../images/overview/${this.state.displayReason}.jpg`}
+                alt={this.state.displayReason}
               />
             </div>
           </div>

@@ -21,7 +21,7 @@ export default function Footer(props) {
       <div className="footer-contact-us">Contact Us</div>
       <a className='footer-faq' href='/#/faqs'>
       <div className="footer-faq">Frequently Asked Questions</div></a>
-      <i className="fa fa-twitter" aria-hidden="true"></i> 
+      <i className="fa fa-twitter"></i> 
       </div>
     </div>
   );

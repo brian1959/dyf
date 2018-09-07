@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: $primary-color;
+  color: #333;
 }
 .overview-header {
 }
@@ -19,6 +19,8 @@
 }
 
 .overview-image {
+  width: 140%;
+  height: 140%;
   margin-bottom: 56px;
 }
 
@@ -47,7 +49,7 @@
 
 .overview-sessions {
   width: 90%;
-  margin: o 5%;
+  margin: 0 5%;
 }
 
 .overview-session-header-box {
@@ -93,7 +95,7 @@
   max-width: 25%;
 }
 .os-image {
-  max-height: 75px;
+  max-height: 90px;
 }
 
 .overview-session-category-text-wrapper {
@@ -118,14 +120,14 @@
   width: 86%;
   background-color: #eff9fb;
   padding: 30px 30px;
-
+  margin-bottom: 80px;
 }
 
 .ov-expo-title {
   font-size: 54px;
   font-weight: 300;
   text-align: center;
-  margin: 30px 0 42px 0;
+  margin: 40px 0 42px 0;
 }
 .ov-expo-hero-wrapper {
   width: 100%;
@@ -133,22 +135,19 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  margin: 30px 0 60px 0;
+  margin: 30px 0 80px 0;
 }
 .ov-expo-image {
   max-width: 60%;
 }
 
-.ov-expo-hero {
-  max-height: 380px;
-}
 .ov-expo-text-wrapper {
-  margin: 10px;
+  margin: 15px;
 }
 
 .ov-expo-text-title {
   font-size: 36px;
-  margin: 10px;
+  margin: 20px;
 }
 
 .ov-expo-text {
@@ -172,8 +171,10 @@
 
   margin: 28px 8px 10px 0;
 }
-.ov-expo-link {
-  // margin: 20% auto;
+
+
+.a-link:visited {
+  color: black;
 }
 
 .ov-expo-features-wrapper {
@@ -194,18 +195,20 @@
 }
 
 .ov-expo-feature-image {
-  max-height: 150px;
+  max-height: 200px;
   margin: 20px;
 }
 
-.ov-expo-feature-box > a{
-
+.ov-expo-feature-box > a,
+a:visited {
+  text-align: center;
+  font-size: 28px;
   text-decoration: none;
-  color: $primary-color;
+  color: #333;
 }
-.ov-expo-feature-box > h1 {
+.ov-expo-feature-box > a > h1 {
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 28px;
   margin: 50px 0 10px 0;
 }
 .ov-expo-feature-box > p {
@@ -218,7 +221,7 @@
 
 .ov-reasons {
   width: 90%;
-  margin-top: 30px;
+  margin-top:60px;
 }
 
 .reason-title {
@@ -226,6 +229,7 @@
   font-size: 54px;
   text-align: center;
   font-weight: 300;
+  line-height: 1.2;
 }
 
 .ov-reason-wrapper {
@@ -257,7 +261,6 @@
   font-weight: bold;
 }
 
-.ov-reason-image{
-   width: 100%;
-   
+.ov-reason-image {
+  width: 100%;
 }

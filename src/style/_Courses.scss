@@ -1,4 +1,4 @@
-.courses-main-wrapper{
+.courses-main-wrapper {
   width: 100%;
 }
 
@@ -9,12 +9,21 @@
 }
 
 .courses-header {
-  font-size: 60px;
+  font-size: 54px;
   text-align: center;
   width: 80%;
-  margin: 5px 10% 20px 10%;
+  margin: 5px 10% 30px 10%;
   font-weight: 300;
   font-family: "Open sans";
+}
+
+.sub-change {
+  font-family: "Open sans";
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 60px;
+  text-align: center;
+  color: black;
 }
 
 .day-box-container {
@@ -76,36 +85,100 @@
   font-size: 24px;
 }
 
+.filterable-schedule-container {
+  width: 100%;
+}
 
-.schedule-container{
+.schedule-container {
   display: flex;
   flex-direction: row;
-  margin-left: 30px;
-  width: 80%;
-  margin: 10px 5% 0 15%;
-  
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  // margin: 10px 5% 0 5%;
 }
-.schedule-filters-container{
-  max-width: 20%;
+.schedule-filters-container {
+  width: 20%;
   height: 750;
-  padding-right: 5%;
+  padding-right: 1%;
 }
 
-.schedule-filter{
+.schedule-filter {
   margin-bottom: 30px;
-  max-width: 200px;
-  height: 100px;
+  min-height: 100px;
   border: solid 1px $primary-color;
   text-align: center;
-  
+  padding-top: 15px;
+  font-family: "Open sans";
 }
 
-.sf-header{
-  font-family: 'Open sans';
+.sf-header {
   line-height: 1.5;
-  margin-top:14px;
+  margin: 25px 0 10px 0;
   font-weight: bold;
-  font-size: 22px;
-
+  font-size: 18px;
+  color: #333;
 }
 
+.course-schedule-container {
+  width: 60%;
+  color: #333;
+}
+
+.dot-symbol {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.selected-key {
+  color: #333;
+  margin: 10px 0 10px 0;
+}
+
+.arrow-up {
+  color: #333;
+  margin: 10px 0 20px 0;
+  font-weight: bold;
+}
+
+.grey{
+  background-color: #d0d3d4;
+}
+.blue{
+  background-color: #34a2bc;
+}
+.green{
+  background-color: #44883e;
+}
+.magenta{
+  background-color: #ac145a;
+}
+.blended{
+  background-color: #53565a  
+}
+
+.selector-holder{
+  min-height: 50px;
+  border: solid 1px black;
+  font-family: 'Open sans';
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+.circle-selector{
+  margin: 0 0 0 15px;
+  border-top: solid grey 1px;
+  border-bottom: solid grey 1px;
+}
+
+.selector-name{
+  float: right;
+  width:200px;
+  padding-left: 10px; 
+   text-align: left;
+}

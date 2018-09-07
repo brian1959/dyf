@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import axios from "axios";
 import Speaker from "./Speaker";
 import Featured from "./Featured";
-// import Speakerbio from "./Speakerbio";
+import Speakerbio from "./Speakerbio";
 
 export default class Presenters extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      modalShow: false,
       speakersToDisplay: [],
       speakerid:'',
       speakerName: "",
@@ -21,10 +22,16 @@ export default class Presenters extends Component {
       presenterTitle: "",
       presenterBio: "",
       presenterImage: "",
-      caption: ""
+      caption: "",
+      selectedSpeaker:{}
     };
 
     this.getBioModal = this.getBioModal.bind(this);
+    this.showModal = this.showModal.bind(this);
+  }
+
+  showModal(){
+    this.setState({modalShow: !this.state.modalShow});
   }
 
   componentDidMount() {
@@ -36,8 +43,9 @@ export default class Presenters extends Component {
     });
   }
 
-  getBioModal(bioid) {
-    console.log(bioid);
+  getBioModal(selectedProps) {
+    this.setState({selectedSpeaker:selectedProps, modalShow:!this.state.modalShow}) 
+    console.log(selectedProps);
   }
 
   render() {
@@ -50,7 +58,7 @@ export default class Presenters extends Component {
           <div className="speaker-header">
             RootsTech 2018 Speakers
           </div>
-          {/* <Speakerbio /> */}
+          {this.state.modalShow ? <Speakerbio selectedSpeaker={this.state.selectedSpeaker}/> :""}
         </section>
         <section className="speaker-list">
           {speakersToDisplay.map(speaker => (
@@ -84,6 +92,8 @@ export default class Presenters extends Component {
               getBioModal={this.getBioModal}
             />
           ))}
+        </section>
+        <section className='bio-modal-dropdown'>
         </section>
       </div>
     );
