@@ -16,6 +16,9 @@ class Courses extends Component {
       displaypasscolor: "alldot.gif",
       displayexplevel: ["All"],
       displaycategory: ["All"],
+      passMenuShow: false,
+      categoryMenuShow: false,
+      explMenuShow: false,
       scheduleid: "",
       coursename: "",
       coursesummary: "",
@@ -23,7 +26,9 @@ class Courses extends Component {
       company: "",
       day: "",
       time: "",
-      explevel: ""
+      explevel: "",
+      expFilter: "",
+      catFilter: ""
     };
   }
   componentDidMount() {
@@ -36,8 +41,9 @@ class Courses extends Component {
     });
   }
 
-  componentDidUpdate(){
-
+  componentDidUpdate(prevState) {
+    if (this.state !== prevState.state) {
+    }
   }
 
   handleDayChange(currentday) {
@@ -49,23 +55,108 @@ class Courses extends Component {
   }
 
   handleExpLevel(explvl) {
-    this.setState({ displayexplevel: [...explvl] });
+    if (this.state.displayexplevel[0] === "All") {
+      this.setState({ displayexplevel: [explvl] });
+    } else {
+      if (
+        this.state.displayexplevel[0] === explvl &&
+        this.state.displayexplevel.length === 1
+      ) {
+        this.setState({ displayexplevel: ["All"] });
+      } else {
+        if (this.state.displayexplevel.indexOf(explvl) === -1) {
+          this.setState({
+            displayexplevel: [...this.state.displayexplevel, explvl]
+          });
+        } else {
+          let modDisplayExplevel = this.state.displayexplevel.slice();
+          modDisplayExplevel.splice(modDisplayExplevel.indexOf(explvl), 1);
+          this.setState({ displayexplevel: modDisplayExplevel });
+        }
+      }
+    }
   }
 
   handleCategory(cat) {
-    this.setState({ displaycategory: [...this.state.displaycategory,cat] });
+    if (this.state.displaycategory[0] === "All") {
+      this.setState({ displaycategory: [cat] });
+    } else {
+      if (
+        this.state.displaycategory[0] === cat &&
+        this.state.displaycategory.length === 1
+      ) {
+        this.setState({ displaycategory: ["All"] });
+      } else {
+        if (this.state.displaycategory.indexOf(cat) === -1) {
+          this.setState({
+            displaycategory: [...this.state.displaycategory, cat]
+          });
+        } else {
+          let modDisplayCategory = this.state.displaycategory.slice();
+          modDisplayCategory.splice(modDisplayCategory.indexOf(cat), 1);
+          this.setState({ displaycategory: modDisplayCategory });
+        }
+      }
+    }
   }
 
+  // this.setState({ displaycategory: [...this.state.displaycategory, cat] })
+
+  // showPassFilter() {
+  //   let arrowBtn = document.querySelector(".arrow-up");
+  //   this.setState({
+  //     passMenuShow: !this.state.passMenuShow
+  //   });
+  //   if (!this.state.passMenuShow) {
+  //     arrowBtn.classList.add("close");
+  //   } else {
+  //     arrowBtn.classList.remove("close");
+  //   }
+  // }
+
   render() {
-    let coursesToDisplay = this.state.courses.filter(
+    console.log(this.state.displayexplevel);
+    let passTypeToDisplay = [];
+    if (this.state.displaypasstype !== "All") {
+      passTypeToDisplay = this.state.courses.filter(
+        course => course.passtype === this.state.displaypasstype
+      );
+    } else {
+      passTypeToDisplay = this.state.courses;
+    }
+    console.log(this.state.displayexplevel[0]);
+
+    let difficultyToDisplay = [];
+    if (this.state.displayexplevel[0] !== "All") {
+      this.state.displayexplevel.forEach(
+        el => (el = this.state.displayexplevel + " || ")
+        // console.log(el)
+      );
+      difficultyToDisplay = passTypeToDisplay.filter(
+        course => course.explevel === this.state.displayexplevel[0] 
+      );
+    } else {
+      difficultyToDisplay = passTypeToDisplay;
+    }
+    console.log(difficultyToDisplay);
+
+    let categoryToDisplay = [];
+    if (this.state.displaycategory[0] !== "All") {
+      categoryToDisplay = difficultyToDisplay.filter(
+        course => course.category === this.state.displaycategory[0] || course.category === this.state.displaycategory[1]  || course.category === this.state.displaycategory[2] || course.category === this.state.displaycategory[3]
+      );
+    } else {
+      categoryToDisplay = difficultyToDisplay;
+    }
+    console.log(categoryToDisplay);
+
+    let coursesToDisplay = categoryToDisplay.filter(
       course => course.day === this.state.displayday
     );
 
     let timeToDisplay = this.state.displaytime.filter(
       times => times.day === this.state.displayday
     );
-    console.log(coursesToDisplay);
-    console.log(this.state.displaypasstype, this.state.displaypasscolor);
 
     return (
       <div className="courses-main-wrapper">
@@ -138,10 +229,10 @@ class Courses extends Component {
                   <img src={`../images/${this.state.displaypasscolor} `} />
                 </div>
                 <div className="all-key">{this.state.displaypasstype}</div>
-                <div className="arrow-up">
-                  <div className="arrow-line"></div>
-                  <div className="arrow-line"></div>
-                  </div>
+                <div className="arrow-up" onClick={() => this.showPassFilter()}>
+                  <div className="arrow-line" />
+                  <div className="arrow-line" />
+                </div>
                 <div className="hidden-selector">
                   <div
                     className="selector-holder"
@@ -238,7 +329,10 @@ class Courses extends Component {
               <div className="schedule-filter">
                 <span className="sf-header">DIFFICULTY</span>
                 <div className="all-key">{this.state.displayexplevel}</div>
-                <div className="arrow-up">X</div>
+                <div className="arrow-up">
+                  <div className="arrow-line" />
+                  <div className="arrow-line" />
+                </div>
                 <div className="hidden-selector">
                   <div className="exp-level">
                     <Checkbox onClick={() => this.handleExpLevel("Beginner")} />
@@ -265,21 +359,82 @@ class Courses extends Component {
               <div className="schedule-filter">
                 <span className="sf-header">CATEGORY</span>
                 <div className="all-key">{this.state.displaycategory}</div>
-                <div className="arrow-up">X</div>
+                <div className="arrow-up">
+                  <div className="arrow-line" />
+                  <div className="arrow-line" />
+                </div>
                 <div className="hidden-selector">
+                  <div className="exp-level">
+                    <Checkbox onClick={() => this.handleCategory("Collaboration")} />
+                    <div className="exp-lvl-title">Collaboration</div>
+                  </div>
                   <div className="exp-level">
                     <Checkbox onClick={() => this.handleCategory("DNA")} />
                     <div className="exp-lvl-title">DNA</div>
                   </div>
                   <div className="exp-level">
-                    <Checkbox onClick={() => this.handleCategory("Photos")} />
-                    <div className="exp-lvl-title">Photos</div>
+                    <Checkbox onClick={() => this.handleCategory("Family Trees")} />
+                    <div className="exp-lvl-title">Family Trees</div>
+                  </div>
+                  <div className="exp-level">
+                    <Checkbox onClick={() => this.handleCategory("Geographical")} />
+                    <div className="exp-lvl-title">Geographical</div>
                   </div>
                   <div className="exp-level">
                     <Checkbox
                       onClick={() => this.handleCategory("Methodology")}
                     />
                     <div className="exp-lvl-title">Methodology</div>
+                  </div>
+                  <div className="exp-level">
+                    <Checkbox onClick={() => this.handleCategory("Military")} />
+                    <div className="exp-lvl-title">Military</div>
+                  </div>
+                  <div className="exp-level">
+                    <Checkbox onClick={() => this.handleCategory("Mobile")} />
+                    <div className="exp-lvl-title">Mobile</div>
+                  </div>
+                  <div className="exp-level">
+                    <Checkbox
+                      onClick={() => this.handleCategory("Newspapers")}
+                    />
+                    <div className="exp-lvl-title">Newspapers</div>
+                  </div>
+                  <div className="exp-level">
+                    <Checkbox
+                      onClick={() => this.handleCategory("Organization")}
+                    />
+                    <div className="exp-lvl-title">Organization</div>
+                  </div>
+                  <div className="exp-level">
+                    <Checkbox
+                      onClick={() => this.handleCategory("Photos & Stories")}
+                    />
+                    <div className="exp-lvl-title">Photos & Stories</div>
+                  </div>
+                  <div className="exp-level">
+                    <Checkbox
+                      onClick={() => this.handleCategory("Preservation")}
+                    />
+                    <div className="exp-lvl-title">Preservation</div>
+                  </div>
+                  <div className="exp-level">
+                    <Checkbox
+                      onClick={() => this.handleCategory("Records")}
+                    />
+                    <div className="exp-lvl-title">Records</div>
+                  </div>
+                  <div className="exp-level">
+                    <Checkbox
+                      onClick={() => this.handleCategory("Religion")}
+                    />
+                    <div className="exp-lvl-title">Religion</div>
+                  </div>
+                  <div className="exp-level">
+                    <Checkbox
+                      onClick={() => this.handleCategory("Social Media")}
+                    />
+                    <div className="exp-lvl-title">Social Media</div>
                   </div>
                   <div className="exp-level">
                     <Checkbox
@@ -291,7 +446,10 @@ class Courses extends Component {
               </div>
               <div className="schedule-filter">
                 <span className="sf-header">SEARCH</span>
-                <div className="arrow-up">X</div>
+                <div className="arrow-up">
+                  <div className="arrow-line" />
+                  <div className="arrow-line" />
+                </div>
               </div>
             </div>
             <div className="course-schedule-container">

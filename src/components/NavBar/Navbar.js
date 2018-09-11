@@ -31,7 +31,6 @@ class Navbar extends Component {
   }
 
   render() {
-    console.log(this.state);
 
     return (
       <div>

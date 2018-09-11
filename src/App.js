@@ -7,6 +7,7 @@ import routes from "./routes";
 
 class App extends Component {
   render() {
+    window.scrollTo(0,0)
     return (
       <div>
         <Navbar/>

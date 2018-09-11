@@ -133,13 +133,14 @@
 
 .arrow-up {
   color: #333;
-  margin: 10px 0 20px 0;
+  width: 15px;
+  margin: 15px 0 20px 45%;
   font-weight: bold;
 
   .arrow-line{
     width: 15px;
     height: 1.5px;
-    margin: 0 0 3px 0;
+    margin: 0 40% 3px 0;
     background: #333;
     @include easeOut;
 
@@ -148,9 +149,14 @@
       translate(1px, -1px);
     }
     &:nth-child(2){
-      transform: rotate(-45deg)
-      translate()
+      transform: rotate(135deg)
+      translate(-10px, -3px);
     }
+  }
+
+  &.close{
+    transform: rotate(180deg);
+    transform-origin:center;
   }
 }
 
