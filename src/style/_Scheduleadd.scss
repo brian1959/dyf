@@ -1,36 +1,32 @@
 .sch-add-container {
   width: 100%;
-
-  margin-left: 5%;
   font-family: "Open Sans";
   color: #333;
 }
 .add-class-item-container {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.add-btn-wrapper{
+.add-btn-wrapper {
   width: 20%;
 }
 .add-class {
   width: 100px;
   margin-bottom: 10px;
-  margin-right: 15px;
+  margin: 10px 0;
 }
 
-.add-collapsible-wrapper{
-  width: 70%;
- 
+.add-collapsible-wrapper {
+  width: 80%;
 }
 .sa-session-title {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   color: #333;
-  
 }
 
 .sa-session-speaker {
@@ -55,5 +51,3 @@
   font-weight: 400;
   font-size: 12px;
 }
-
-

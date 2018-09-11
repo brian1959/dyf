@@ -1,6 +1,5 @@
 @import "reset";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
-
 @import "config";
 @import "Menu";
 @import "Home";
@@ -36,7 +35,10 @@
   padding-bottom: 1px;
 }
 
-a, a:hover, a:visited, a:active {
+a,
+a:hover,
+a:visited,
+a:active {
   text-decoration: none;
   color: #8d003f;
 }

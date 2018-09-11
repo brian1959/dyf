@@ -4,7 +4,7 @@ import Scheduleadd from './Scheduleadd';
 export default function Schedulechoicetime(props) {
 
   return (
-    <div className="coursetime-container">
+    <div className="my-coursetime-container">
       <div className="my-time-container">
         <div className="my-time-block">
           {props.time}

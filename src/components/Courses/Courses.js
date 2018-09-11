@@ -1,16 +1,21 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Coursetime from "./Coursetime";
+import { Checkbox } from "semantic-ui-react";
 
 class Courses extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      selectedKey:'All',
+      selectedKey: "All",
       courses: [],
       displaytime: [],
       displayday: "Thursday",
+      displaypasstype: "All",
+      displaypasscolor: "alldot.gif",
+      displayexplevel: ["All"],
+      displaycategory: ["All"],
       scheduleid: "",
       coursename: "",
       coursesummary: "",
@@ -31,8 +36,24 @@ class Courses extends Component {
     });
   }
 
+  componentDidUpdate(){
+
+  }
+
   handleDayChange(currentday) {
     this.setState({ displayday: currentday });
+  }
+
+  handlePassType(passtype, passcolor) {
+    this.setState({ displaypasstype: passtype, displaypasscolor: passcolor });
+  }
+
+  handleExpLevel(explvl) {
+    this.setState({ displayexplevel: [...explvl] });
+  }
+
+  handleCategory(cat) {
+    this.setState({ displaycategory: [...this.state.displaycategory,cat] });
   }
 
   render() {
@@ -44,6 +65,7 @@ class Courses extends Component {
       times => times.day === this.state.displayday
     );
     console.log(coursesToDisplay);
+    console.log(this.state.displaypasstype, this.state.displaypasscolor);
 
     return (
       <div className="courses-main-wrapper">
@@ -52,9 +74,22 @@ class Courses extends Component {
             <span>RootsTech 2018 Schedule</span>
           </div>
           <div className="sub-change">Subject to change</div>
-          <div className="day-box-container">
+          <div className="general-day-box-container">
             <div
-              className="day-box dayT "
+              className="day-box"
+              style={
+                this.state.displayday === "Wednesday"
+                  ? { background: "rgba(238, 238, 238)" }
+                  : {}
+              }
+              onClick={() => this.handleDayChange("Wednesday")}
+            >
+              <div className="day-letter-holder dayW">W</div>
+              <div className="day-name-holder daywe">WEDNESDAY</div>
+            </div>
+
+            <div
+              className="day-box"
               style={
                 this.state.displayday === "Thursday"
                   ? { background: "rgba(238, 238, 238)" }
@@ -62,11 +97,12 @@ class Courses extends Component {
               }
               onClick={() => this.handleDayChange("Thursday")}
             >
-              <div className="day-letter-holder dayT">TH</div>
-              <div className="day-name-holder dayth">Thursday</div>
+              <div className="day-letter-holder dayT">Th</div>
+              <div className="day-name-holder dayth">THURSDAY</div>
             </div>
+
             <div
-              className="day-box dayF"
+              className="day-box"
               style={
                 this.state.displayday === "Friday"
                   ? { background: "rgba(238, 238, 238)" }
@@ -75,10 +111,11 @@ class Courses extends Component {
               onClick={() => this.handleDayChange("Friday")}
             >
               <div className="day-letter-holder dayF">F</div>
-              <div className="day-name-holder dayfr">Friday</div>
+              <div className="day-name-holder dayfr">FRIDAY</div>
             </div>
+
             <div
-              className="day-box dayS"
+              className="day-box"
               style={
                 this.state.displayday === "Saturday"
                   ? { background: "rgba(238, 238, 238)" }
@@ -87,7 +124,7 @@ class Courses extends Component {
               onClick={() => this.handleDayChange("Saturday")}
             >
               <div className="day-letter-holder dayS">S</div>
-              <div className="day-name-holder daysa">Saturday</div>
+              <div className="day-name-holder daysa">SATURDAY</div>
             </div>
           </div>
         </section>
@@ -97,28 +134,101 @@ class Courses extends Component {
             <div className="schedule-filters-container">
               <div className="schedule-filter">
                 <span className="sf-header">PASS</span>
-                <div className="dot-symbol-holder " />
-                <div className="all-key">All</div>
-                <div className="arrow-up">X</div>
+                <div className="dot-symbol-holder">
+                  <img src={`../images/${this.state.displaypasscolor} `} />
+                </div>
+                <div className="all-key">{this.state.displaypasstype}</div>
+                <div className="arrow-up">
+                  <div className="arrow-line"></div>
+                  <div className="arrow-line"></div>
+                  </div>
                 <div className="hidden-selector">
-                  <div className="selector-holder">
-                    <div className="circle-selector dot-symbol grey" />
+                  <div
+                    className="selector-holder"
+                    onClick={() => this.handlePassType("All", "alldot.gif")}
+                    style={
+                      this.state.displaypasstype === "All"
+                        ? { background: "rgba(238, 238, 238)" }
+                        : {}
+                    }
+                  >
+                    <img
+                      className="filter-passdot"
+                      src="../images/alldot.gif"
+                    />
                     <div className="selector-name">All</div>
                   </div>
-                  <div className="selector-holder">
-                    <div className="circle-selector dot-symbol blue" />
+                  <div
+                    className="selector-holder"
+                    onClick={() =>
+                      this.handlePassType("Family", "familydot.gif")
+                    }
+                    style={
+                      this.state.displaypasstype === "Family"
+                        ? { background: "rgba(238, 238, 238)" }
+                        : {}
+                    }
+                  >
+                    <img
+                      className="filter-passdot"
+                      src="../images/familydot.gif"
+                    />
                     <div className="selector-name">Family Discovery Day</div>
                   </div>
-                  <div className="selector-holder">
-                    <div className="circle-selector dot-symbol green" />
+                  <div
+                    className="selector-holder"
+                    onClick={() =>
+                      this.handlePassType("Getting Started", "startdot.gif")
+                    }
+                    style={
+                      this.state.displaypasstype === "Getting Started"
+                        ? { background: "rgba(238, 238, 238)" }
+                        : {}
+                    }
+                  >
+                    <img
+                      className="filter-passdot"
+                      src="../images/startdot.gif"
+                    />
                     <div className="selector-name">Getting Started</div>
                   </div>
-                  <div className="selector-holder">
-                    <div className="circle-selector dot-symbol magenta" />
+                  <div
+                    className="selector-holder"
+                    onClick={() =>
+                      this.handlePassType("RootsTech", "rootstechdot.gif")
+                    }
+                    style={
+                      this.state.displaypasstype === "Rootstech"
+                        ? { background: "rgba(238, 238, 238)" }
+                        : {}
+                    }
+                    style={
+                      this.state.displaypasstype === "RootsTech"
+                        ? { background: "rgba(238, 238, 238)" }
+                        : {}
+                    }
+                  >
+                    <img
+                      className="filter-passdot"
+                      src="../images/rootstechdot.gif"
+                    />
                     <div className="selector-name">RootsTech</div>
                   </div>
-                  <div className="selector-holder">
-                    <div className="circle-selector dot-symbol blended" />
+                  <div
+                    className="selector-holder"
+                    onClick={() =>
+                      this.handlePassType("Add-ons", "addondot.gif")
+                    }
+                    style={
+                      this.state.displaypasstype === "Add-ons"
+                        ? { background: "rgba(238, 238, 238)" }
+                        : {}
+                    }
+                  >
+                    <img
+                      className="filter-passdot"
+                      src="../images/addondot.gif"
+                    />
                     <div className="selector-name">
                       RootsTech Pass Paid Add-ons
                     </div>
@@ -127,17 +237,60 @@ class Courses extends Component {
               </div>
               <div className="schedule-filter">
                 <span className="sf-header">DIFFICULTY</span>
-                <div className="all-key">All</div>
+                <div className="all-key">{this.state.displayexplevel}</div>
                 <div className="arrow-up">X</div>
+                <div className="hidden-selector">
+                  <div className="exp-level">
+                    <Checkbox onClick={() => this.handleExpLevel("Beginner")} />
+                    <div className="exp-lvl-title">Beginner</div>
+                  </div>
+                  <div className="exp-level">
+                    <Checkbox
+                      onClick={() => this.handleExpLevel("Intermediate")}
+                    />
+                    <div className="exp-lvl-title">Intermediate</div>
+                  </div>
+                  <div className="exp-level">
+                    <Checkbox
+                      onClick={() => this.handleExpLevel("Professional")}
+                    />
+                    <div className="exp-lvl-title">Professional</div>
+                  </div>
+                  <div className="exp-level">
+                    <Checkbox onClick={() => this.handleExpLevel("Advanced")} />
+                    <div className="exp-lvl-title">Advanced</div>
+                  </div>
+                </div>
               </div>
               <div className="schedule-filter">
                 <span className="sf-header">CATEGORY</span>
-                <div className="all-key">All</div>
+                <div className="all-key">{this.state.displaycategory}</div>
                 <div className="arrow-up">X</div>
+                <div className="hidden-selector">
+                  <div className="exp-level">
+                    <Checkbox onClick={() => this.handleCategory("DNA")} />
+                    <div className="exp-lvl-title">DNA</div>
+                  </div>
+                  <div className="exp-level">
+                    <Checkbox onClick={() => this.handleCategory("Photos")} />
+                    <div className="exp-lvl-title">Photos</div>
+                  </div>
+                  <div className="exp-level">
+                    <Checkbox
+                      onClick={() => this.handleCategory("Methodology")}
+                    />
+                    <div className="exp-lvl-title">Methodology</div>
+                  </div>
+                  <div className="exp-level">
+                    <Checkbox
+                      onClick={() => this.handleCategory("Technology")}
+                    />
+                    <div className="exp-lvl-title">Technology</div>
+                  </div>
+                </div>
               </div>
               <div className="schedule-filter">
                 <span className="sf-header">SEARCH</span>
-                <div className="all-key">All</div>
                 <div className="arrow-up">X</div>
               </div>
             </div>

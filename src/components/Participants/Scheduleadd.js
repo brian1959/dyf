@@ -3,17 +3,7 @@ import Collapsible from "react-collapsible";
 
 
 export default class Scheduleadd extends Component {
-    constructor(props){
-      super(props)
-
-      this.state ={
-        scheduleid:'',
-      }
-    }
-
-
-      
-    
+  
 
   render(){
 

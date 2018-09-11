@@ -1,13 +1,18 @@
 .sch-container {
   width: 80%;
-  
-  margin-left:15%;
+  min-height: 30px;
+  margin: 10px 0 20px 10%;
   font-family: "Open Sans";
-  color: $primary-color;
-}
-.session-title {
   font-size: 18px;
-  font-weight: 400;
+  color: $primary-color;
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid 1px $primary-color;
+}
+
+.passdot{
+  height: 24px;
+  margin-right: 20px;
 }
 
 .session-speaker {
@@ -29,10 +34,12 @@
 .session-meta-item-label {
   font-weight: 700;
   font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .Collapsible__trigger{
   max-width: 95%;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
+  
 }

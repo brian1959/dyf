@@ -26,6 +26,7 @@ export default function Coursetime(props) {
           time={course.time}
           explevel={course.explevel}
           category={course.category}
+          passtype={course.passtype}
         />
       
         )}

@@ -1,4 +1,4 @@
-SELECT co.coursename, co.coursesummary, co.explevel,s.dayid, s.time24, s.scheduleid , p.presenter, p.company, ca.category, s."day", s."time"
+SELECT co.coursename, co.coursesummary, co.explevel,s.dayid, s.time24, s.scheduleid , p.presenter, p.company, ca.category, s."day", s."time",co.passtype
 FROM schedule AS s
 JOIN courses AS co ON
 s.courseid = co.courseid

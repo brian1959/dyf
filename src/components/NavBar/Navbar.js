@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import onClickOutside from "react-onclickoutside";
-// import {FontAwesome} from 'react-fontawesome'
 import logo from "../../images/RT_logo.png";
 
 class Navbar extends Component {
@@ -12,14 +11,23 @@ class Navbar extends Component {
       menuShow: false
     };
   }
+
   showMenu() {
+    let menuBtn = document.querySelector(".menu-btn");
     this.setState({
       menuShow: !this.state.menuShow
     });
+    if (!this.state.menuShow) {
+      menuBtn.classList.add("close");
+    } else {
+      menuBtn.classList.remove("close");
+    }
   }
 
   handleClickOutside() {
+    let menuBtn = document.querySelector(".menu-btn");
     this.setState({ menuShow: false });
+    menuBtn.classList.remove("close");
   }
 
   render() {
@@ -33,30 +41,32 @@ class Navbar extends Component {
               <img src={logo} alt="logo" height="30px" />
             </div>
             <div className="menu-box">
-              <span className="header-date">Feb. 27-Mar. 2, 2019</span>
-              <div
-                className="menu-items-holder"
-                onClick={() => this.showMenu()}
-              >
-                <div className="menu-btn">
+              <span className="menu-header-date">Feb. 27-Mar. 2, 2019</span>
+              <div className="menu-items-holder">
+                <div className="menu-btn" onClick={() => this.showMenu()}>
                   <div className="btn-line" />
                   <div className="btn-line" />
                   <div className="btn-line" />
                 </div>
-                <div className="menu-word">Menu</div>
+
+                <div className="menu-header-word">Menu</div>
               </div>
             </div>
           </section>
         </div>
         <div
-          className={(this.state.menuShow ? "dropDownShow" : "") + " dropdown"}
+          className={
+            (this.state.menuShow ? "dropDownShow" : "dropDownNoShow") +
+            " dropdown"
+          }
         >
           <div className="navbar-header-links">
+          <div className="navbar-header-link-words">
             <div className="navbar-header-link-word">Blog</div>
             <Link to="/overview">
               <div
                 className="navbar-header-link-word"
-                onClick={() => this.setState({ menuShow: false })}
+                onClick={() => this.showMenu()}
               >
                 Why Attend RootsTech
               </div>
@@ -65,113 +75,110 @@ class Navbar extends Component {
             <Link to="/expohall">
               <div
                 className="navbar-header-link-word"
-                onClick={() => this.setState({ menuShow: false })}
+                onClick={() => this.showMenu()}
               >
                 Expo Hall
               </div>
             </Link>
             <div className="navbar-header-link-word">London</div>
-          </div>
-          <div className="navbar-body-wrapper">
-            <div className="navbar-column-header-wrapper">
-              <div className="navbar-column-title">Conference Features</div>
-              <div className="navbar-column-title">Agenda</div>
-              <div className="navbar-column-title">Get Involved</div>
-              <div className="navbar-column-title">About RootsTech</div>
-              <div className="navbar-column-title">Topics</div>
-              <div className="icons">
-              <i className='fab fa-twitter'></i>
-              </div>
             </div>
-            <div className="navbar-column-link-wrapper">
-              <div className="navbar-column-link-box">
-                <Link to="/overview">
-                  <div
-                    className="navbar-column-link"
-                    onClick={() => this.setState({ menuShow: false })}
-                  >
-                    Conference Overview
-                  </div>
-                </Link>
-                <div className="navbar-column-link">Family Discovery Day</div>
-                <Link to="/expohall">
-                  <div
-                    className="navbar-column-link"
-                    onClick={() => this.setState({ menuShow: false })}
-                  >
-                    Expo Hall
-                  </div>
-                </Link>
-              </div>
-              <div className="navbar-column-link-box">
-                <Link to="/courses">
-                  <div
-                    className="navbar-column-link"
-                    onClick={() => this.setState({ menuShow: false })}
-                  >
-                    Schedule
-                  </div>
-                </Link>
-                <Link to="/presenters">
-                  <div
-                    className="navbar-column-link"
-                    onClick={() => this.setState({ menuShow: false })}
-                  >
-                    Speakers
-                  </div>
-                </Link>
-                <Link to="/events">
-                  <div
-                    className="navbar-column-link"
-                    onClick={() => this.setState({ menuShow: false })}
-                  >
-                    Events
-                  </div>
-                </Link>
-                <Link to="/labs">
-                  <div
-                    className="navbar-column-link"
-                    onClick={() => this.setState({ menuShow: false })}
-                  >
-                    Labs
-                  </div>
-                </Link>
-                <div className="navbar-column-link">Live Stream Schedule</div>
-              </div>
-              <div className="navbar-column-link-box">
-                <div className="navbar-column-link">
-                  Exhibitors and Sponsors
+            <div className="navbar-icons">
+            <i className="fas fa-search "></i>
+            <i className="fab fa-twitter "></i>
+            <i className="fab fa-facebook "></i>
+            </div>
+          </div>
+          <div className="navbar-column-link-wrapper">
+            <div className="navbar-column-link-box">
+              <div className="navbar-column-title">Conference Features</div>
+              <Link to="/overview">
+                <div
+                  className="navbar-column-link"
+                  onClick={() => this.showMenu()}
+                >
+                  Conference Overview
                 </div>
-                <div className="navbar-column-link">Hotels</div>
-              </div>
-              <div className="navbar-column-link-box">
-                <Link to="/about">
-                  <div
-                    className="navbar-column-link"
-                    onClick={() => this.setState({ menuShow: false })}
-                  >
-                    About
-                  </div>
-                </Link>
-                <Link to="/faq">
-                  <div
-                    className="navbar-column-link"
-                    onClick={() => this.setState({ menuShow: false })}
-                  >
-                    FAQ
-                  </div>
-                </Link>
-                <div className="navbar-column-link">Library</div>
-                <div className="navbar-column-link">RootsTech 2018 Videos</div>
-              </div>
-              <div className="navbar-column-link-box">
-                <div className="navbar-column-link">DNA</div>
-                <div className="navbar-column-link">Technology</div>
-                <div className="navbar-column-link">LDS Resources</div>
-                <div className="navbar-column-link">Heirlooms</div>
-                <div className="navbar-column-link">Genealogy</div>
-                <div className="navbar-column-link">Census</div>
-              </div>
+              </Link>
+              <div className="navbar-column-link">Family Discovery Day</div>
+              <Link to="/expohall">
+                <div
+                  className="navbar-column-link"
+                  onClick={() => this.showMenu()}
+                >
+                  Expo Hall
+                </div>
+              </Link>
+            </div>
+            <div className="navbar-column-link-box">
+              <div className="navbar-column-title">Agenda</div>
+              <Link to="/courses">
+                <div
+                  className="navbar-column-link"
+                  onClick={() => this.showMenu()}
+                >
+                  Schedule
+                </div>
+              </Link>
+              <Link to="/presenters">
+                <div
+                  className="navbar-column-link"
+                  onClick={() => this.showMenu()}
+                >
+                  Speakers
+                </div>
+              </Link>
+              <Link to="/events">
+                <div
+                  className="navbar-column-link"
+                  onClick={() => this.showMenu()}
+                >
+                  Events
+                </div>
+              </Link>
+              <Link to="/labs">
+                <div
+                  className="navbar-column-link"
+                  onClick={() => this.showMenu()}
+                >
+                  Labs
+                </div>
+              </Link>
+              <div className="navbar-column-link">Live Stream Schedule</div>
+            </div>
+            <div className="navbar-column-link-box">
+              <div className="navbar-column-title">Get Involved</div>
+              <div className="navbar-column-link">Exhibitors and Sponsors</div>
+              <div className="navbar-column-link">Hotels</div>
+            </div>
+            <div className="navbar-column-link-box">
+              <div className="navbar-column-title">About RootsTech</div>
+              <Link to="/about">
+                <div
+                  className="navbar-column-link"
+                  onClick={() => this.showMenu()}
+                >
+                  About
+                </div>
+              </Link>
+              <Link to="/faq">
+                <div
+                  className="navbar-column-link"
+                  onClick={() => this.showMenu()}
+                >
+                  FAQ
+                </div>
+              </Link>
+              <div className="navbar-column-link">Library</div>
+              <div className="navbar-column-link">RootsTech 2018 Videos</div>
+            </div>
+            <div className="navbar-column-link-box">
+              <div className="navbar-column-title">Topics</div>
+              <div className="navbar-column-link">DNA</div>
+              <div className="navbar-column-link">Technology</div>
+              <div className="navbar-column-link">LDS Resources</div>
+              <div className="navbar-column-link">Heirlooms</div>
+              <div className="navbar-column-link">Genealogy</div>
+              <div className="navbar-column-link">Census</div>
             </div>
           </div>
         </div>
@@ -181,3 +188,4 @@ class Navbar extends Component {
 }
 
 export default onClickOutside(Navbar);
+// Eric was here

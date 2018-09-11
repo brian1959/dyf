@@ -12,7 +12,7 @@
   font-size: 54px;
   text-align: center;
   width: 80%;
-  margin: 5px 10% 30px 10%;
+  margin: 30px 10% 35px 10%;
   font-weight: 300;
   font-family: "Open sans";
 }
@@ -26,40 +26,21 @@
   color: black;
 }
 
-.day-box-container {
-  height: 150px;
-  width: 70%;
-  margin: 0 15%;
+.general-day-box-container {
+  height: 200px;
+  width: 80%;
+  margin: 0 10%;
   text-align: center;
-  display: grid;
-  grid-template-areas:
-    "dayT dayF dayS"
-    "dayth dayfr daysa";
-  grid-template-columns: (3 1fr);
-}
-
-.dayT {
-  grid-area: dayT;
-}
-.dayF {
-  grid-area: dayF;
-}
-.dayS {
-  grid-area: dayS;
-}
-.dayth {
-  grid-area: dayth;
-}
-.dayfr {
-  grid-area: dayfr;
-}
-.daysa {
-  grid-area: daysa;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .day-box {
   border: 1px solid $primary-color;
-  min-width: 180px;
+  height: 120px;
+  width: 25%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,7 +53,6 @@
   font-weight: 300;
   text-align: center;
   height: 40%;
-  width: 33%;
   font-size: 36px;
   padding: auto;
 }
@@ -80,12 +60,13 @@
 .day-name-holder {
   font-family: "Open sans";
   text-align: center;
+  font-weight: bold;
   height: 30%;
-  width: 33%;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .filterable-schedule-container {
+  margin-top: 50px;
   width: 100%;
 }
 
@@ -94,11 +75,11 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
-  // margin: 10px 5% 0 5%;
+  width: 80%;
+  margin: 10px 10% 0 10%;
 }
 .schedule-filters-container {
-  width: 20%;
+  width: 25%;
   height: 750;
   padding-right: 1%;
 }
@@ -120,16 +101,29 @@
   color: #333;
 }
 
+.all-key{
+  margin-top: 10px;
+}
+
+.dot-symbol-holder {
+  margin: 10px 41% 0 41%;
+}
+
 .course-schedule-container {
-  width: 60%;
+  width: 75%;
   color: #333;
 }
 
-.dot-symbol {
-  width: 20px;
+.schedule-dot-symbol {
+  width: 23px;
   height: 20px;
   border-radius: 50%;
   margin: 10px;
+}
+
+.filter-passdot{
+  margin-left: 15px;
+  width: 22px;
 }
 
 .selected-key {
@@ -141,44 +135,58 @@
   color: #333;
   margin: 10px 0 20px 0;
   font-weight: bold;
+
+  .arrow-line{
+    width: 15px;
+    height: 1.5px;
+    margin: 0 0 3px 0;
+    background: #333;
+    @include easeOut;
+
+    &:nth-child(1){
+      transform: rotate(45deg)
+      translate(1px, -1px);
+    }
+    &:nth-child(2){
+      transform: rotate(-45deg)
+      translate()
+    }
+  }
 }
 
-.grey{
-  background-color: #d0d3d4;
-}
-.blue{
-  background-color: #34a2bc;
-}
-.green{
-  background-color: #44883e;
-}
-.magenta{
-  background-color: #ac145a;
-}
-.blended{
-  background-color: #53565a  
-}
-
-.selector-holder{
+.selector-holder {
   min-height: 50px;
-  border: solid 1px black;
-  font-family: 'Open sans';
+  // border: solid 1px black;
+  font-family: "Open sans";
   font-size: 18px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-
 }
-.circle-selector{
+.circle-selector {
   margin: 0 0 0 15px;
   border-top: solid grey 1px;
   border-bottom: solid grey 1px;
 }
 
-.selector-name{
+.selector-name {
   float: right;
-  width:200px;
-  padding-left: 10px; 
-   text-align: left;
+  width: 200px;
+  padding-left: 10px;
+  text-align: left;
 }
+
+.exp-level{
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 15px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.exp-lvl-title{
+  margin-left: 15px;
+}
+
