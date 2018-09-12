@@ -100,6 +100,7 @@ class Courses extends Component {
     }
   }
 
+  // function rebuild() {
   // this.setState({ displaycategory: [...this.state.displaycategory, cat] })
 
   // showPassFilter() {
@@ -130,10 +131,9 @@ class Courses extends Component {
     if (this.state.displayexplevel[0] !== "All") {
       this.state.displayexplevel.forEach(
         el => (el = this.state.displayexplevel + " || ")
-        // console.log(el)
       );
       difficultyToDisplay = passTypeToDisplay.filter(
-        course => course.explevel === this.state.displayexplevel[0] 
+        course => this.state.displayexplevel.indexOf(course.explevel) !== -1
       );
     } else {
       difficultyToDisplay = passTypeToDisplay;
@@ -143,12 +143,12 @@ class Courses extends Component {
     let categoryToDisplay = [];
     if (this.state.displaycategory[0] !== "All") {
       categoryToDisplay = difficultyToDisplay.filter(
-        course => course.category === this.state.displaycategory[0] || course.category === this.state.displaycategory[1]  || course.category === this.state.displaycategory[2] || course.category === this.state.displaycategory[3]
+        course => this.state.displaycategory.indexOf(course.category) !== -1
       );
     } else {
       categoryToDisplay = difficultyToDisplay;
     }
-    console.log(categoryToDisplay);
+    console.log(this.state.explevel);
 
     let coursesToDisplay = categoryToDisplay.filter(
       course => course.day === this.state.displayday
@@ -226,7 +226,10 @@ class Courses extends Component {
               <div className="schedule-filter">
                 <span className="sf-header">PASS</span>
                 <div className="dot-symbol-holder">
-                  <img src={`../images/${this.state.displaypasscolor} `} />
+                  <img
+                    src={`../images/${this.state.displaypasscolor} `}
+                    alt="color dot"
+                  />
                 </div>
                 <div className="all-key">{this.state.displaypasstype}</div>
                 <div className="arrow-up" onClick={() => this.showPassFilter()}>
@@ -246,6 +249,7 @@ class Courses extends Component {
                     <img
                       className="filter-passdot"
                       src="../images/alldot.gif"
+                      alt="color dot"
                     />
                     <div className="selector-name">All</div>
                   </div>
@@ -263,6 +267,7 @@ class Courses extends Component {
                     <img
                       className="filter-passdot"
                       src="../images/familydot.gif"
+                      alt="blue dot"
                     />
                     <div className="selector-name">Family Discovery Day</div>
                   </div>
@@ -280,6 +285,7 @@ class Courses extends Component {
                     <img
                       className="filter-passdot"
                       src="../images/startdot.gif"
+                      alt="magenta dot"
                     />
                     <div className="selector-name">Getting Started</div>
                   </div>
@@ -302,6 +308,7 @@ class Courses extends Component {
                     <img
                       className="filter-passdot"
                       src="../images/rootstechdot.gif"
+                      alt="magenta dot"
                     />
                     <div className="selector-name">RootsTech</div>
                   </div>
@@ -319,6 +326,7 @@ class Courses extends Component {
                     <img
                       className="filter-passdot"
                       src="../images/addondot.gif"
+                      alt="blended dot"
                     />
                     <div className="selector-name">
                       RootsTech Pass Paid Add-ons
@@ -328,7 +336,7 @@ class Courses extends Component {
               </div>
               <div className="schedule-filter">
                 <span className="sf-header">DIFFICULTY</span>
-                <div className="all-key">{this.state.displayexplevel}</div>
+                <div className="all-key">{[this.state.displayexplevel]}</div>
                 <div className="arrow-up">
                   <div className="arrow-line" />
                   <div className="arrow-line" />
@@ -351,7 +359,7 @@ class Courses extends Component {
                     <div className="exp-lvl-title">Professional</div>
                   </div>
                   <div className="exp-level">
-                    <Checkbox onClick={() => this.handleExpLevel("Advanced")} />
+                    <Checkbox onClick={() => this.handleExpLevel("advanced")} />
                     <div className="exp-lvl-title">Advanced</div>
                   </div>
                 </div>
@@ -365,7 +373,9 @@ class Courses extends Component {
                 </div>
                 <div className="hidden-selector">
                   <div className="exp-level">
-                    <Checkbox onClick={() => this.handleCategory("Collaboration")} />
+                    <Checkbox
+                      onClick={() => this.handleCategory("Collaboration")}
+                    />
                     <div className="exp-lvl-title">Collaboration</div>
                   </div>
                   <div className="exp-level">
@@ -373,11 +383,15 @@ class Courses extends Component {
                     <div className="exp-lvl-title">DNA</div>
                   </div>
                   <div className="exp-level">
-                    <Checkbox onClick={() => this.handleCategory("Family Trees")} />
+                    <Checkbox
+                      onClick={() => this.handleCategory("Family Trees")}
+                    />
                     <div className="exp-lvl-title">Family Trees</div>
                   </div>
                   <div className="exp-level">
-                    <Checkbox onClick={() => this.handleCategory("Geographical")} />
+                    <Checkbox
+                      onClick={() => this.handleCategory("Geographical")}
+                    />
                     <div className="exp-lvl-title">Geographical</div>
                   </div>
                   <div className="exp-level">
@@ -408,7 +422,7 @@ class Courses extends Component {
                   </div>
                   <div className="exp-level">
                     <Checkbox
-                      onClick={() => this.handleCategory("Photos & Stories")}
+                      onClick={() => this.handleCategory("Photo & Stories")}
                     />
                     <div className="exp-lvl-title">Photos & Stories</div>
                   </div>
@@ -419,15 +433,11 @@ class Courses extends Component {
                     <div className="exp-lvl-title">Preservation</div>
                   </div>
                   <div className="exp-level">
-                    <Checkbox
-                      onClick={() => this.handleCategory("Records")}
-                    />
+                    <Checkbox onClick={() => this.handleCategory("Records")} />
                     <div className="exp-lvl-title">Records</div>
                   </div>
                   <div className="exp-level">
-                    <Checkbox
-                      onClick={() => this.handleCategory("Religion")}
-                    />
+                    <Checkbox onClick={() => this.handleCategory("Religion")} />
                     <div className="exp-lvl-title">Religion</div>
                   </div>
                   <div className="exp-level">

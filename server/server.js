@@ -4,12 +4,14 @@ const bodyParser = require("body-parser");
 const massive = require("massive");
 const session = require("express-session");
 const axios = require("axios");
-const cors = require('cors');
+const cors = require("cors");
 
 const speaker_controller = require("./speaker_controller");
 const course_controller = require("./course_controller");
 const attendee_controller = require("./attendee_controller");
-const faq_controller = require('./faq_controller');
+const faq_controller = require("./faq_controller");
+
+const email_controller = require("./Nodemailer");
 
 const app = express();
 
@@ -71,7 +73,7 @@ app.get("/auth/callback", async (req, res) => {
     res.redirect("/#/profile");
   } else {
     let createdUser = await db.create_user(name, email, picture, sub);
-    req.session.user = createdUser[0] ;
+    req.session.user = createdUser[0];
     res.redirect("/#/registrationform");
   }
 });
@@ -98,7 +100,6 @@ app.get("/api/user-data", envCheck, (req, res) => {
   }
 });
 
-
 app.get("/auth/logout", (req, res) => {
   req.session.destroy();
   res.redirect("http://localhost:3000/");
@@ -110,21 +111,25 @@ app.get("/api/featured", speaker_controller.getFeatured);
 app.post("/api/speaker", speaker_controller.addSpeaker);
 app.delete("/api/speaker/:id", speaker_controller.deleteSpeaker);
 
-app.get("/api/attendeeschedule",attendee_controller.getAttendeeSchedule)
+app.get("/api/attendeeschedule", attendee_controller.getAttendeeSchedule);
 app.get("/api/attendees", attendee_controller.getAttendees);
 app.get("/api/attendee", attendee_controller.getAttendee);
 app.put("/api/attendee", attendee_controller.updateAttendee);
 app.post("/api/addschedule", attendee_controller.addAttendeeSchedule);
-app.delete('/api/attendeeschedule/:id', attendee_controller.deleteAttendeeSchedule)
+app.delete(
+  "/api/attendeeschedule/:id",
+  attendee_controller.deleteAttendeeSchedule
+);
 app.delete("/api/admin/:usertodelete", attendee_controller.deleteAttendee);
-
 
 app.get("/api/schedule", course_controller.getSchedule);
 app.delete("/api/course", course_controller.deleteCourse);
-app.get('/api/times', course_controller.getScheduleTime);
+app.get("/api/times", course_controller.getScheduleTime);
 
-app.get('/api/faqs', faq_controller.getFaqs);
-app.get('/api/categories', faq_controller.getCategories)
+app.get("/api/faqs", faq_controller.getFaqs);
+app.get("/api/categories", faq_controller.getCategories);
+
+app.post("/api/email", email_controller.sendConfirmation);
 
 app.listen(SERVER_PORT, () => {
   console.log(`Server evesdropping on port ${SERVER_PORT}.`);

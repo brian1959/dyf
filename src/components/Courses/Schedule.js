@@ -11,9 +11,20 @@ export default class Schedule extends Component {
   }
 
   render() {
+   
     return (
       <div className="sch-container">
-        <img className="passdot" src={this.props.passtype==='Family'?'../images/familydot.gif':this.props.passtype==='Getting Started'?'../images/startdot.gif':'../images/rootstechdot.gif'} />
+        <img
+          className="passdot"
+          src={
+            this.props.passtype === "Family"
+              ? "../images/familydot.gif"
+              : this.props.passtype === "Getting Started"
+                ? "../images/startdot.gif"
+                : "../images/rootstechdot.gif"
+          }
+          alt="color dot"
+        />
         <Collapsible trigger={this.props.coursename} transitionTime={300}>
           <div className="session-speaker">{` ${this.props.presenter}, ${
             this.props.company

@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+
 class Registrationform extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      firstName: "",
-      lastName: "",
+      firstname: "",
+      lastname: "",
       address: "",
       city: "",
       state: "",
@@ -31,10 +32,12 @@ class Registrationform extends Component {
     .then(response =>{
       this.props.history.push('/profile')
     })
+    axios
+      .post('/api/email', this.state)
   }
   
   render() {
-    console.log(this.props)
+    
     
     return (
       <div className="form">
