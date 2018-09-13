@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 class Expohall extends Component {
   render() {
+    document.title='Expo Hall';
+
     return (
       <div className="expo-main">
         <span className="expo-header">RootsTech Expo Hall 2018</span>

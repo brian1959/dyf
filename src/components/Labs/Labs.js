@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 class Labs extends Component{
 
     render(){
+        document.title='Labs';
 
         return(
             <div className='lab-main'>

@@ -32,6 +32,8 @@ class Courses extends Component {
     };
   }
   componentDidMount() {
+    document.title = "Schedule";
+
     axios.get("/api/schedule").then(response => {
       this.setState({ courses: response.data });
     });
@@ -103,17 +105,17 @@ class Courses extends Component {
   // function rebuild() {
   // this.setState({ displaycategory: [...this.state.displaycategory, cat] })
 
-  // showPassFilter() {
-  //   let arrowBtn = document.querySelector(".arrow-up");
-  //   this.setState({
-  //     passMenuShow: !this.state.passMenuShow
-  //   });
-  //   if (!this.state.passMenuShow) {
-  //     arrowBtn.classList.add("close");
-  //   } else {
-  //     arrowBtn.classList.remove("close");
-  //   }
-  // }
+  showPassFilter() {
+    let arrowBtn = document.querySelector(".arrow-up");
+    this.setState({
+      passMenuShow: !this.state.passMenuShow
+    });
+    if (!this.state.passMenuShow) {
+      arrowBtn.classList.add("close");
+    } else {
+      arrowBtn.classList.remove("close");
+    }
+  }
 
   render() {
     console.log(this.state.displayexplevel);
@@ -294,11 +296,7 @@ class Courses extends Component {
                     onClick={() =>
                       this.handlePassType("RootsTech", "rootstechdot.gif")
                     }
-                    style={
-                      this.state.displaypasstype === "Rootstech"
-                        ? { background: "rgba(238, 238, 238)" }
-                        : {}
-                    }
+
                     style={
                       this.state.displaypasstype === "RootsTech"
                         ? { background: "rgba(238, 238, 238)" }

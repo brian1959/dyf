@@ -2,7 +2,8 @@ import React from "react";
 import Schedule from './Schedule';
 
 export default function Coursetime(props) {
-  
+
+
   return (
     <div className="coursetime-container">
       <div className="time-container">

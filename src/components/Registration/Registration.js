@@ -3,6 +3,8 @@ import Login from "../Login/Login";
 
 class Registration extends Component {
   render() {
+    document.title='Registration';
+
     return (
       <div className="registration-wrapper">
         <div className="reg-sidebar-wrapper">

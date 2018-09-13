@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 class Events extends Component {
   render() {
+    document.title='Events';
+
     return (
       <div className="event-main">
         <span className="event-header">RootsTech Events</span>

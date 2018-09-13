@@ -159,7 +159,7 @@ class Navbar extends Component {
                   About
                 </div>
               </Link>
-              <Link to="/faq">
+              <Link to="/faqs">
                 <div
                   className="navbar-column-link"
                   onClick={() => this.showMenu()}

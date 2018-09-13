@@ -20,7 +20,9 @@ module.exports = {
       subject: "RootsTech Registration Confirmation",
       text:
         `Thank you ${req.body.firstname} for your ${req.body.passtype} registration.  We look forward to seeing you at RootsTech 2019. If you have any questions please contact us.`,
-      html:`<h2>You are Confirmed!</h2><br/><b><p>Thank you, ${req.body.firstname} for your  ${req.body.passtype} registration.  We look forward to seeing you at RootsTech 2019. If you have any questions please contact us.</p></b><br/><br/><strong>Sincerely,<br/><br/>The RootsTech Family</strong>`
+      html:`<h2 style='color:blue; text-align: center'>You are Confirmed!</h2><br/>
+      <p style='font-size:20px; font-family: Tahoma, Geneva, Verdana, sans-serif'>Thank you, ${req.body.firstname} for your  ${req.body.passtype} registration.  We look forward to seeing you at RootsTech 2019. If you have any questions please contact us.</p>
+      <br/><br/><h3 style='font-size: 20px; font-family: Tahoma, Geneva, Verdana, sans-serif '>Sincerely, <br/>  <br/> The RootsTech Family</h3>`
     };
 
     transporter.sendMail(mailOptions, function(error, info) {

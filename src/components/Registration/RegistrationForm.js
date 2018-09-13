@@ -37,7 +37,7 @@ class Registrationform extends Component {
   }
   
   render() {
-    
+    document.title='Registration';
     
     return (
       <div className="form">

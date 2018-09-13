@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Faq from './Faq'
+import Faqcategory from "./Faqcategory";
 
 class Faqs extends Component {
   constructor(props) {
@@ -15,19 +15,23 @@ class Faqs extends Component {
     };
   }
   componentDidMount() {
+    document.title = "Faqs";
+
     axios.get("/api/faqs").then(response => {
       this.setState({ faqs: response.data });
     });
-    
+
     axios.get("/api/categories").then(response => {
       this.setState({ categories: response.data });
     });
   }
-  
+
   render() {
-    
-    
-    let categoryToDisplay = this.state.categories
+    document.title = "Faqs";
+
+    let categoryToDisplay = this.state.categories;
+
+    let questionsToDisplay = this.state.faqs;
     console.log(this.state);
 
     return (
@@ -39,15 +43,16 @@ class Faqs extends Component {
           <div className="faq-cat-filter">|</div>
           <div className="faq-cat-filter">VENUE</div>
           <div className="faq-cat-filter">|</div>
-          <div className="faq-cat-filter">REGISTRATION</div>
-          <div className="faq-category" />
+         <a href='.Registration'> <div className="faq-cat-filter">REGISTRATION</div></a>
+         
         </div>
-        {categoryToDisplay.map(faq => (
-          <Faq
-            key={faq.faq_category}
-            category={faq.faq_category}
-            question={faq.faq_question}
-            answer={faq.faq_response}
+        {categoryToDisplay.map(cat => (
+          <Faqcategory
+            key={cat.faq_category}
+            category={cat.faq_category}
+            faqs={questionsToDisplay.filter(question => {
+              return question.faq_category === cat.faq_category;
+            })}
           />
         ))}
       </div>

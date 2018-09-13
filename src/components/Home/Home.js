@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 export default class Home extends Component {
   render() {
+    document.title='RootsTech';
+
     return (
       <div className="landing">
         <div className="landing-hero">

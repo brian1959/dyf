@@ -5,6 +5,7 @@ export default class About extends Component {
 
 
   render() {
+    document.title='About RootsTech';
     return (
       <div className="about-main">
         <section className="about-header">

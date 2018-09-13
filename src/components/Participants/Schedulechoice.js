@@ -21,6 +21,7 @@ class Schedulechoice extends Component {
     };
   }
   componentDidMount() {
+    document.title='My Schedule';
     axios.get("/api/schedule").then(response => {
       this.setState({ courses: response.data });
     });
@@ -32,6 +33,7 @@ class Schedulechoice extends Component {
 
 
   handleDayChange(currentday) {
+    document.querySelector('.schedule-container-scroll').scrollTo(0,0)
     this.setState({ displayday: currentday });
   }
 

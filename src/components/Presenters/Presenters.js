@@ -35,6 +35,7 @@ export default class Presenters extends Component {
   }
 
   componentDidMount() {
+    document.title='Speakers';
     axios.get("/api/speakers").then(response => {
       this.setState({ speakersToDisplay: response.data });
     });

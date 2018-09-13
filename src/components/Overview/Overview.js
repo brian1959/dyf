@@ -15,6 +15,8 @@ export default class Overview extends Component {
   }
 
   render() {
+    document.title='Overview';
+    
     return (
       <div className="overview-main">
         <section className="overview-header">
