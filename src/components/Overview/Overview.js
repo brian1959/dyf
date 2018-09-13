@@ -162,7 +162,7 @@ export default class Overview extends Component {
           <div className="ov-expo-hero-wrapper">
             <img
               className="ov-expo-image ov-expo-hero"
-              src="../images/overview/expohall.jpg"
+              src="../images/overview/expo.jpg"
               alt="expo Hall"
             />
             <div className="ov-expo-text-wrapper">
