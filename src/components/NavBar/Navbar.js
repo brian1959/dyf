@@ -35,7 +35,7 @@ class Navbar extends Component {
     return (
       <div>
         <div className="navbar fixed-top">
-          <section className="company-container">
+          <div className="company-container">
 
               <img className="c-logo" src={logo} alt="logo" />
 
@@ -51,7 +51,7 @@ class Navbar extends Component {
                 <div className="menu-header-word">Menu</div>
               </div>
             </div>
-          </section>
+          </div>
         </div>
         <div
           className={

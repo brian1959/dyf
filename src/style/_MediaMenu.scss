@@ -5,12 +5,14 @@
 
   .company-container {
     margin-top: 10px;
+    width: 200px;
     height: 100%;
   }
 
   .c-logo {
     margin-left: 10px;
-    width: 40%;
+    width: 250px;
+    height: 30px;
   }
 
   .menu-header-date {
@@ -27,27 +29,32 @@
   }
 
   .navbar-header-link-words {
-
     flex-direction: column;
-
   }
 
   .navbar-header-link-word {
     margin: 15px 15px 15px 10px;
   }
 
-  .navbar-icons{
-    margin-left:60%;
+  .navbar-icons {
+    margin-left: 60%;
     margin-bottom: 15px;
-   
-    i{
-      margin:0 10px;
-      
-    }
-   }
 
-   .dropDownShow {
+    i {
+      margin: 0 10px;
+    }
+  }
+
+  .dropDownShow {
     max-height: 100vh;
     overflow-y: scroll;
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-logo {
+    width: 200px;
+    height: 30px;
+    margin-bottom: 20px;
   }
 }
