@@ -1,0 +1,53 @@
+@media (min-width: 276px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .company-container {
+    margin-top: 10px;
+    height: 100%;
+  }
+
+  .c-logo {
+    margin-left: 10px;
+    width: 40%;
+  }
+
+  .menu-header-date {
+    visibility: hidden;
+  }
+
+  .navbar-header-links {
+    width: 90%;
+    min-height: 280px;
+    flex-direction: column-reverse;
+    font-size: 16px;
+    margin: 0 5%;
+    line-height: 1;
+  }
+
+  .navbar-header-link-words {
+
+    flex-direction: column;
+
+  }
+
+  .navbar-header-link-word {
+    margin: 15px 15px 15px 10px;
+  }
+
+  .navbar-icons{
+    margin-left:60%;
+    margin-bottom: 15px;
+   
+    i{
+      margin:0 10px;
+      
+    }
+   }
+
+   .dropDownShow {
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
+}

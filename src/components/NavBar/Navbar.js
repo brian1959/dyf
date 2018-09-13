@@ -36,9 +36,9 @@ class Navbar extends Component {
       <div>
         <div className="navbar fixed-top">
           <section className="company-container">
-            <div className="c-logo">
-              <img src={logo} alt="logo" height="30px" />
-            </div>
+
+              <img className="c-logo" src={logo} alt="logo" />
+
             <div className="menu-box">
               <span className="menu-header-date">Feb. 27-Mar. 2, 2019</span>
               <div className="menu-items-holder">

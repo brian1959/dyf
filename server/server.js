@@ -31,7 +31,8 @@ massive(CONNECTION_STRING).then(db => {
   app.set("db", db);
 });
 app.use(bodyParser.json());
-app.use(express.static(`${__dirname}/build`));
+
+app.use(express.static(`${__dirname}/../build`));
 app.use(cors());
 
 //session functionality
@@ -102,7 +103,7 @@ app.get("/api/user-data", envCheck, (req, res) => {
 
 app.get("/auth/logout", (req, res) => {
   req.session.destroy();
-  res.redirect("http://localhost:3000/");
+  res.redirect(process.env.REACT_APP_REDIRECT);
 });
 //end of session logging
 

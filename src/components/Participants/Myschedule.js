@@ -1,7 +1,6 @@
 import React from 'react';
 
 
-
 export default function Myschedule(props){
 
 
@@ -20,3 +19,4 @@ export default function Myschedule(props){
 
     )
 }
+

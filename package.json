@@ -46,6 +46,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "jest": "^23.5.0"
+    "jest": "^23.5.0",
+    "react-to-print": "^2.0.0-alpha-3"
   }
 }

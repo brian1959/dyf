@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Footer from '../Footer/Footer';
+
 
 export default class About extends Component {
 
@@ -14,11 +14,11 @@ export default class About extends Component {
               <img className='about-image'
                 src="../images/about/about.jpg"
                 alt="about"
-                height="430px"
+              
               />
             </div>
             <div className="about-text-container">
-              <div className="about-date">CELEBRATING FAMILIES</div>
+              <div className="about-sub-title">CELEBRATING FAMILIES</div>
               <h1>What Is RootsTech?</h1>
               <p>
               At RootsTech, we believe in the power of family—and discovering your family story has never been easier! RootsTech is a 4-day event held annually in Salt Lake City, Utah, dedicated to celebrating family and discovering family histories. With over 300 breakout expects, an exciting lineup of celebrity speakers, and a gigantic expo hall, we’ve got something we’re sure you’ll love.
@@ -126,7 +126,7 @@ export default class About extends Component {
 <h2>Nicka Smith</h2></div></a>
 </div>
         </section>
-        <Footer/>
+ 
       </div>
     );
   }
