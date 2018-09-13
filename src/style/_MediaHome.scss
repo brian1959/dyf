@@ -1,4 +1,17 @@
 @media (min-width: 276px) {
- 
+.landing{
+    width: 90%;
+    margin: 0 5%;
+}
 
+  .landing-hero {
+  background: none;
+  margin: 10px 10% 20px 10%
+  }
+
+  .landing-hero-img{
+      visibility: visible;
+      height: 200px;
+
+  }
 }

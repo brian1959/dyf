@@ -7,6 +7,7 @@ export default class Home extends Component {
     return (
       <div className="landing">
         <div className="landing-hero">
+        <img className="landing-hero-img" src='../images/landing/london.jpg' alt='London'/>
           <div className="overlay-promo">
             RootsTech Expands to London in 2019
           </div>
