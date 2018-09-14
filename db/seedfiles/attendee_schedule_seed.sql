@@ -1,8 +1,8 @@
 CREATE TABLE attendeeschedule
 (
     asid SERIAL PRIMARY KEY,
-    attendeeid INTEGER NOT NULL,
-    scheduleid INTEGER NOT NULL
+    attendeeid INTEGER NOT NULL FOREIGN KEY REFERENCES users(userid),
+    scheduleid INTEGER NOT NULL FOREIGN KEY REFERENCES schedule(scheduleid)
 );
 
 insert into attendeeschedule (attendeeid, scheduleid)

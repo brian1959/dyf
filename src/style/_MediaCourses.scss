@@ -38,7 +38,7 @@
 
   .schedule-filters-container {
     width: 100%;
-    height: 1px;
+    display: none;
     padding-right: 0;
     visibility: hidden;
   }
@@ -176,7 +176,7 @@
   .schedule-filters-container {
     visibility: visible;
     width: 25%;
-    height: 750;
+    display: block;
     padding-right: 1%;
   }
 
@@ -208,6 +208,7 @@
   }
 
   .course-schedule-container {
+    min-height: 1000px;
     width: 75%;
     color: #333;
   }
