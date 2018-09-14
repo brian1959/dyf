@@ -78,7 +78,7 @@
   
   .menu-box {
     position: absolute;
-    z-index: 3;
+    z-index: 5;
     right: 15%;
     top: 20px;
     height: 60px;
@@ -178,6 +178,7 @@
  
   .dropDownShow {
     min-height: 400px;
+    z-index: 4;
   }
   
   .navbar-header-links {

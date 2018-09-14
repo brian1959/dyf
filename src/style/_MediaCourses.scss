@@ -5,7 +5,7 @@
     margin: 0 5% 35px 5%;
   }
 
-  .course-section{
+  .course-section {
     position: sticky;
     top: 60px;
     background: #fff;
@@ -61,8 +61,8 @@
   }
 
   .sch-container {
-    width: 100%;
-    margin: 10px 0 20px 0;
+    width: 90%;
+    margin: 10px 5% 20px 5%;
     font-size: 16px;
   }
 
@@ -79,8 +79,7 @@
   }
   .session-summary {
     margin: 15px 0;
-    font-size:15px;
-
+    font-size: 15px;
   }
   .session-meta-item {
     font-size: 15px;
@@ -90,8 +89,6 @@
     font-size: 15px;
     margin-bottom: 10px;
   }
-
-
 }
 
 @media (min-width: 576px) {
@@ -291,8 +288,7 @@
   }
   .session-summary {
     margin: 30px 0;
-    font-size:18px;
-
+    font-size: 18px;
   }
   .session-meta-item {
     font-size: 18px;
