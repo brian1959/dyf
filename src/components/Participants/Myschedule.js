@@ -12,7 +12,7 @@ export default function Myschedule(props){
         <div className="my-schedule-field header-time">{props.stime}</div>
         <div className="my-schedule-field header-class">{props.coursetitle}</div>
         <div className="my-schedule-field header-presenter">{props.presenter}</div>
-        <button onClick={()=> props.deleteClass(props.asid)}>Delete Class</button>
+        <button className='delete-class' onClick={()=> props.deleteClass(props.asid)}>Delete Class</button>
         
         </div>
 

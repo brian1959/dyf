@@ -1,131 +1,274 @@
-.registration-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100%;
-  width: 60%;
-  margin: 10px 20%;
-  font-family: 'Myriad';
+@media (min-width: 276px) {
+  .registration-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100%;
+    width: 90%;
+    margin: 0 5%;
+    font-family: "Myriad";
+  }
+
+  .reg-info-box {
+    margin-bottom: 20px;
+  }
+
+  .reg-info-box > a {
+    text-decoration: none;
+    color: #3295ac;
+    margin-left: 10px;
+  }
+
+  .reg-info-box > a:hover {
+    text-decoration-line: underline;
+  }
+
+  .reg-info-box > h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  .reg-info-box > span {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .reg-landing-wrapper {
+    width: 90%;
+    margin: 10px 5% ;
+  }
+
+  .reg-title {
+    text-align: center;
+    margin: 0 10% 20px 10%;
+    font-family: "Open sans";
+    font-size: 28px;
+  }
+
+  .reg-instruction {
+    margin-bottom: 10px;
+  }
+  .login-btn{
+    width: 50%;
+    margin:20px 25%;
+  }
+
+  .login {
+    height: 60px;
+    width: 120px;
+    font-size: 20px;
+  }
+
+  .form {
+    width: 90%;
+    margin: 10px 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .form-container {
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    flex-direction:column;
+       justify-content: center;
+    align-items: center;
+  }
+
+  .reg-form-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Open sans";
+    font-weight: 300;
+  }
+
+  .reg-form-title {
+    height: 40px;
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .reg-form {
+    height: 40px;
+    width: 200px;
+    margin: 10px 30px;
+    font-size: 18px;
+    padding: 4px;
+  }
+
+  .radio-form-box {
+    width: 100%;
+    margin: 20px 25%;
+    font-family: "Open sans";
+    font-weight: 300;
+  }
+
+  .radio-form-title {
+    font-size: 24px;
+    margin: 15px;
+  }
+
+  .radio-box {
+    width: 80%;
+    margin: 10px 10%;
+    display: flex;
+    flex-direction: row;
+  }
+  .radio {
+    font-size: 18px;
+    margin: 5px 20px;
+  }
+
+  .reg-form-btn {
+    width:40%;
+    height: 40px;
+    font-size: 18px;
+  }
 }
 
-.reg-sidebar-wrapper{
-  padding: 20px;
-  width: 15%;
-  border-right: solid 1px $primary-color;
+
+
+@media (min-width: 576px) {
 }
 
-.reg-info-box{
-  margin-bottom: 20px;
-  
+@media (min-width: 768px) {
 }
 
-.reg-info-box>a{
-  text-decoration: none;
-  color: #3295ac;
-  margin-left:10px;
+@media (min-width: 992px) {
 }
 
-.reg-info-box>a:hover{
-  text-decoration-line: underline;
-}
+@media (min-width: 1200px) {
+  .registration-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100%;
+    width: 60%;
+    margin: 10px 20%;
+    font-family: "Myriad";
+  }
 
-.reg-info-box>h2{
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
-}
+  .reg-sidebar-wrapper {
+    padding: 20px;
+    width: 15%;
+    border-right: solid 1px $primary-color;
+  }
 
-.reg-info-box>span{
-  font-size: 14px;
-  margin-left: 10px;
+  .reg-info-box {
+    margin-bottom: 20px;
+  }
 
-}
+  .reg-info-box > a {
+    text-decoration: none;
+    color: #3295ac;
+    margin-left: 10px;
+  }
 
-.reg-landing-wrapper{
-  width: 70%;
-  margin: 10px 14% 10px 1%;
+  .reg-info-box > a:hover {
+    text-decoration-line: underline;
+  }
 
-}
+  .reg-info-box > h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
 
-.reg-title {
-  margin-bottom: 20px;
-  font-family: 'Open sans';
-  font-size: 36px;
-}
+  .reg-info-box > span {
+    font-size: 14px;
+    margin-left: 10px;
+  }
 
-.reg-instruction{
-  margin-bottom: 10px;
+  .reg-landing-wrapper {
+    width: 70%;
+    margin: 10px 14% 10px 1%;
+  }
 
-}
+  .reg-title {
+    margin-bottom: 20px;
+    font-family: "Open sans";
+    font-size: 36px;
+  }
 
-.form{
-  width: 70%;
-  margin: 10px 15%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
+  .reg-instruction {
+    margin-bottom: 10px;
+  }
 
-.form-container {
-  width: 70%;
-  margin: 10px 15%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
+  .form {
+    width: 70%;
+    margin: 10px 15%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 
-.reg-form-box {
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-end;
-  font-family: "Open sans";
-  font-weight: 300;
-}
+  .form-container {
+    width: 70%;
+    margin: 10px 15%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 
-.reg-form-title {
-  height: 40px;
-  text-align: left;
-  font-size: 20px;
-}
+  .reg-form-box {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-family: "Open sans";
+    font-weight: 300;
+  }
 
-.reg-form {
-  height: 40px;
-  width: 200px;
-  margin: 10px 30px;
-  font-size: 18px;
-  padding: 4px;
-}
+  .reg-form-title {
+    height: 40px;
+    text-align: left;
+    font-size: 20px;
+  }
 
-.radio-form-box{
-  width: 50%;
-  margin: 20px 25%;
-font-family: 'Open sans';
-font-weight: 300;
-}
+  .reg-form {
+    height: 40px;
+    width: 200px;
+    margin: 10px 30px;
+    font-size: 18px;
+    padding: 4px;
+  }
 
-.radio-form-title{
-  font-size: 24px;
-  margin: 15px;
-}
+  .radio-form-box {
+    width: 50%;
+    margin: 20px 25%;
+    font-family: "Open sans";
+    font-weight: 300;
+  }
 
-.radio-box{
-  width: 80%;
-  margin: 10px 10%;
-  display: flex;
-  flex-direction: row;
-}
-.radio{
-  font-size: 18px;
-  margin: 5px 20px;
+  .radio-form-title {
+    font-size: 24px;
+    margin: 15px;
+  }
 
-}
+  .radio-box {
+    width: 80%;
+    margin: 10px 10%;
+    display: flex;
+    flex-direction: row;
+  }
+  .radio {
+    font-size: 18px;
+    margin: 5px 20px;
+  }
 
-.reg-form-btn{
-  width: 10%;
+  .reg-form-btn {
+    width: 10%;
+  }
 }

@@ -1,0 +1,190 @@
+@media (min-width: 276px) {
+  .attendee-details-wrapper {
+    flex-direction: column;
+  }
+
+  .profile-holder {
+    width: 100%;
+    font-size: 18px;
+    margin: 0;
+    padding-right: 0;
+    flex-direction: column;
+    border-right: none;
+    text-align: center;
+  }
+
+  .profile-item-holder {
+    margin: 0px 5% 0 0;
+    padding: 0;
+    width: 100%;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .profile-item-type {
+    width: 0px;
+    visibility: hidden;
+  }
+  .profile-item {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+  .name {
+    visibility: visible;
+    font-size: 22px;
+    margin: 0 10% 20px 0;
+    text-align: center;
+  }
+
+  .my-schedule-selector {
+    width: 96%;
+    margin: 5px 2%;
+  }
+  .my-schedule-title {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .my-schedule-column-headers {
+    width: 100%;
+    font-size: 14px;
+  }
+  .my-schedule-header {
+    margin: 5px 10px;
+  }
+
+  .my-schedule-field {
+    text-align: left;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  .delete-class {
+    font-size: 12px;
+    max-height: 40px;
+    width: 50px;
+  }
+
+  .schedule-container-scroll {
+    width: 90%;
+    margin: 0 5%;
+  }
+
+  .my-schedule-container {
+    margin: 15px 0;
+  }
+  .my-coursetime-container {
+    width: 100%;
+  }
+  .add-btn-wrapper {
+  }
+
+  .add-class {
+    font-size: 12px;
+    width: 50px;
+  }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .attendee-details-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 10px 5%;
+  }
+  .profile-holder {
+    width: 25%;
+    font-size: 22px;
+    font-weight: 300;
+    margin: 10px 20px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    border-right: solid 1px $primary-color;
+  }
+
+  .profile-item-holder {
+    width: 100%;
+    visibility: visible;
+    margin: 20px 10px;
+    display: flex;
+    flex-direction:row;
+  }
+  .profile-item-type {
+    height: 30px;
+    width: 50px;
+    visibility: visible;
+    font-weight: 400;
+    font-size: 18px;
+    width: 80px;
+  }
+  .profile-item {
+    height: 30px;
+    width: 150px;
+    visibility: visible;
+    font-size: 18px;
+    font-weight: 300;
+   }
+
+  .name {
+    visibility: visible;
+    font-size: 22px;
+    margin: 0 10% 20px 0;
+    text-align: center;
+  }
+
+  .my-schedule-selector {
+    width: 74%;
+    margin: 10px 3%;
+    font-family: "Open sans";
+    display: flex;
+    flex-direction: column;
+  }
+
+  .my-schedule-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .my-schedule-column-headers {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-apart;
+    align-items: flex-start;
+    flex-wrap: none;
+    border-bottom: solid 2px $primary-color;
+  }
+
+  .my-schedule-header {
+    margin: 20px;
+    text-align: left;
+  }
+
+  .header-day {
+    width: 10%;
+  }
+
+  .header-time {
+    width: 10%;
+  }
+
+  .header-class {
+    width: 40%;
+  }
+
+  .header-presenter {
+    width: 15%;
+  }
+}

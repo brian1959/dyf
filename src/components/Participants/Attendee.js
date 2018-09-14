@@ -71,10 +71,10 @@ class Profile extends Component {
       <div className="attendee-wrapper">
         <div className="attendee-details-wrapper">
           <section className="profile-holder">
-            <div className="profile-item-holder">
-              {`${firstname} ${lastname}`}{" "}
+            <div className="profile-item-holder name">
+              {`${firstname} ${lastname}`}
             </div>
-            <div className="profile-item-holder">
+            <div className="profile-item-holder ">
               <div className="profile-item-type">Address:</div>
               <div className="profile-item"> {address}</div>
             </div>

@@ -1,89 +1,77 @@
-.attendee-details-wrapper{
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    margin: 10px 5%;
+.attendee-details-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 10px 5%;
 }
-.profile-holder{
-    width: 25%;
-    font-size: 22px;
-    font-weight: 300;
-    margin: 10px 20px;
-    padding-right: 10px;
-    display: flex;
-    flex-direction: column;
-    border-right: solid 1px $primary-color;
-  }
-  
-  .profile-item-holder{
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: row;
+.profile-holder {
+  width: 25%;
+  font-size: 22px;
+  font-weight: 300;
+  margin: 10px 20px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  border-right: solid 1px $primary-color;
+}
 
-  }
-.profile-item-type{
-    font-weight: 400;
-    font-size: 16px;
-    width: 80px;
+.profile-item-holder {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
 }
-.profile-item{
+.profile-item-type {
+  font-weight: 400;
+  font-size: 16px;
+  width: 80px;
+}
+.profile-item {
   font-size: 16px;
   font-weight: 300;
   text-align: left;
 }
 
+.my-schedule-selector {
+  width: 74%;
+  margin: 10px 3%;
+  font-family: "Open sans";
+  display: flex;
+  flex-direction: column;
+}
 
-  .my-schedule-selector{
-    width: 74%;
-    margin: 10px 3%;
-    font-family: 'Open sans';
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .my-schedule-title{
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-    
-  }
-  
-  .my-schedule-column-headers{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-apart;
-    align-items: flex-start;
-    flex-wrap: none;
-    border-bottom: solid 2px $primary-color;
-  }
+.my-schedule-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-  .my-schedule-header{
-    margin: 20px;
-    text-align: left;
-  }
+.my-schedule-column-headers {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-apart;
+  align-items: flex-start;
+  flex-wrap: none;
+  border-bottom: solid 2px $primary-color;
+}
 
-  .header-day{
-    width: 10%;
-  }
+.my-schedule-header {
+  margin: 20px;
+  text-align: left;
+}
 
-  .header-time{
-    width: 10%;
-  }
+.header-day {
+  width: 10%;
+}
 
-  .header-class{
-    width: 40%;
-  }
+.header-time {
+  width: 10%;
+}
 
-  .header-presenter{
-    width: 15%;
-  }
+.header-class {
+  width: 40%;
+}
 
-
-  
-
-
-
-  
-  
-  
+.header-presenter {
+  width: 15%;
+}
