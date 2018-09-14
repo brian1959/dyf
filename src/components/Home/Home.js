@@ -9,7 +9,7 @@ export default class Home extends Component {
         <div className="landing-hero">
           <img
             className="landing-hero-img"
-            src="../images/landing/london.jpg"
+            src="../images/Landing/london.jpg"
             alt="London"
           />
           <div className="overlay-promo">
