@@ -162,11 +162,11 @@ class Courses extends Component {
 
     return (
       <div className="courses-main-wrapper">
-        <section className="course-section">
           <div className="courses-header">
             <span>RootsTech 2018 Schedule</span>
           </div>
           <div className="sub-change">Subject to change</div>
+        <section className="course-section">
           <div className="general-day-box-container">
             <div
               className="day-box"

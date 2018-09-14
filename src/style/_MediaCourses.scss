@@ -5,8 +5,14 @@
     margin: 0 5% 35px 5%;
   }
 
+  .course-section{
+    position: sticky;
+    top: 60px;
+    background: #fff;
+  }
+
   .general-day-box-container {
-    height: 120px;
+    height: 100px;
   }
 
   .day-box {
@@ -194,7 +200,7 @@
   }
 
   .all-key {
-    margin: 10px 15px 0 15px;
+    margin: 15px auto;
     width: 200px;
     min-height: 30px;
   }
