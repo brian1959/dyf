@@ -75,9 +75,20 @@
 }
 
 @media (min-width: 768px) {
+  .bio-info-container {
+    width: 70%;
+    margin: 100px 15%;
+    min-width: 250px;
+    min-height: 400px;
+    max-height: 100vh;
+    background: #fff;
+    border: solid rgb(160, 159, 159) 10px;
+    overflow-y: auto;
+  }
 }
 
 @media (min-width: 992px) {
+  
 }
 
 @media (min-width: 1200px) {
@@ -90,15 +101,16 @@
     height: 100%;
     z-index: 2;
   }
-
+  
   .bio-info-container {
-    width: 48%;
-    margin: 100px 26%;
+    width: 60%;
+    margin: 80px 20%;
     min-width: 20%;
     min-height: 400px;
-    max-height: 800px;
+    max-height: 100vh;
     background: #fff;
     border: solid rgb(160, 159, 159) 20px;
+    overflow-y: auto;
 
   }
 
