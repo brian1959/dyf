@@ -2,12 +2,16 @@ import React, { Component } from "react";
 
 export default class Home extends Component {
   render() {
-    document.title='RootsTech';
+    document.title = "RootsTech";
 
     return (
       <div className="landing">
         <div className="landing-hero">
-        <img className="landing-hero-img" src='../images/landing/london.jpg' alt='London'/>
+          <img
+            className="landing-hero-img"
+            src="../images/landing/london.jpg"
+            alt="London"
+          />
           <div className="overlay-promo">
             RootsTech Expands to London in 2019
           </div>

@@ -1,0 +1,299 @@
+@media (min-width: 276px) {
+  .courses-header {
+    font-size: 28px;
+    width: 90%;
+    margin: 0 5% 35px 5%;
+  }
+
+  .general-day-box-container {
+    height: 120px;
+  }
+
+  .day-box {
+    height: 70px;
+  }
+
+  .day-letter-holder {
+    font-size: 28px;
+  }
+
+  .day-name-holder {
+    visibility: hidden;
+    height: 1px;
+  }
+
+  .schedule-container {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 10px 5% 0 5%;
+  }
+
+  .schedule-filters-container {
+    width: 100%;
+    height: 1px;
+    padding-right: 0;
+    visibility: hidden;
+  }
+
+  .course-schedule-container {
+    width: 100%;
+  }
+
+  .time-container {
+    width: 98%;
+    height: 40px;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .time-block {
+    font-size: 18px;
+  }
+
+  .session-type {
+    font-size: 18px;
+  }
+
+  .sch-container {
+    width: 100%;
+    margin: 10px 0 20px 0;
+    font-size: 16px;
+  }
+
+  .Collapsible__trigger {
+    max-width: 95%;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .session-speaker {
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: 400;
+  }
+  .session-summary {
+    margin: 15px 0;
+    font-size:15px;
+
+  }
+  .session-meta-item {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .session-meta-item-label {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .courses-header {
+    font-size: 54px;
+    text-align: center;
+    width: 80%;
+    margin: 30px 10% 35px 10%;
+    font-weight: 300;
+    font-family: "Open sans";
+  }
+
+  .sub-change {
+    font-family: "Open sans";
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 60px;
+    text-align: center;
+    color: black;
+  }
+
+  .general-day-box-container {
+    height: 200px;
+    width: 80%;
+    margin: 0 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .day-box {
+    border: 1px solid $primary-color;
+    height: 120px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .day-letter-holder {
+    font-family: "Open sans";
+    font-weight: 300;
+    text-align: center;
+    height: 40%;
+    font-size: 36px;
+    padding: auto;
+  }
+
+  .day-name-holder {
+    visibility: visible;
+    font-family: "Open sans";
+    text-align: center;
+    font-weight: bold;
+    height: 30%;
+    font-size: 18px;
+  }
+
+  .filterable-schedule-container {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .schedule-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin: 10px 10% 0 10%;
+  }
+  .schedule-filters-container {
+    visibility: visible;
+    width: 25%;
+    height: 750;
+    padding-right: 1%;
+  }
+
+  .schedule-filter {
+    margin-bottom: 30px;
+    min-height: 100px;
+    border: solid 1px $primary-color;
+    text-align: center;
+    padding-top: 15px;
+    font-family: "Open sans";
+  }
+
+  .sf-header {
+    line-height: 1.5;
+    margin: 25px 0 10px 0;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+  }
+
+  .all-key {
+    margin: 10px 15px 0 15px;
+    width: 200px;
+    min-height: 30px;
+  }
+
+  .dot-symbol-holder {
+    margin: 10px 41% 0 41%;
+  }
+
+  .course-schedule-container {
+    width: 75%;
+    color: #333;
+  }
+
+  .schedule-dot-symbol {
+    width: 23px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 10px;
+  }
+
+  .filter-passdot {
+    margin-left: 15px;
+    width: 22px;
+  }
+
+  .selected-key {
+    color: #333;
+    margin: 10px 0 10px 0;
+  }
+
+  .arrow-up {
+    color: #333;
+    width: 15px;
+    margin: 15px 0 20px 45%;
+    font-weight: bold;
+
+    .arrow-line {
+      width: 15px;
+      height: 1.5px;
+      margin: 0 40% 3px 0;
+      background: #333;
+      @include easeOut;
+
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(1px, -1px);
+      }
+      &:nth-child(2) {
+        transform: rotate(135deg) translate(-10px, -3px);
+      }
+    }
+
+    &.close {
+      transform: rotate(180deg);
+      transform-origin: center;
+    }
+  }
+
+  .time-container {
+    width: 98%;
+    height: 60px;
+    margin-left: 1%;
+    margin-bottom: 20px;
+  }
+
+  .time-block {
+    font-size: 22px;
+  }
+
+  .session-type {
+    font-size: 22px;
+  }
+
+  .sch-container {
+    width: 80%;
+    margin: 10px 0 20px 10%;
+    font-size: 18px;
+  }
+
+  .Collapsible__trigger {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .session-speaker {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: 400;
+  }
+  .session-summary {
+    margin: 30px 0;
+    font-size:18px;
+
+  }
+  .session-meta-item {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .session-meta-item-label {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}

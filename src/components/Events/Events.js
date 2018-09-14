@@ -36,7 +36,7 @@ class Events extends Component {
           <div className="event-wrapper">
             <div className="event-image-holder">
               <img
-                className="event-image"
+                className="event-image-sm"
                 src="../images/events/proquest.jpg"
                 alt="ProQuest"
               />
@@ -55,16 +55,15 @@ class Events extends Component {
                 </p>
                 <br />
                 <p>
-                  {" "}
                   Welcome by David Rencher, CGO at FamilySearch International,
                   and keynote by Brewster Kahle, Founder & Digital Librarian,
-                  Internet Archive.{" "}
+                  Internet Archive.
                 </p>
                 <br />
                 <p>
                   Digital Preservation Presenters: Laura Stone—Arizona State
                   Library, Ken Williams—Utah State Archives, and Wendy
-                  Hanamura—Internet Archives{" "}
+                  Hanamura—Internet Archives
                 </p>
                 <br />
                 <p>
@@ -78,7 +77,7 @@ class Events extends Component {
           <div className="event-wrapper">
             <div className="event-image-holder">
               <img
-                className="event-image"
+                className="event-image-sm"
                 src="../images/events/innovation.jpg"
                 alt="Innovations"
               />
@@ -99,7 +98,7 @@ class Events extends Component {
           <div className="event-wrapper">
             <div className="event-image-holder">
               <img
-                className="event-image"
+                className="event-image-sm"
                 src="../images/events/previewnight.jpg"
                 alt="Preview Night"
               />
@@ -120,7 +119,7 @@ class Events extends Component {
           <div className="event-wrapper">
             <div className="event-image-holder">
               <img
-                className="event-image"
+                className="event-image-sm"
                 src="../images/events/opening.jpg"
                 alt="Opening Night"
               />
@@ -147,7 +146,7 @@ class Events extends Component {
           <div className="event-wrapper">
             <div className="event-image-holder">
               <img
-                className="event-image"
+                className="event-image-sm"
                 src="../images/events/closing.jpg"
                 alt="Closing Night"
               />
