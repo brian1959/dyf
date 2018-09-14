@@ -41,13 +41,13 @@ class Navbar extends Component {
 
             <div className="menu-box">
               <span className="menu-header-date">Feb. 27-Mar. 2, 2019</span>
-              <div className="menu-items-holder" onClick={() => this.showMenu()}>
-                <div className="menu-btn" >
+              <div className="menu-items-holder" >
+                <div className="menu-btn" onClick={() => this.showMenu()}>
                   <div className="btn-line" />
                   <div className="btn-line" />
                   <div className="btn-line" />
                 </div>
-                <div className="menu-header-word">Menu</div>
+                <div className="menu-header-word" onClick={() => this.showMenu()}>Menu</div>
 
               </div>
             </div>
