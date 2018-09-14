@@ -1,7 +1,7 @@
 .expo-main {
-  width: 80%;
+  width: 90%;
   font-family: "Open sans";
-  margin: 0 10%;
+  margin: 0 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,23 +18,30 @@
 }
 
 .expo-hero {
-  width: 90%;
+  width: 94%;
   display: flex;
   flex-direction: row;
 }
 
 .expo-image {
   max-width: 100%;
-  margin-bottom: 56px;
+  margin:0 10px 56px 10px;
+}
+
+.sm-expo-image {
+  max-width: 100%;
+  margin: 0 10px 56px 10px;
 }
 
 .expo-text-container {
-  margin-left: 25px;
-  line-height: 1.6;
+  margin-left: 10px;
+  line-height: 1.4;
   font-weight: 300;
 }
 h1 {
   font-size: 34px;
+  font-weight: 400;
+  line-height: 1.4;
   margin-bottom: 15px;
 }
 

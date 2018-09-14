@@ -9,7 +9,7 @@ export default function Footer(props) {
             Subscribe to the RootsTech Newsletter
           </div>
           <div className="footer-form-field" >
-           <input/>
+           <input placeholder='Enter Email Here'/>
     
           </div>
           <div className="footer-form-button">
@@ -21,7 +21,10 @@ export default function Footer(props) {
       <div className="footer-contact-us">Contact Us</div>
       <a className='footer-faq' href='/#/faqs'>
       <div className="footer-faq">Frequently Asked Questions</div></a>
-      <i className="fa fa-twitter"></i> 
+      <div className="footer-icons">
+            <i className="fab fa-twitter fa-2x"></i>
+            <i className="fab fa-facebook fa-2x"></i>
+            </div>
       </div>
     </div>
   );

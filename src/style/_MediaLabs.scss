@@ -1,0 +1,65 @@
+@media (min-width: 276px) {
+    .lab-main{
+        margin: 0 2% 40px 2%;
+        width: 96%;     
+    }
+    .lab-header{
+        font-size: 28px;
+        margin-bottom:40px;
+        margin-top: 25px;  
+    }
+    
+    .lab-image{
+        width: 80%;
+        margin-bottom: 50px;  
+    }
+    
+    p{
+        margin: 0 10%;
+        line-height: 1.3;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+    .lab-main{
+        margin: 0 33% 40px 33%;
+        width: 34%;    
+    }
+
+    .lab-header{
+        font-size: 54px;
+        margin-bottom: 80px;
+        margin-top: 35px;
+    
+    
+    }
+    
+    .lab-image{
+        width: 34%;
+        margin-bottom: 50px;
+        
+    }
+    
+    p{
+        line-height: 1.8;
+        font-size: 18px;
+        font-weight: 300;
+    }
+ 
+}

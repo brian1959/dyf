@@ -18,7 +18,7 @@
   }
 
   .footer-form-button {
-margin-top: 10px;
+    margin-top: 10px;
   }
 
   .footer-form-contact-us {
@@ -31,8 +31,55 @@ margin-top: 10px;
   .footer-contact-us {
     margin: 10px;
   }
-  
+
   .footer-faq {
-    margin:10px;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-form {
+    height: 60px;
+  }
+
+  .footer-form-fields {
+    height: 60px;
+    flex-direction: row;
+  }
+
+  .footer-form-title {
+    margin: 0 10px;
+  }
+
+  .footer-form-field {
+    height: 40px;
+    width: 400px;
+    margin: 0 10px;
+  }
+
+  .footer-form-field > input {
+    font-size: 18px;
+    text-align: left;
+    width: 395px;
+    height: 35px;
+    // margin: 10px 0;
+  }
+
+  .footer-form-button {
+    height: 20px;
+    padding: 13px 0 7px 0;
+    margin-top: 0;
+  }
+
+  .footer-form-contact-us {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .footer-icons > i {
+    margin: 0 20px;
   }
 }
