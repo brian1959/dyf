@@ -113,16 +113,17 @@ export default class About extends Component {
 <div className="video-clips-title">Past Attendees Talk about Their RootsTech Experience</div>
 <div className="video-clips-wrapper">
 <a href='https://www.youtube.com/watch?v=nBno-JSC6W0&list=PLGng78LVGBHGOCL6LxB_KGj0Pb_UhjBNu&index=10'>
+
 <div className="video-clip-box">
-<img className='video-clip-image' src='../images/about/Curt-Witcher.jpg' alt='Curt Witcher'/>
+<img className='video-clip-image' src='../images/about/Curt-Witcher.jpg' alt='Curt Witcher'/><i className='fab fa-youtube fa-3x'></i>
 <h2>Curt Witcher</h2></div></a>
 <a href='https://www.youtube.com/watch?v=poFVQieNhFw&list=PLGng78LVGBHGOCL6LxB_KGj0Pb_UhjBNu&index=13'>
 <div className="video-clip-box">
-<img className='video-clip-image' src='../images/about/Sunny-Morton.jpg' alt='Sunny Morton'/>
+<img className='video-clip-image' src='../images/about/Sunny-Morton.jpg' alt='Sunny Morton'/><i className='fab fa-youtube fa-3x'></i>
 <h2>Sunny Morton</h2></div></a>
 <a href="https://www.youtube.com/watch?v=EQZ03jCo2f0&list=PLGng78LVGBHHr7LuHa5Rx8icHlgacZTZE&index=9">
 <div className="video-clip-box">
-<img className='video-clip-image' src='../images/about/NickaSmith.jpg' alt='Nicka Smith'/>
+<img className='video-clip-image' src='../images/about/NickaSmith.jpg' alt='Nicka Smith'/><i className='fab fa-youtube fa-3x'></i>
 <h2>Nicka Smith</h2></div></a>
 </div>
         </section>

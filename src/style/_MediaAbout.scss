@@ -336,6 +336,7 @@
   }
   
   .video-clip-box {
+    position: relative;
     width: 90%;
     margin: 10px 5%;
   }
@@ -349,6 +350,14 @@
     color: #333;
     width: 100%;
   }
+  .fa-youtube{
+    position: absolute;
+    color:#fff;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
   
   .video-clip-box > h2 {
     font-size: 22px;
